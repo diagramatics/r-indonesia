@@ -2209,24 +2209,6 @@ a:hover {
 		text-align: center;
 	}
 
-	.thing .tagline .author.submitter.id-t2_bs5v9,
-	.thing .collapsed .author.gray.submitter.id-t2_bs5v9,
-	.thing .tagline .author.submitter.id-t2_bs5v9:hover,
-	.thing .collapsed .author.gray.submitter.id-t2_bs5v9:hover
-	{background-color:transparent!important;}
-
-	.thing .tagline .author.submitter.id-t2_bs5v9:after{color:#2f5cb5;}
-	.thing .collapsed .author.gray.submitter.id-t2_bs5v9:after{color:#888;}
-
-	.author.id-t2_bs5v9:hover:after{color:#D4AF37!important;}
-	.author.id-t2_bs5v9:active:after{color:#FFD700!important;}
-
-	.RESDialogSmall [href$="/marssantoso"]{font-size:0!important;}
-	.RESDialogSmall [href$="/marssantoso"]:after{
-		font-size: 14px;
-		content: "Now kneel before me!";
-	}
-
 	/* 9.3.3.2 /u/Mental_octo */
 	.author[href$="/Mental_octo"],
 	.author.submitter[href$="/Mental_octo"],
