@@ -4,10 +4,17 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
+    "autoprefixer-core": "^4.0.2",
     "browser-sync": "^1.8.2",
     "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-csso": "^0.2.9",
     "gulp-load-plugins": "^0.8.0",
-    "gulp-sass": "^1.2.4"
+    "gulp-postcss": "^4.0.0",
+    "gulp-sass": "^1.2.4",
+    "postcss": "^4.0.0",
+    "postcss-url": "^1.2.1",
+    "run-sequence": "^1.0.2"
   },
   "dependencies": {}
 }
