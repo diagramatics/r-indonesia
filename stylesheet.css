@@ -2209,20 +2209,6 @@ a:hover {
 		text-align: center;
 	}
 
-	a.author.id-t2_bs5v9,
-	a.author.submitter.id-t2_bs5v9,
-	a.author.may-blank.id-t2_bs5v9,
-	a.author.userTagged.id-t2_bs5v9,
-	a.author.flairselectable.id-t2_bs5v9 {
-		font-size: 0!important;
-	}
-
-	.author.id-t2_bs5v9:after{
-		font-size: 12px;
-		content: "God Himself";
-		display: inline-block;
-	}
-
 	.thing .tagline .author.submitter.id-t2_bs5v9,
 	.thing .collapsed .author.gray.submitter.id-t2_bs5v9,
 	.thing .tagline .author.submitter.id-t2_bs5v9:hover,
