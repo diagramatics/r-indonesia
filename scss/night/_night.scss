@@ -1,0 +1,98 @@
+body.post-linkflair-cat {
+  background-color: #333;
+}
+
+body.post-linkflair-cat .tabmenu {
+  background-color: #222!important;
+  box-shadow: 0 1px 3px #000;
+  height: 39px;
+}
+
+body.post-linkflair-cat .tabmenu a {
+  background-color: #222!important;
+  padding-top: 6px!important;
+}
+
+body.post-linkflair-cat .thing.id-t3_271wzk,
+body.post-linkflair-cat #sr-header-area,
+body.post-linkflair-cat .commentarea,
+body.post-linkflair-cat .side {
+  background-color: #222;
+  box-shadow: 0 1px 3px #000;
+}
+
+body.post-linkflair-cat .thing.id-t3_271wzk p,
+body.post-linkflair-cat #header-bottom-right a,
+body.post-linkflair-cat .side .linkinfo span,
+body.post-linkflair-cat .side p,
+#siteTable_t3_271wzk p {
+  color: #ddd;
+}
+
+body.post-linkflair-cat .thing.id-t3_271wzk li a, #siteTable_t3_271wzk li a {
+  color: #ccc!important;
+}
+
+body.post-linkflair-cat .thing.id-t3_271wzk .comment {
+  background-color: #111;
+  box-shadow: 0 1px 3px #000;
+}
+
+body.post-linkflair-cat button,
+body.post-linkflair-cat .side .morelink,
+body.post-linkflair-cat .side .morelink:hover:before,
+body.post-linkflair-cat .fancy-toggle-button .active,
+body.post-linkflair-cat .RESshortcutside,
+body.post-linkflair-cat .RESDashboardToggle {
+  box-shadow: none;
+}
+
+
+
+
+body.post-linkflair-cat .side .linkinfo > div {
+  color: #aaa;
+}
+
+body.post-linkflair-cat #search input[type=text] {
+  background-color: #666;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-left: 2px solid #777;
+}
+
+body.post-linkflair-cat .side h3:nth-of-type(1) {
+  background-color: #111;
+  box-shadow: 0 1px 3px #222;
+  color: #ddd;
+}
+
+
+
+body.post-linkflair-cat textarea, body.post-linkflair-cat .RESBigEditorPop {
+  background-color: #666;
+  border: 1px solid #777;
+  color: #ddd;
+}
+
+#siteTable_t3_271wzk .comment,
+#siteTable_t3_271wzk .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #000!important;
+  box-shadow: 0 1px 3px #222;
+}
+
+#siteTable_t3_271wzk .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment .comment .comment .comment,
+#siteTable_t3_271wzk .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment{
+  background-color: #222!important;
+  box-shadow: 0 1px 3px #111;
+}
+
+#siteTable_t3_271wzk .deleted.comment .usertext.grayed .usertext-body{
+  background-color: #000;
+}

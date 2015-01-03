@@ -1,0 +1,62 @@
+/* 9.3.3 SPECIAL FLAIRS */
+/* 3.3.9.4 /u/marssantoso */
+.side:after {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 0;
+  color: #D09F00;
+  font-size: 12px;
+  content: "CSS by /u/marssantoso";
+  text-transform: none;
+  position: absolute;
+  width: 300px;
+  text-align: center;
+}
+
+/* 9.3.3.2 /u/Mental_octo */
+.author[href$="/Mental_octo"],
+.author.submitter[href$="/Mental_octo"],
+.author.userTagged[href$="/Mental_octo"],
+.author.flairselectable[href$="/Mental_octo"] {
+  color: black !important;
+  padding: 0 2px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -o-linear-gradient(#FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -moz-linear-gradient(right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: linear-gradient(to right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+}
+
+.thing .tagline .author.submitter[href$="/Mental_octo"],
+.thing .collapsed .author.gray.submitter[href$="/Mental_octo"] {
+  color: black !important;
+  background: -webkit-linear-gradient(left, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -o-linear-gradient(#FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -moz-linear-gradient(right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: linear-gradient(to right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+}
+
+.author[href$="/Mental_octo"]:hover,
+.author.submitter[href$="/Mental_octo"]:hover,
+.author.userTagged[href$="/Mental_octo"]:hover,
+.author.flairselectable[href$="/Mental_octo"]:hover,
+.thing .tagline .author.submitter[href$="/Mental_octo"]:hover,
+.thing .collapsed .author.gray.submitter[href$="/Mental_octo"]:hover {
+  font-size: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.author[href$="/Mental_octo"]:hover:after,
+.author.submitter[href$="/Mental_octo"]:hover:after,
+.author.userTagged[href$="/Mental_octo"]:hover:after,
+.author.flairselectable[href$="/Mental_octo"]:hover:after,
+.thing .tagline .author.submitter[href$="/Mental_octo"]:hover:after,
+.thing .collapsed .author.gray.submitter[href$="/Mental_octo"]:hover:after {
+  content: "HAIL HYDRA!";
+  padding: 0 2px;
+  display: inline-block;
+  font-size: 11px;
+  background-color: #F70000;
+  color: white;
+}

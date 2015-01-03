@@ -16,7 +16,7 @@ gulp.task('sass', function() {
 gulp.task('reddit-proxy', function() {
   browserSync({
     proxy: "http://www.reddit.com/r/" + subreddit,
-    files: "stylesheet.css",
+    files: "style.css",
     port: bsPort + 1,
 
     // Use the snippetOptions to find the current subreddit CSS if any
@@ -27,7 +27,7 @@ gulp.task('reddit-proxy', function() {
         // If there's none, just match it with the </head>
         match: new RegExp('<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text/css">|</head>', 'i'),
         fn: function(snippet, match) {
-          return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/stylesheet.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
+          return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/style.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
         }
       }
     }
@@ -41,6 +41,7 @@ gulp.task('setup-servers', function() {
       baseDir: './',
       directory: true,
     },
+    files: "",
     open: false,
     codeSync: false,
     ghostMode: false,

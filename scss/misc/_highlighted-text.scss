@@ -1,0 +1,16 @@
+.link .usertext .md a[href$="#h00"], .comments-page .comment .md a[href$="#h00"]{background-color:#000000!important; color: white!important;}
+.link .usertext .md a[href$="#h01"], .comments-page .comment .md a[href$="#h01"]{background-color:#99cbed!important; color: black!important;}
+.link .usertext .md a[href$="#h02"], .comments-page .comment .md a[href$="#h02"]{background-color:#f9d97f!important; color: black!important;}
+.link .usertext .md a[href$="#h03"], .comments-page .comment .md a[href$="#h03"]{background-color:#f9b5af!important; color: black!important;}
+.link .usertext .md a[href$="#h04"], .comments-page .comment .md a[href$="#h04"]{background-color:#c6e1a6!important; color: black!important;}
+
+.link .usertext .md a[href*="#h"]:hover, .comments-page .comment .md a[href*="#h"]:hover,
+.link .usertext .md a[href*="#0"]:hover, .comments-page .comment .md a[href*="#0"]:hover,
+.link .usertext .md a[href*="#3"]:hover, .comments-page .comment .md a[href*="#3"]:hover,
+.link .usertext .md a[href*="#6"]:hover, .comments-page .comment .md a[href*="#6"]:hover,
+.link .usertext .md a[href*="#9"]:hover, .comments-page .comment .md a[href*="#9"]:hover,
+.link .usertext .md a[href*="#c"]:hover, .comments-page .comment .md a[href*="#c"]:hover,
+.link .usertext .md a[href*="#f"]:hover, .comments-page .comment .md a[href*="#f"]:hover{
+  text-decoration: none!important;
+  cursor: text;
+}

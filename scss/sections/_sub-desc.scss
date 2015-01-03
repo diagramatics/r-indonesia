@@ -1,0 +1,29 @@
+/* 2.4 SUBREDDIT DESCRIPTION */
+.titlebox {
+  padding: 0 15px 15px 15px;
+  color: #404040;
+
+}
+.titlebox .md {
+  line-height: 1.35em;
+  font-family: candara,arial,sans-serif;
+}
+
+.titlebox .bottom {
+  padding-top: 5px;
+  border-top: 1px solid #e5e5e5;
+  color: #999;
+  font-size: 110%;
+}
+
+div.titlebox span.number:after {content: " komodo dragons";}
+
+div.titlebox span.word {display: none;}
+.titlebox .users-online {display: inline;}
+.titlebox .users-online:before {display: none;}
+.titlebox .users-online .number {font-style: italic;font-size: 12px;}
+.titlebox .users-online .number:before {content: "(";}
+.titlebox .users-online .number:after {content: " here)";}
+.titlelebox .word {display: none;}
+.titlebox .users-online, .titlebox .number {cursor: text;}
+.titlebox .tagline {font-size: 12px;}

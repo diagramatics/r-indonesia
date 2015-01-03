@@ -1,0 +1,353 @@
+/* 4. COMMENT PAGE */
+.linkinfo {
+  margin-top: -10px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  color: #404040;
+}
+
+.commentarea {
+  margin-top: 10px;
+  margin-right: 340px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #FFF;
+  color: #3b3b3b;
+  box-shadow: 0 1px 3px #ccc;
+}
+
+.commentarea>.usertext {
+  overflow: visible;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 0;
+}
+
+a.author {
+  margin-right: 4px;
+  color: #7181c4;
+}
+
+.comment .midcol {
+  margin-top: 6px;
+  width: 16px !important;
+}
+
+.comment .score {
+  font-size: small;
+}
+
+/* 4.1 COMMENTS */
+.commentarea .menuarea {
+  display: inline;
+  margin: 0 0 10px -320px;
+  padding: 0;
+  color: #c0c0c0;
+  font-weight: normal;
+  font-size: 110%;
+  box-shadow: 0 0;
+}
+
+.comments-page #noresults:after {
+  content: "... what's on your mind?";
+}
+
+.panestack-title {
+  display: inline;
+  border-bottom: 1px solid #e5e5e5;
+  color: #c0c0c0;
+}
+
+.panestack-title .title {
+  display: none;
+}
+
+.menuarea .spacer {
+  margin-right: -15px;
+}
+
+.commentarea .menuarea .toggle a {
+  font-size: 11px;
+  color: #c0c0c0;
+  font-weight: normal;
+}
+
+.menuarea .spacer .drop-choices.lightdrop {
+  padding: 5px;
+  border-color: #DFDDDD;
+  box-shadow: 0 1px 1px #C9C9C9;
+  font-family: arial, sans-serif;
+}
+
+.titlebox form.toggle, .leavemoderator {
+  background-color: transparent;
+}
+
+.menuarea .spacer .drop-choices.lightdrop a.choice, .commentarea .menuarea form {
+  padding: .5px;
+  font-size: 14px;
+  color: #7181c4;
+}
+
+.menuarea .spacer .drop-choices.lightdrop a.choice:hover, .commentarea .menuarea form:hover {
+  background-color: #7181c4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menuarea .dropdown.lightdrop .selected {
+  background-image: none;
+  color: #3b3b3b;
+  text-decoration: none;
+  opacity: 10;
+  cursor: pointer;
+}
+
+.menuarea .dropdown.lightdrop .selected:hover {
+  color: #7181c4;
+}
+
+.menuarea .dropdown.lightdrop .selected:after {
+  content: " ▼";
+  vertical-align: middle;
+  opacity: .5;
+}
+
+.comments-page .comment .md {
+  color: #161616;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  line-height: 1.35em;
+}
+
+hr {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+}
+
+.comments-page textarea {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  color: #999;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+}
+
+.comments-page textarea:hover {
+  border-color: #bebebe;
+}
+
+.comments-page textarea:focus {
+  border: 1px solid #FF8E8D;
+  color: #000;
+}
+
+.usertext .help-toggle, .usertext a.reddiquette {
+  background: none repeat scroll 0 0 #E0645C;
+  color: white;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  font-size: 110%;
+  text-transform: none;
+  text-align: center;
+  width: 200px;
+  padding: 5px 0;
+  border: 1px solid #eee;
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.usertext .help-toggle:hover, .usertext a.reddiquette:hover {
+  background: none repeat scroll 0 0 #999;
+  color: #CE1126;
+}
+
+.help-toggle a {
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.help-toggle:hover > a {
+  color: #CE1126;
+}
+
+.usertext a.reddiquette {
+  width: 200px;
+}
+
+.usertext a.reddiquette:hover {
+  text-decoration: none;
+}
+
+.comments-page .usertext.border .usertext-body {
+  padding-left: 5px;
+  background-color: #f0f0f0;
+}
+
+.comment .expand {
+  background-color: transparent;
+  color: #999 !important;
+}
+
+.comment .expand:hover {
+  background-color: transparent;
+  color: #999 !important;
+  text-decoration: underline;
+}
+
+.comment .child,.comment .showreplies {
+  margin-top: 10px;
+  margin-left: 15px;
+  border-left: 0;
+}
+
+.res-commentBoxes.res-commentBoxes-rounded .comment, .comment {
+  margin: 0 5px 10px!important;
+  border: 0!important;
+  border-radius: 0!important;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #ddd;
+}
+
+.res-commentBoxes .comment .comment {
+  background-color: #fafafa!important;
+}
+
+.res-commentBoxes .comment .comment .comment {
+  background-color: #fff!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment {
+  background-color: #fafafa!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment {
+  background-color: #fff!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment {
+  background-color: #fafafa!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #fff!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #fafafa!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #fff!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #fafafa!important;
+}
+
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: #fff!important;
+}
+
+.res-commentBoxes .comment .entry:hover {
+  background-color: rgba(0,0,0,.02)!important;
+}
+
+/* 4.2 MARKUP TEXT*/
+.link .usertext .md h1, .comments-page .comment .md h1,
+.link .usertext .md h2, .comments-page .comment .md h2,
+.link .usertext .md h3, .comments-page .comment .md h3,
+.link .usertext .md h4, .comments-page .comment .md h4,
+.link .usertext .md h5, .comments-page .comment .md h5,
+.link .usertext .md h6, .comments-page .comment .md h6 {
+  margin: 10px 0 5px;
+  font-weight: normal;
+  border: 0;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.link .usertext .md h1, .comments-page .comment .md h1, .md h1 a {
+  color: #000000!important;
+}
+
+.link .usertext .md h2, .comments-page .comment .md h2, .md h2 a {
+  color: #3498DB!important;
+}
+
+.link .usertext .md h3, .comments-page .comment .md h3, .md h3 a {
+  color: #F36C60!important;
+}
+
+.link .usertext .md h4, .comments-page .comment .md h4, .md h4 a {
+  color: #8DC44E!important;
+}
+
+.link .usertext .md h5, .comments-page .comment .md h5, .md h5 a {
+  color: #f4b400!important;
+}
+
+.link .usertext .md h6, .comments-page .comment .md h6, .md h6 a {
+  color: #7d7d7d!important;
+}
+
+.link .usertext .md h1 strong, .comments-page .comment .md h1 strong,
+.link .usertext .md h2 strong, .comments-page .comment .md h2 strong,
+.link .usertext .md h3 strong, .comments-page .comment .md h3 strong,
+.link .usertext .md h4 strong, .comments-page .comment .md h4 strong,
+.link .usertext .md h5 strong, .comments-page .comment .md h5 strong,
+.link .usertext .md h6 strong, .comments-page .comment .md h6 strong {
+  font-size: 20px;
+}
+
+.link .usertext .md h1 strong strong, .comments-page .comment .md h1 strong strong,
+.link .usertext .md h2 strong strong, .comments-page .comment .md h2 strong strong,
+.link .usertext .md h3 strong strong, .comments-page .comment .md h3 strong strong,
+.link .usertext .md h4 strong strong, .comments-page .comment .md h4 strong strong,
+.link .usertext .md h5 strong strong, .comments-page .comment .md h5 strong strong,
+.link .usertext .md h6 strong strong, .comments-page .comment .md h6 strong strong {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.link .usertext .md h1 strong strong, .comments-page .comment .md h1 strong strong {
+  border-bottom: 2px solid #000000;
+}
+
+.link .usertext .md h2 strong strong, .comments-page .comment .md h2 strong strong {
+  border-bottom: 2px solid #3498DB;
+}
+
+.link .usertext .md h3 strong strong, .comments-page .comment .md h3 strong strong {
+  border-bottom: 2px solid #F36C60;
+}
+
+.link .usertext .md h4 strong strong, .comments-page .comment .md h4 strong strong {
+  border-bottom: 2px solid #8DC44E;
+}
+
+.link .usertext .md h5 strong strong, .comments-page .comment .md h5 strong strong {
+  border-bottom: 2px solid #f4b400;
+}
+
+.link .usertext .md h6 strong strong, .comments-page .comment .md h6 strong strong {
+  border-bottom: 2px solid #7d7d7d;
+}
+
+/* 4.3 PROFILE PAGE */
+.profile-page .thing.comment {
+  margin-right: 340px!important;
+  margin-left: 0!important;
+  margin-top: 10px!important;
+  padding: 5px 20px;
+}

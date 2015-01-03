@@ -1,0 +1,112 @@
+/* 2.5 MODERATION TOOLS */
+.sidecontentbox {
+  padding: 0 5px 0 15px;
+}
+
+.sidecontentbox .title {
+  text-align: left;
+}
+
+.sidecontentbox .title h1 {
+  color: #111;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+}
+
+.sidecontentbox.collapsible .title {
+  text-align: left;
+}
+
+.sidecontentbox .collapse-button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #111;
+  font-size: 15px;
+}
+
+.sidecontentbox .content {
+  padding: 3px 0 5px 0;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+}
+
+.sidecontentbox .content a {
+  color: #111;
+  text-align: left;
+  font-family: arial, sans-serif;
+}
+
+.sidecontentbox .content a:hover {
+  color: #FF8E8D;
+  text-decoration: underline;
+}
+
+.icon-menu a {
+  background-color: transparent;
+}
+
+.icon-menu a:before {
+  background-image: url(%%sprites%%)!important;
+}
+
+.icon-menu .reddit-edit:before {
+  background-position: 0  0;
+}
+
+.icon-menu .edit-stylesheet:before {
+  background-position: -16px  0;
+}
+
+.icon-menu .moderator-mail:before {
+  margin-top: -1px;
+  height: 16px;
+  background-position: -32px 0;
+}
+
+.icon-menu .reddit-moderators:before {
+  background-position: -48px 0;
+}
+
+.icon-menu .reddit-contributors:before {
+  background-position: -64px 0;
+}
+
+.icon-menu .reddit-traffic:before {
+  background-position: -80px 0;
+}
+
+.icon-menu .reddit-modqueue:before {
+  background-position: -96px -0;
+}
+
+.icon-menu .reddit-reported:before {
+  background-position: -112px 0;
+}
+
+.icon-menu .reddit-spam:before {
+  background-position: -128px 0;
+}
+
+.icon-menu .reddit-edited:before {
+  background-position: -144px 0;
+}
+
+.icon-menu .reddit-ban:before {
+  background-position: -160px 0;
+}
+
+.icon-menu .reddit-flair:before {
+  background-position: -176px 0;
+}
+
+.icon-menu .reddit-moderationlog:before {
+  background-position: -192px 0;
+}
+
+.icon-menu .reddit-unmoderated:before {
+  background-position: -208px 0;
+}

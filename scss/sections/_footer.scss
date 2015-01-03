@@ -1,0 +1,36 @@
+/* 8. FOOTER */
+.footer-parent {
+  margin-top: 120px;
+  padding-top: 0;
+  background-color: transparent;
+}
+
+.footer {
+  border: none;
+  color: #969696;
+  font-family: arial, sans-serif;
+}
+
+.footer a {
+  color: #969696;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #7181c4;
+  text-decoration: underline;
+}
+
+.footer .col {
+  border-left: 1px solid #aaa;
+}
+
+.debuginfo {
+  background-color: transparent;
+  color: #969696;
+}
+
+.footer a.buygold {
+  color: #D09F00!important;
+}

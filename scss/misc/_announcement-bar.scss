@@ -1,0 +1,16 @@
+.titlebox form {
+  position: static;
+}
+
+.side h3:nth-of-type(1) {
+  position:absolute;
+  display: block;
+  top:230px;
+  left:20px;
+  right: 20px;
+  background-color: #FFF;
+  color: #444;
+  text-align: center;
+  padding: 7px 10px 7px 10px;
+  box-shadow: 0 1px 3px #ccc;
+}

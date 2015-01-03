@@ -1,0 +1,66 @@
+/* 7.2 SETTING PAGE */
+.create-reddit.fancy-settings {
+  background-color: transparent;
+  box-shadow: 0;
+}
+
+.pretty-form {
+  margin-right: 340px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  color: #707070;
+}
+
+.pretty-form textarea {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.stylesheet-customize-container .pretty-form {
+  box-shadow: 0 1px 3px #ccc;
+  padding: 10px;
+}
+
+.stylesheet-customize-container textarea {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  color: #707070;
+}
+
+.sheets .btn.right {
+  display: none;
+}
+
+.sheets .col textarea {
+  width: 100%;
+  background-color: #fff;
+}
+
+.sheets .col textarea:hover {
+  border-color: #B1B1B1;
+}
+
+.sheets .col textarea:focus {
+  border-color: #FF8E8D;
+}
+
+.sheets {
+  margin-right: 0;
+}
+
+#images {
+  margin-right: 340px;
+  margin-bottom: 30px;
+  padding: 10px;
+  height: 1440px;
+  color: #707070;
+  box-shadow: 0 1px 3px #ccc;
+}
+
+ul#image-preview-list {
+  margin: 15px 0 0;
+  padding-bottom: 80px;
+  font-size: 14px;
+}

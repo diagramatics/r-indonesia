@@ -1,0 +1,85 @@
+/* 2. SIDEBAR */
+.side {
+  float: right;
+  margin: 66px 20px 0 0;
+  padding-top: 25px;
+  width: 300px;
+  text-align: left;
+  font-family: Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding-top: 310px;
+  box-shadow: 0 1px 3px #ccc;
+}
+
+/* 2.1 GARUDA */
+.titlebox h1 a {
+  position: absolute;
+  top: 285px;
+  right: 35px;
+  width: 270px;
+  height: 290px;
+  background: url(%%garuda%%);
+  font-size: 0;
+}
+
+.titlebox h1 a:after:hover {
+  color: #ED5055;
+}
+
+.sidebox .subtitle {
+  font-size: 1.6em;
+}
+
+/* 2.2 SEARCH */
+#search input[type=text] {
+  padding: 5px 0 5px 15px;
+  border: none;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-left: 2px solid #fff;
+  color: #999;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Arial, sans-serif !important;
+}
+
+#search input[type=text]:focus {
+  outline: none !important;
+  border-left: 2px solid #ED1C24;
+  color: #000;
+}
+
+#searchexpando {
+  margin: 0 0 5px 0;
+  padding: 5px 5px 0 15px;
+  height: 55px;
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  color: #111;
+  font-size: 150%;
+}
+
+#searchexpando label {
+  cursor: pointer;
+}
+
+.search-page form#search label {
+  font-size: 150%;
+  cursor: pointer;
+}
+
+#searchexpando .searchexpando-submit {
+  position: relative;
+  top: -94px;
+  left: 195px;
+  width: 90px;
+}
+
+#searchexpando .searchexpando-submit input[type="submit"] {
+  display: none;
+}
+
+#search_showmore {
+  display: none;
+}

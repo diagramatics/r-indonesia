@@ -1,0 +1,99 @@
+/* 9.3 FLAIRS */
+/* 9.3.0 FLAIR PAGE  */
+div.tabpane-content {
+  padding: 4px;
+  border: 0 #e5e5e5;
+  border-bottom-width: 3px;
+  background-color: #fff;
+  width: 1080px;
+  margin-top: 7px;
+}
+
+.linefield {
+  padding: 10px;
+  width:514px!important;
+  color: #707070;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px #ccc;
+}
+
+.linefield .title {
+  padding: 1px 10px;
+  color: #FC7373;
+}
+
+.linefield .title+.gray {font-size: small;}
+
+.flairtemplate .flairrow {
+  margin-top: 2px;
+  margin-right: 340px;
+  padding: 5px 5px 8px 3px;
+  color: #707070;
+  text-transform: capitalize;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.tabmenu li#tab-grant.selected, .tabmenu li#tab-templates.selected,
+.tabmenu li#tab-link_templates.selected {margin: 7px 0 4px 0;}
+
+.tabmenu li#tab-grant.selected a, .tabmenu li#tab-grant a:hover,
+.tabmenu li#tab-templates.selected a, .tabmenu li#tab-templates a:hover,
+.tabmenu li#tab-link_templates.selected a, .tabmenu li#tab-link_templates a:hover {color: #333;}
+
+/* 9.3.1 LINK FLAIRS */
+.linkflairlabel {
+  padding: 0 5px;
+  height: auto;
+  border-radius: 0;
+  border: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: Tahoma, Arial, sans-serif;
+  cursor: default;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.linkflair-cat .linkflairlabel {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 9.3.2 USER FLAIRS */
+.flair {
+  height: auto;
+  background-color: transparent;
+  border: none;
+  color: #555;
+  font-size: small !important;
+  font-family: Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+  border: 1px solid #DADADA;
+  padding: 0 3px 2px 3px;
+  cursor: help;
+}
+
+.flair-lgreen, .res-nightmode .flair-lgreen{background-color: #cef5c6; color: black;}
+.flair-lcyan, .res-nightmode .flair-lcyan{background-color: #B3E8DF; color: black;}
+.flair-lblue, .res-nightmode .flair-lblue{background-color: #D2DEFF; color: black;}
+.flair-lpurple, .res-nightmode .flair-lpurple{background-color: #D6B3E8; color: black;}
+.flair-lred, .res-nightmode .flair-lred{background-color: #FFC6C5; color: black;}
+
+.flair-green, .res-nightmode .flair-green{background-color: #4aa329; color: white;}
+.flair-cyan, .res-nightmode .flair-cyan{background-color: #2bcca3; color: white;}
+.flair-blue, .res-nightmode .flair-blue{background-color: #2f5cb5; color: white;}
+.flair-purple, .res-nightmode .flair-purple{background-color: #882bcc; color: white;}
+.flair-red, .res-nightmode .flair-red{background-color: #d13c47; color: white;}
+
+.flair-dgreen, .res-nightmode .flair-dgreen{background-color: #255215; color:white;}
+.flair-dcyan, .res-nightmode .flair-dcyan{background-color: #1a7a62; color:white;}
+.flair-dblue, .res-nightmode .flair-dblue{background-color: #1a3363; color:white;}
+.flair-dpurple, .res-nightmode .flair-dpurple{background-color: #511a7a; color:white;}
+.flair-dred, .res-nightmode .flair-dred{background-color: #7f252b; color:white;}
+
+.flair-white, .res-nightmode .flair-white{background-color: white; color: black;}
+.flair-black, .res-nightmode .flair-black{background-color: black; color: white;}
+.flair-lgrey, .res-nightmode .flair-lgrey{background-color: #bbb; color: black;}
+.flair-dgrey, .res-nightmode .flair-dgrey{background-color: #444; color: white;}

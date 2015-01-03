@@ -1,0 +1,317 @@
+/* 2.3 BUTTONS */
+/* 2.3.1 SUBMIT BUTTONS */
+.morelink {
+  z-index: 97;
+  width: 130px;
+  height: 28px;
+  background-color: #CE1126;
+  background-image: none!important;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  margin-left: 15px;
+  padding: 2px 0 3px 0;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.morelink:hover {
+  background-color: #ED1C24;
+  -webkit-box-shadow: 0 2px 5px #555;
+  -moz-box-shadow: 0 2px 5px #555;
+  box-shadow: 0 2px 5px #555;
+}
+
+.morelink:active {
+  background-color: #960011;
+  -webkit-box-shadow: 0 0 5px #555 inset;
+  -moz-box-shadow: 0 0 5px #555 inset;
+  box-shadow: 0 0 5px #555 inset;
+}
+
+.morelink a {
+  color: #fff !important;
+  text-shadow: 0 1px 0 #AF7070;
+  letter-spacing: 0;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: arial, sans-serif;
+  cursor: default;
+  line-height: 30px;
+}
+
+.morelink a:hover {
+  text-decoration: none;
+}
+
+.disabled .morelink,.disabled .morelink:hover {
+  width: 270px;
+  background-image: none;
+  border: 0;
+  color: white;
+  font-size: 0;
+  background-color: #AF7070;
+  margin-top: 3px;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.disabled .morelink a {
+  color: #fff;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: sans-serif;
+  cursor: default;
+  text-indent: 0;
+  text-shadow: none;
+}
+
+.account-activity-box, .sidebox.create, .morelink .nub {
+  display: none;
+}
+
+.sidebox.submit-text {
+  display: block !important;
+}
+
+.sidebox.submit {
+  width: 130px;
+  word-spacing: 1px;
+  letter-spacing: -1px;
+}
+
+.sidebox.submit-link {
+  position: relative;
+  display: block;
+  margin-left: 0;
+  text-indent: 0;
+}
+
+.sidebox.submit-link .morelink .nub:before {
+  position: relative;
+  margin-left: 13px;
+  padding: 5px;
+  height: auto;
+  border: 1px solid #fbfbf9;
+  border-radius: 50%;
+  background-color: #fbfbf9 !important;
+  color: #242527;
+  font-weight: bold;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px #fff,1px 1px 2px #808088;
+  z-index: 1;
+}
+
+.sidebox.submit-text {
+  position: relative;
+  float: right;
+  margin-top: -45px;
+  margin-right: 30px;
+  text-align: right;
+}
+
+/* 2.3.2 SUBSCRIPTION BUTTONS */
+.titlebox .fancy-toggle-button {
+  display: block;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.titlebox .subscribe-button {
+  display: block;
+  text-align: center;
+}
+
+.fancy-toggle-button .active {
+  border-radius: 0;
+  border: 0;
+  background: #CE1126;
+  font-weight: normal;
+  font-size: 10px;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.fancy-toggle-button .remove {
+  padding: 3px 19px;
+}
+
+.fancy-toggle-button .add {
+  padding: 3px 25px;
+}
+
+.fancy-toggle-button .option {
+  position: relative;
+  top: 10px;
+}
+
+.RESshortcutside, .RESDashboardToggle {
+  position: relative!important;
+  top: -15px!important;
+  color: white!important;
+  background: #CE1126!important;
+  width: 80px!important;
+  font-weight: normal!important;
+  font-size: 10px!important;
+  border: 0!important;
+  border-radius: 0!important;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  -moz-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  -webkit-transition: background .3s;
+  -moz-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s;
+}
+
+.fancy-toggle-button .active:hover, .RESshortcutside:hover, .RESDashboardToggle:hover, .RESshortcutside.remove:hover, .RESDashboardToggle.remove:hover {
+  text-decoration: none;
+  background: #ED1C24!important;
+  -webkit-box-shadow: 0 1px 4px #555;
+  -moz-box-shadow: 0 1px 4px #555;
+  box-shadow: 0 1px 4px #555;
+}
+
+.RESshortcutside {
+  padding: 3px 0!important;
+  margin-top: 5px!important;
+}
+
+.RESDashboardToggle {
+  margin: 0 0 0 104px!important;
+  padding: 3px 13px!important;
+}
+
+.RESDashboardToggle.remove {
+  padding: 3px 15px!important;
+}
+
+.res .side .titlebox h1+div {
+  text-align: center;
+  z-index: -10!important;
+}
+
+body:not(.res) .titlebox .subscribe-button {
+  position: relative;
+  top: -15px;
+}
+
+body:not(.res) .fancy-toggle-button {
+  margin-bottom: 10px;
+}
+
+body:not(.res) .fancy-toggle-button .option {
+  padding: 3px 116px;
+}
+
+.titlebox .leavemoderator:before {
+  background-image: url(%%sprites%%);
+  background-position: -224px 0;
+}
+
+/* 2.3.3 MESSAGE MODS */
+.sidecontentbox a.helplink {
+  display: block;
+  margin-right: 27px;
+  margin-bottom: 15px;
+  width: 80%;
+  background-color: #ED1C24;
+  background-image: none!important;
+  border: none;
+  border-top: 2px solid #ED1C24;
+  border-bottom: 2px solid #ED1C24;
+  -webkit-box-shadow: 0 1px 0 #ccc;
+  box-shadow: 0 1px 0 #ccc;
+  color: #fff !important;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 0 1px 0 #ED1C24;
+  letter-spacing: 0;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  line-height: 26px;
+  cursor: default;
+}
+
+/* 2.3.4 FLAIR SELECTOR */
+.flairselector.drop-choices.active {
+  visibility: visible !important;
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+}
+
+.flairselector h2 {
+  padding: 5px 5px 5px 5px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 130%;
+}
+
+.flairoptionpane {
+  text-align: left;
+}
+
+.flairoptionpane ul {
+  visibility: visible !important;
+}
+
+.flairoptionpane ul a.title {
+  font-size: 100% !important;
+}
+
+.flairselector li {
+  padding: 3px 0 3px 0;
+  width: 182px;
+}
+
+.flairselector li:hover {
+  background-color: #efefef;
+}
+
+.flairselector form {
+  border-top: 1px solid #e5e5e5;
+}
+
+.flairsample-left {
+  text-align: left !important;
+}
+
+.flairselector ul {
+  overflow: visible;
+}
+
+.flairselector li.selected {
+  background-color: #e5ebf8;
+  border: none;
+}
+
+.sidecontentbox a.helplink:hover {
+  background-color: #CE1126;
+  border-top: 2px solid #CE1126;
+  border-bottom: 2px solid #960011;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.sidecontentbox a.helplink:active {
+  background-color: #960011;
+  border-top: 2px solid #960011;
+  border-bottom: 2px solid #960011;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

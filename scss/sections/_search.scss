@@ -1,0 +1,48 @@
+/* 6. SEARCH PAGE */
+.search-page #search {
+  position: relative;
+  top: 0;
+  margin: 0 150px 0 80px;
+  height: 50px;
+  background: none !important;
+  background-color: transparent;
+  text-align: left;
+}
+
+.search-page .searchpane {
+  margin: 0 340px 20px 0;
+  height: 120px;
+  box-shadow: 0 1px 3px #ccc;
+}
+
+.search-page .raisedbox {
+  padding: 5px;
+  border: 0;
+}
+
+.search-page #search input[type=text] {
+  padding: 5px 0 5px 10px;
+  font-size: 150%;
+}
+
+.searchfacets {
+  margin-top: 10px;
+  margin-right: 320px;
+  padding: 10px;
+  box-shadow: none;
+  color: #3b3b3b;
+  border: 0;
+  border-bottom: 3px solid #E5E5E5;
+}
+
+.search-page #header .tabmenu {
+  display: none !important;
+}
+
+.search-page .side {
+  padding-top: 325px;
+}
+
+.search-summary {
+  margin-right: 40px;
+}

@@ -1,0 +1,36 @@
+/* 2.8 LOGIN FORM */
+.login-form-side {
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 120%;
+  margin: 10px;
+}
+
+.login-form-side input[type=text], .login-form-side input[type=password] {
+  margin: 10px 0;
+  width: 265px;
+}
+
+.popup {
+  position: fixed;
+  left: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: white;
+  border: 0;
+  border-radius: 0;
+  color: #3b3b3b;
+  font-size: 16px;
+  font-family: Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: .6;
+}
