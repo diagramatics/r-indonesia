@@ -37,6 +37,7 @@ gulp.task('reddit-proxy', function() {
           // when the page is reloaded
           else if (timesRun === 1) {
             timesRun = 0;
+            runSnippetOnce = 0;
           }
           else {
             timesRun++;
