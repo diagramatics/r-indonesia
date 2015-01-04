@@ -54,46 +54,35 @@
 }
 
 /* 9.4.5.2 DOWNVOTE REMINDER */
-.comment .arrow.down:before, .arrow.down:after{
-  position:fixed;
-  display:block;
-  z-index:1000;
-  text-align:center;
-  width:100%;
-  left:0;
-  background-color:#CE1126;
-  color:white;
-  font-size:16px;
+.comment .arrow.down:before,
+.comment .arrow.down:after {
+  position: fixed;
+  display: block;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  margin-top: 0;
+  background-color: #CE1126;
+  color: white;
+  font-size: 16px;
   text-transform: uppercase;
-  text-shadow: rgba(0,0,0,.04) 0 0 1px;
-  letter-spacing: -.03em;
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
 }
 
 .comment .arrow.down:before{
   content:"Downvotes are for comments that do not contribute to the discussion, not for expressing disagreement.";
-  bottom:-30px;
-  padding-top:4px;
-  padding-bottom:1px;
-  -webkit-transition: bottom .5s ease;
-  -moz-transition: bottom .5s ease;
-  -o-transition: bottom .5s ease;
-  transition: bottom .5s ease;
 }
 
 .comment .arrow.down:after{
   content:"Downvote diberikan pada komentar yang tidak memiliki kontribusi pada topik, bukan yang tidak anda setujui.";
-  bottom:-50px;
-  padding-bottom:2px;
-  -webkit-transition: bottom .5s ease;
-  -moz-transition: bottom .5s ease;
-  -o-transition: bottom .5s ease;
-  transition: bottom .5s ease;
 }
 
 .comment .arrow.down:hover:before{
-  bottom: 20px;
+  transform: translateY(-30px);
 }
 
 .comment .arrow.down:hover:after{
-  bottom: 0;
+  transform: translateY(-50px);
 }
