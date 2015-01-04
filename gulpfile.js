@@ -13,6 +13,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('reddit-proxy', function() {
   var runSnippetOnce = 0;
+  var timesRun = 0;
   browserSync({
     proxy: "http://www.reddit.com/r/" + subreddit,
     port: bsPort + 1,
@@ -25,10 +26,22 @@ gulp.task('reddit-proxy', function() {
         // If there's none, just match it with the </head>
         match: new RegExp('<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text/css">|</head>', 'i'),
         fn: function(snippet, match) {
-          if (runSnippetOnce === 0) {
+          // Since there's 2 matches on the snippet injection, check if the snippet
+          // has been injected or not
+          if (timesRun < 2 && runSnippetOnce === 0) {
             runSnippetOnce = 1;
+            timesRun++;
             return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
           }
+          // If both <link> and <head> has been checked, reset the counter for
+          // when the page is reloaded
+          else if (timesRun === 1) {
+            timesRun = 0;
+          }
+          else {
+            timesRun++;
+          }
+          return match;
         }
       }
     }
