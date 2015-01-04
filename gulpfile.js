@@ -97,7 +97,7 @@ gulp.task('style-dev', function() {
   runSequence('styles', 'post-style-dev');
 });
 
-gulp.task('build', function() {
+gulp.task('build', ['styles'], function() {
   gulp.src('css/style.css')
     .pipe($.csso())
     .pipe(gulp.dest('dist/css/'));
