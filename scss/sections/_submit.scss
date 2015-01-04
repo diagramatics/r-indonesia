@@ -208,11 +208,17 @@ button.RESBigEditorPop {
 #suggest-title button {
   display: block;
   padding: 0 10px;
-  box-shadow: 0 0 15px #eee inset;
-  border: 1px solid #ccc!important;
+  box-shadow: none;
+  text-shadow: none;
+  text-transform: capitalize;
+  background: #e2e2e2;
   width: 110px;
   height: 33px;
   right: -385px;
   top: -43px;
   position: relative;
+
+  &:hover {
+    background: #CE1126;
+  }
 }
