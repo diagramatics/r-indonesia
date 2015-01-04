@@ -19,9 +19,12 @@ a:hover {
 }
 
 .stickied.link {
-  margin-bottom: 20px!important;
   border-bottom: 0!important;
   box-shadow: 0 1px 3px #ccc;
+
+  .linklisting &:first-child {
+    margin-bottom: 20px!important;
+  }
 }
 
 .link, .side, .submit-page .infobar, .roundfield,
