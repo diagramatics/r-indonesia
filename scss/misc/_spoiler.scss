@@ -1,25 +1,29 @@
-a[href$="#s"] {
-  border: 1px solid #CE1126;
-  background: #CE1126 !important;
-  color: #CE1126 !important ;
-}
+a[href$="#s"],
+a[href$="/s"] {
+  border: 1px solid #ce1126;
+  background: #ce1126 !important;
+  color: #ce1126 !important;
+  cursor: text;
 
-a[href$="#s"]:hover {
-  color: #f1f1f1 !important;
-  text-decoration: none;
-}
+  &:hover {
+    color: #f1f1f1 !important;
+    text-decoration: none;
 
-a[href$="#s"]::before {
-  background: #FFF!important;
-  color: #000!important;
-  padding: 0 1px;
-  margin: 0;
-  letter-spacing: 1px;
-  margin-right: 1px;
-  text-transform: uppercase;
-  padding-left: 10px !important;
-}
+    &[title]:after {
+      color: #f1f1f1 !important;
+      text-decoration: none;
+    }
+  }
 
-a[href$="#s"][title]::before {
-  content: attr(title) " ";
+  &[title] {
+    background: white!important;
+    color: black !important;
+
+    &:after {
+      content: attr(title) " ";
+      padding: 0 5px;
+      background: #ce1126 !important;
+      color: #ce1126 !important;
+    }
+  }
 }

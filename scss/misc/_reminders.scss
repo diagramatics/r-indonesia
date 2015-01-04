@@ -1,49 +1,52 @@
 /* 9.4.5 REMINDERS */
 /* 1.9.4.5 SUBMISSION REMINDER */
-.submit .morelink:before, .submit .morelink:after{
-  position:absolute;
-  display:block;
+
+// TODO: Can .submit be taken out? Find references where .morelink is used other than the submit buttons
+// NOTE: The implementation of transform to show the popup is broken on IE 8. Needs more research on fallback
+.submit .morelink:before,
+.submit .morelink:after {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: -155px;
   width: 300px;
-  height:0;
-  text-shadow: 0 1px 0 #960011;
-  font-size: 11px;
-  text-transform: uppercase;
-  color:white;
+  height: 0;
   opacity: 0;
-  text-align:center;
-  top:20px;
-  -webkit-transition: height .2s ease-out, top .3s ease-out, opacity .1s ease-in;
-  -moz-transition: height .2s ease-out, top .3s ease-out, opacity .1s ease-in;
-  -o-transition: height .2s ease-out, top .3s ease-out, opacity .1s ease-in;
-  transition: height .2s ease-out, top .3s ease-out, opacity .1s ease-in;
+  color: white;
+  letter-spacing: .1px;
+  font-size: 11px;
+  text-shadow: 0 1px 0 #960011;
+  text-transform: uppercase;
+  text-align: center;
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  pointer-events: none;
 }
-.submit .morelink:before{
-  content:"Please check out the sidebar before submitting.";
+
+.submit .morelink:before {
+  content: "Please check out the sidebar before submitting.";
+  height: 64px;
   box-shadow: 0 5px 10px #555;
   background-color: #CE1126;
 }
 
 .submit .morelink:after{
-  content:"Tolong baca sidebar sebelum submit.";
+  content: "Tolong baca sidebar sebelum submit.";
+  top: 75px;
 }
 
-.submit .morelink:before, .submit .morelink:after{
-  right:-155px;
+.submit-text .morelink:before,
+.submit-text .morelink:after {
+  right: -15px;
 }
 
-.submit.submit-text .morelink:before, .submit.submit-text .morelink:after{
-  right:-15px;
-}
-
-.submit .morelink:hover:before{
-  height:64px;
-  top:75px;
+.submit .morelink:hover:before,
+.submit .morelink:hover:after {
   opacity: 1;
+  transform: translateY(20px);
 }
 
-.submit .morelink:hover:after{
-  top:110px;
-  opacity: 1;
+.submit .morelink:hover:before {
+  transform: scaleY(1) translateY(20px);
 }
 
 .formtabs-content .infobar:before {
@@ -51,46 +54,35 @@
 }
 
 /* 9.4.5.2 DOWNVOTE REMINDER */
-.comment .arrow.down:before, .arrow.down:after{
-  position:fixed;
-  display:block;
-  z-index:1000;
-  text-align:center;
-  width:100%;
-  left:0;
-  background-color:#CE1126;
-  color:white;
-  font-size:16px;
+.comment .arrow.down:before,
+.comment .arrow.down:after {
+  position: fixed;
+  display: block;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  margin-top: 0;
+  background-color: #CE1126;
+  color: white;
+  font-size: 16px;
   text-transform: uppercase;
-  text-shadow: rgba(0,0,0,.04) 0 0 1px;
-  letter-spacing: -.03em;
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
 }
 
 .comment .arrow.down:before{
   content:"Downvotes are for comments that do not contribute to the discussion, not for expressing disagreement.";
-  bottom:-30px;
-  padding-top:4px;
-  padding-bottom:1px;
-  -webkit-transition: bottom .5s ease;
-  -moz-transition: bottom .5s ease;
-  -o-transition: bottom .5s ease;
-  transition: bottom .5s ease;
 }
 
 .comment .arrow.down:after{
   content:"Downvote diberikan pada komentar yang tidak memiliki kontribusi pada topik, bukan yang tidak anda setujui.";
-  bottom:-50px;
-  padding-bottom:2px;
-  -webkit-transition: bottom .5s ease;
-  -moz-transition: bottom .5s ease;
-  -o-transition: bottom .5s ease;
-  transition: bottom .5s ease;
 }
 
 .comment .arrow.down:hover:before{
-  bottom: 20px;
+  transform: translateY(-30px);
 }
 
 .comment .arrow.down:hover:after{
-  bottom: 0;
+  transform: translateY(-50px);
 }
