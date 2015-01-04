@@ -12,6 +12,7 @@ var util = require('util');
 var runSequence = require('run-sequence');
 
 gulp.task('reddit-proxy', function() {
+  var runSnippetOnce = 0;
   browserSync({
     proxy: "http://www.reddit.com/r/" + subreddit,
     port: bsPort + 1,
@@ -24,7 +25,10 @@ gulp.task('reddit-proxy', function() {
         // If there's none, just match it with the </head>
         match: new RegExp('<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text/css">|</head>', 'i'),
         fn: function(snippet, match) {
-          return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
+          if (runSnippetOnce === 0) {
+            runSnippetOnce = 1;
+            return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
+          }
         }
       }
     }
