@@ -69,7 +69,7 @@ gulp.task('styles', function() {
     // .pipe($.postcss([
     //   require('autoprefixer-core')({browsers: ['last 2 version']})
     // ]))
-    .pipe($.autoprefixer({browsers: 'last 2 version'}))
+    .pipe($.autoprefixer({browsers: ['last 2 version', 'ie 8', 'ie 9']}))
     .pipe(gulp.dest('css/'));
 });
 
