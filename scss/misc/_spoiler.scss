@@ -1,5 +1,6 @@
 a[href$="#s"],
-a[href$="/s"] {
+a[href$="/s"],
+a[href$="/spoiler"] {
   border: 1px solid #ce1126;
   background: #ce1126 !important;
   color: #ce1126 !important;
