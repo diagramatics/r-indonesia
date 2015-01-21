@@ -14,49 +14,72 @@
 }
 
 /* 9.3.3.2 /u/Mental_octo */
+
+%octoflair {
+  position: relative;
+  color: black !important;
+  background: -webkit-linear-gradient(left, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -o-linear-gradient(#FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: -moz-linear-gradient(right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  background: linear-gradient(to right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
+  padding: 0 2px;
+
+  // Special occasions? Mental_octo's birthday!
+  @if ($is-octo-birthday == true) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background: url(%%flair-octobd%%);
+      background-size: 100%;
+      width: 36px;
+      height: 33px;
+      opacity: 0;
+      transform: rotate(180deg) translateY(10px);
+      transition: all .2s cubic-bezier(.4,0,.2,1);
+    }
+  }
+
+  &:hover {
+    background: transparent !important;
+    color: transparent !important;
+
+    @if ($is-octo-birthday == true) {
+      &:before {
+        opacity: 1;
+        transform: rotate(180deg) translateY(0);
+      }
+    }
+
+    &:after {
+      content: "HAIL HYDRA!";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      font-size: 11px;
+      text-align: center;
+      background-color: #F70000;
+      color: white;
+      z-index: 1;
+    }
+  }
+}
+
 .author[href$="/Mental_octo"],
 .author.submitter[href$="/Mental_octo"],
 .author.userTagged[href$="/Mental_octo"],
 .author.flairselectable[href$="/Mental_octo"] {
-  color: black !important;
+  @extend %octoflair;
   padding: 0 2px;
-  font-weight: bold;
-  background: -webkit-linear-gradient(left, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: -o-linear-gradient(#FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: -moz-linear-gradient(right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: linear-gradient(to right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
 }
 
 .thing .tagline .author.submitter[href$="/Mental_octo"],
 .thing .collapsed .author.gray.submitter[href$="/Mental_octo"] {
-  color: black !important;
-  background: -webkit-linear-gradient(left, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: -o-linear-gradient(#FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: -moz-linear-gradient(right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-  background: linear-gradient(to right, #FFA298, #E8CF8B, #B7FF9C, #94DFE8, #C5A2FF);
-}
-
-.author[href$="/Mental_octo"]:hover,
-.author.submitter[href$="/Mental_octo"]:hover,
-.author.userTagged[href$="/Mental_octo"]:hover,
-.author.flairselectable[href$="/Mental_octo"]:hover,
-.thing .tagline .author.submitter[href$="/Mental_octo"]:hover,
-.thing .collapsed .author.gray.submitter[href$="/Mental_octo"]:hover {
-  font-size: 0 !important;
-  padding: 0 !important;
-  background-color: transparent !important;
-}
-
-.author[href$="/Mental_octo"]:hover:after,
-.author.submitter[href$="/Mental_octo"]:hover:after,
-.author.userTagged[href$="/Mental_octo"]:hover:after,
-.author.flairselectable[href$="/Mental_octo"]:hover:after,
-.thing .tagline .author.submitter[href$="/Mental_octo"]:hover:after,
-.thing .collapsed .author.gray.submitter[href$="/Mental_octo"]:hover:after {
-  content: "HAIL HYDRA!";
-  padding: 0 2px;
-  display: inline-block;
-  font-size: 11px;
-  background-color: #F70000;
-  color: white;
+  @extend %octoflair;
 }
