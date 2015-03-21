@@ -101,5 +101,5 @@ gulp.task('build', ['styles'], function() {
 
 
 gulp.task('dev', ['setup-servers', 'style-dev'], function() {
-  gulp.watch('scss/**/*.scss', ['style-dev', browserSync.reload]);
+  gulp.watch('scss/**/*.scss', ['style-dev']);
 });
