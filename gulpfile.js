@@ -7,6 +7,8 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var util = require('util');
 var runSequence = require('run-sequence');
+var fs = require('fs');
+var postcss = require('postcss');
 
 // Two instances of BrowserSync — one for Reddit, the other for the local server
 // for the stylesheet
@@ -72,11 +74,8 @@ gulp.task('styles', function() {
 });
 
 gulp.task('post-style-dev', function() {
-  var fs = require('fs');
-  var postcss = require('postcss');
-  var url = require('postcss-url');
   var result = postcss()
-    .use(url({
+    .use(require('postcss-url')({
       url: function(url) {
         var name = url.substring(2, url.length - 2);
         if (fs.existsSync('images/' + name + '.jpg')) {
@@ -91,14 +90,33 @@ gulp.task('post-style-dev', function() {
   return gulp.src('css/style.css').pipe(bs2.reload({stream: true}));
 });
 
+gulp.task('post-style-build', function() {
+  var result = postcss()
+    .use(function(css) {
+      // Remove the charset rule so it will be allowed to be used on Reddit
+      // Adapted from postcss-single-charset that removes all but the first one
+      // specified in the CSS file
+      // (https://github.com/hail2u/postcss-single-charset/blob/master/index.js)
+      css.eachAtRule('charset', function (atRule) {
+        atRule.removeSelf();
+      });
+    })
+    .process(fs.readFileSync('css/style.css'))
+    .css;
+  fs.writeFile('css/style.css', result);
+
+  // Now minify and send it to the dist folder
+  gulp.src('css/style.css')
+    .pipe($.csso())
+    .pipe(gulp.dest('dist/css/'));
+});
+
 gulp.task('style-dev', function() {
   runSequence('styles', 'post-style-dev');
 });
 
-gulp.task('build', ['styles'], function() {
-  gulp.src('css/style.css')
-    .pipe($.csso())
-    .pipe(gulp.dest('dist/css/'));
+gulp.task('build', function() {
+  runSequence('styles', 'post-style-build');
 });
 
 
