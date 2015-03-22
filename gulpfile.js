@@ -40,11 +40,12 @@ gulp.task('setup-servers', function() {
         snippetOptions: {
           rule: {
             // Matches the correct custom reddit stylesheet
-            // If there's none, just match it with the </head>
-            match: new RegExp('<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text/css">|</head>', 'i'),
+            // Note: this configuration assumes that the subreddit you're
+            // testing on has a custom stylesheet installed. If it doesn't then
+            // this doesn't work.
+            match: /<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text\/css">/i,
             fn: function(snippet, match) {
-              return snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">' + (match === '</head>' ? match : '');
-
+              return ret = snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
             }
           }
         }
@@ -86,7 +87,7 @@ gulp.task('post-style-dev', function() {
     .process(fs.readFileSync('css/style.css'))
     .css;
   fs.writeFile('css/style.css', result);
-  return gulp.src('css/style.css').pipe(browserSync.reload({stream: true}));
+  return gulp.src('css/style.css').pipe(bs2.reload({stream: true}));
 });
 
 gulp.task('style-dev', function() {

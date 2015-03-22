@@ -41,6 +41,7 @@ a.author {
 /* 4.1 COMMENTS */
 .commentarea .menuarea {
   display: inline;
+  margin-bottom: 10px;
   padding: 0;
   color: #c0c0c0;
   font-weight: normal;
@@ -57,7 +58,9 @@ a.author {
 }
 
 .menuarea .spacer {
+  display: inline-block;
   margin-right: -15px;
+  padding-bottom: 5px;
 }
 
 .commentarea .menuarea .toggle a {
