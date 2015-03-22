@@ -57,7 +57,8 @@ gulp.task('setup-servers', function() {
 gulp.task('styles', function() {
   return $.rubySass('scss/style.scss', {
     style: 'nested',
-    precision: 3
+    precision: 3,
+    defaultEncoding: 'UTF-8'
   })
   .on('error', function (err) {
     console.error('Error: ', err.message);
