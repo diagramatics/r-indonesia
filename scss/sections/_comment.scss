@@ -41,7 +41,6 @@ a.author {
 /* 4.1 COMMENTS */
 .commentarea .menuarea {
   display: inline;
-  margin: 0 0 10px -320px;
   padding: 0;
   color: #c0c0c0;
   font-weight: normal;
@@ -54,12 +53,6 @@ a.author {
 }
 
 .panestack-title {
-  display: inline;
-  border-bottom: 1px solid #e5e5e5;
-  color: #c0c0c0;
-}
-
-.panestack-title .title {
   display: none;
 }
 
