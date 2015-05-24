@@ -23,6 +23,7 @@ a:hover {
   box-shadow: 0 1px 3px #ccc;
 
   .linklisting &:first-child {
+    margin-top: 20px;
     margin-bottom: 20px!important;
   }
 }
@@ -677,7 +678,7 @@ a.pretty-button.positive {
 
 /* 3.6 PROMOTED */
 .organic-listing {
-  margin-right: 320px;
+  margin-right: 340px;
   border: 1px solid #D0D6DD;
   border-bottom-width: 3px;
   border-top-width: 0;
