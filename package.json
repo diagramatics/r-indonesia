@@ -1,0 +1,35 @@
+{
+  "name": "r-indonesia",
+  "version": "2.0.0",
+  "description": "The stylesheet for Reddit's /r/indonesia subreddit.",
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "autoprefixer-core": "^4.0.2",
+    "browser-sync": "^2.7.3",
+    "gulp-load-plugins": "^0.8.1",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-postcss": "^4.0.3",
+    "gulp-csso": "^0.2.9",
+    "postcss-url": "^1.3.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-sass": "^2.0.1",
+    "postcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "gulp-size": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diagramatics/r-indonesia.git"
+  },
+  "author": "Steven Sinatra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diagramatics/r-indonesia/issues"
+  },
+  "homepage": "http://reddit.com/r/indonesia"
+}
