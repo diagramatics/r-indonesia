@@ -68,8 +68,7 @@ gulp.task('sass', function () {
       require('autoprefixer-core')({browsers: ['last 1 version', 'ie 8']})
     ]))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('.tmp/css'))
-    .pipe(bs2.reload({stream: true}));
+    .pipe(gulp.dest('.tmp/css'));
 });
 
 gulp.task('styles:dev', ['sass'], function() {
