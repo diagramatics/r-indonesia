@@ -19,7 +19,7 @@ gulp.task('setup-servers', function() {
   // Run the local server first
   bs1.init({
     server: {
-      baseDir: './',
+      baseDir: ['./', '.tmp'],
       directory: true,
     },
     open: false,
