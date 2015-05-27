@@ -20,4 +20,14 @@ This document outlines the plans, ideas, and researches about the next version o
 
 ---
 
+## **Contributing**
+
+If you plan to help with the development, or know people who want to contribute or just offering resources for the development, here's a list of the things currently needed:
+
+* Icons for elements of the website
+* Vector file (e.g. Illustrator or Sketch) of designs of batik, or just a general knowledge of designing batik will be great
+* Photographs of Indonesia, whether it's a landscape scenery of the hustle and bustle of an Indonesian city
+
+Contributions will be properly documented and credited accordingly.
+
 ***More to be announced***.
