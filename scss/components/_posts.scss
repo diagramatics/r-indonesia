@@ -1,0 +1,41 @@
+.expando-button.selftext.collapsed {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  // TODO: After having new icons, change this to a smaller size
+
+  + .tagline {
+    display: inline;
+  }
+}
+
+.thing {
+  position: relative;
+  padding-top: .5rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 5%;
+    left: 5%;
+    height: 1px;
+    margin-right: $sidebar-width; // Counter the sidebar width so the horizontal line doesn't pass through the sidebar
+    margin-bottom: .25rem;
+    background: rgba(black, .05);
+  }
+
+  .title {
+    color: black;
+
+    &:visited {
+      color: #777;
+    }
+
+
+    > .linkflairlabel,
+    > .title {
+      vertical-align: middle;
+    }
+  }
+}

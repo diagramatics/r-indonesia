@@ -1,0 +1,33 @@
+.side {
+  position: relative;
+  background: none;
+  z-index: 2; // Up the z-index since sidebar precedes .content in the DOM tree
+  // TODO: Figure out why z-index: 1 doesn't work
+}
+
+#search {
+  // Relative to the sidebar, position it on top of everything
+  position: relative;
+  top: -5em;
+  margin-bottom: -5em;
+  > input[type="text"] {
+    opacity: 0;
+    cursor: pointer;
+
+    &:focus {
+      opacity: 1;
+      cursor: auto;
+      outline: 0;
+
+      + input[type="submit"] {
+        z-index: auto;
+      }
+    }
+  }
+
+  > input[type="submit"] {
+    position: relative;
+    transform: scale(1.5);
+    z-index: -1;
+  }
+}

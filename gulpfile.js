@@ -59,11 +59,11 @@ gulp.task('sass', function () {
   return gulp.src('scss/style.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      outputStyle: 'nested', // libsass doesn't support expanded yet
+      outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.'],
-      onError: console.error.bind(console, 'Sass error:')
+      includePaths: ['.']
     }))
+    .on('error', $.sass.logError)
     .pipe($.postcss([
       require('autoprefixer-core')({browsers: ['last 1 version', 'ie 8']})
     ]))
@@ -79,7 +79,9 @@ gulp.task('styles:dev', ['sass'], function() {
         if (fs.existsSync('images/' + name + '.jpg')) {
           return '"http://localhost:' + bsPort + '/images/' + name + '.jpg"';
         }
-        else return '"http://localhost:' + bsPort + '/images/' + name + '.png"';
+        else if (fs.existsSync('images/' + name + '.png')) {
+          return '"http://localhost:' + bsPort + '/images/' + name + '.png"';
+        }
       }
     }))
     .process(fs.readFileSync('.tmp/css/style.css'))

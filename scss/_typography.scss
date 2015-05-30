@@ -1,0 +1,52 @@
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+}
+
+
+.md-small .-text, .side .md .-text, .side .md p, .side .md pre>code, .side .md th, .side .md td, .side .md li {
+  line-height: 1.6;
+}
+
+// We need a proper size reset to replace the monstrosity of the typography of Reddit, here it is
+// Why in one place? It's easier to just remove them if users don't like it or it backfires
+
+#sr-header-area {
+  font-size: .7rem;
+}
+
+#header-bottom-left {
+  font-size: .85rem;
+}
+
+#header-bottom-right {
+  font-size: .85rem;
+  line-height: inherit;
+}
+
+.tagline {
+  font-size: .7em;
+}
+
+.entry .buttons li a {
+  font-weight: normal;
+  font-size: .7rem;
+}
+
+.titlebox .bottom {
+  font-size: .85rem;
+}
+
+.sidecontentbox {
+  font-size: .7rem;
+}
+
+.footer-parent {
+  font-size: .85rem;
+}

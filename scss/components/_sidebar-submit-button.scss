@@ -1,0 +1,30 @@
+.submit {
+  > .morelink {
+    float: left; // Since they're wrapped in a .spacer, float collapses the boundary box, making it look like display: inline-block
+    width: 50%;
+    padding: 0 .1em;
+    background: none;
+    border: none;
+    font-size: 1rem;
+
+    > a {
+      display: block;
+      height: auto;
+      color: inherit;
+      border: thin solid black;
+    }
+
+    > .nub {
+      display: none;
+    }
+  }
+
+  &.submit-text {
+    // .submit-text is always the last of the type, so use this to clearfix
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
