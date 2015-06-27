@@ -29,27 +29,20 @@ gulp.task('setup-servers', function() {
   }, function(err, bs) {
     if (!err) {
       console.log('Local server running. Initializing Reddit proxy server now.');
-
-      var runSnippetOnce = 0;
-      var timesRun = 0;
       bs2.init({
         proxy: "http://www.reddit.com/r/" + subreddit,
         port: bsPort + 1,
 
         // Use the snippetOptions to find the current subreddit CSS if any
-        // and remove that along with putting the new CSS <link>
-        snippetOptions: {
-          rule: {
-            // Matches the correct custom reddit stylesheet
-            // Note: this configuration assumes that the subreddit you're
-            // testing on has a custom stylesheet installed. If it doesn't then
-            // this doesn't work.
-            match: /<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text\/css">/i,
-            fn: function(snippet, match) {
-              return ret = snippet + '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
+        // and replace that with the developed CSS <link>
+        rewriteRules: [
+          {
+            match: /<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text\/css">/ig,
+            fn: function() {
+              return '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
             }
           }
-        }
+        ]
       })
     }
   })
