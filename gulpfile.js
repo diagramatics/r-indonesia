@@ -1,5 +1,4 @@
-// Note: edit this according to the Reddit subreddit to test
-var subreddit = "indoclone"
+// Note: BrowserSync port must be specified
 var bsPort = 3500;
 // --------
 
@@ -8,44 +7,22 @@ var $ = require('gulp-load-plugins')();
 var util = require('util');
 var fs = require('fs');
 var postcss = require('postcss');
-
-// Two instances of BrowserSync — one for Reddit, the other for the local server
-// for the stylesheet
 var browserSync = require('browser-sync');
-var bs1 = browserSync.create('local');
-var bs2 = browserSync.create('proxy');
 
 gulp.task('setup-servers', function() {
   // Run the local server first
-  bs1.init({
+  browserSync({
     server: {
       baseDir: ['./', '.tmp'],
       directory: true,
     },
+    socket: {
+      domain: 'localhost:' + bsPort
+    },
     open: false,
-    codeSync: false,
     ghostMode: false,
     port: bsPort
-  }, function(err, bs) {
-    if (!err) {
-      console.log('Local server running. Initializing Reddit proxy server now.');
-      bs2.init({
-        proxy: "http://www.reddit.com/r/" + subreddit,
-        port: bsPort + 1,
-
-        // Use the snippetOptions to find the current subreddit CSS if any
-        // and replace that with the developed CSS <link>
-        rewriteRules: [
-          {
-            match: /<link rel="stylesheet" href="[^"]*" title="applied_subreddit_stylesheet" type="text\/css">/ig,
-            fn: function() {
-              return '<link rel="stylesheet" href="http://localhost:'+bsPort+'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
-            }
-          }
-        ]
-      })
-    }
-  })
+  });
 });
 
 gulp.task('sass', function () {
@@ -70,10 +47,10 @@ gulp.task('styles:dev', ['sass'], function() {
       url: function(url) {
         var name = url.substring(2, url.length - 2);
         if (fs.existsSync('images/' + name + '.jpg')) {
-          return '"http://localhost:' + bsPort + '/images/' + name + '.jpg"';
+          return '"//localhost:' + bsPort + '/images/' + name + '.jpg"';
         }
         else if (fs.existsSync('images/' + name + '.png')) {
-          return '"http://localhost:' + bsPort + '/images/' + name + '.png"';
+          return '"//localhost:' + bsPort + '/images/' + name + '.png"';
         }
       }
     }))
@@ -81,7 +58,7 @@ gulp.task('styles:dev', ['sass'], function() {
     .css
   );
   return gulp.src('.tmp/css/style.css')
-    .pipe(bs2.reload({stream: true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('styles:build', ['sass'], function() {
