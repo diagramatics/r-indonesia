@@ -10,7 +10,7 @@ var postcss = require('postcss');
 var browserSync = require('browser-sync');
 
 gulp.task('setup-servers', function() {
-  // Run the local server first
+  // Run the server hosting the files
   browserSync({
     server: {
       baseDir: ['./', '.tmp'],
@@ -21,7 +21,11 @@ gulp.task('setup-servers', function() {
     },
     open: false,
     ghostMode: false,
-    port: bsPort
+    port: bsPort,
+    https: {
+      key: 'example.key',
+      cert: 'example.crt'
+    }
   });
 });
 
@@ -59,6 +63,22 @@ gulp.task('styles:dev', ['sass'], function() {
   );
   return gulp.src('.tmp/css/style.css')
     .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('parse', function() {
+  console.log(function() {
+    var selector = [];
+    postcss().use(function(css) {
+      css.eachRule(function(rule) {
+        rule.eachDecl(function(decl) {
+          if (decl.value.match(/^small$/i)) {
+            selector.push(rule.selector);
+          }
+        });
+      });
+    }).process(fs.readFileSync('reddit.css')).css;
+    return selector;
+  }());
 });
 
 gulp.task('styles:build', ['sass'], function() {
