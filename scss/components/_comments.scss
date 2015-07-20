@@ -1,0 +1,109 @@
+.comments-page {
+
+  &.post-linkflair-longpost {
+    .linkflairlabel {
+      display: none;
+    }
+
+    .thumbnail {
+      display: none;
+    }
+
+    .link .entry {
+      overflow: inherit;
+
+      > .title,
+      > .tagline {
+        // margin: 0 10rem; // 110px
+        text-align: center;
+      }
+
+      > .title {
+        position: relative;
+        padding-top: 1em;
+
+        > .title {
+          margin-right: 0;
+          font-size: 2.1rem;
+        }
+
+        > .domain {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+        }
+      }
+
+      > .tagline {
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+
+      > .expando {
+        position: relative;
+        margin-top: 2em;
+        padding: .5em 0;
+        border-top: thin solid darken($page-background-color, 4%);
+        border-bottom: thin solid darken($page-background-color, 4%);
+      }
+
+      .md-container .md {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        border: 0;
+        background: none;
+      }
+
+      .flat-list {
+        font-size: 1.2rem;
+
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+.usertext-edit {
+  width: 100%;
+
+  > .md {
+    width: 100%;
+    max-width: none;
+    padding: 1em;
+
+    > textarea {
+      width: 100%;
+      border-radius: 4px;
+      border-color: darken($page-background-color, 10%);
+      background: none;
+    }
+  }
+}
+
+.commentarea {
+  .panestack-title {
+    display: none;
+  }
+}
+
+.comment {
+  position: relative;
+
+  .midcol {
+    width: auto;
+  }
+
+  .child {
+    margin-left: 1em;
+  }
+}
+
+.entry .buttons .reply-button a { // High specificity to override
+  @extend %button;
+  display: inline-block;
+  padding: .1em 1em;
+}

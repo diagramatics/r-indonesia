@@ -1,0 +1,5 @@
+$debug--font-family-fallback: false !default;
+
+@function is-debug--font-family-fallback() {
+  @return $debug--font-family-fallback;
+}

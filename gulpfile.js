@@ -6,6 +6,8 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var util = require('util');
 var fs = require('fs');
+var del = require('del');
+var vinylPaths = require('vinyl-paths');
 var postcss = require('postcss');
 var browserSync = require('browser-sync');
 
@@ -36,8 +38,7 @@ gulp.task('sass', function () {
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
-    }))
-    .on('error', $.sass.logError)
+    }).on('error', $.sass.logError))
     .pipe($.postcss([
       require('autoprefixer-core')({browsers: ['last 1 version', 'ie 8']})
     ]))
@@ -62,7 +63,7 @@ gulp.task('styles:dev', ['sass'], function() {
     .css
   );
   return gulp.src('.tmp/css/style.css')
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('parse', function() {
@@ -71,7 +72,7 @@ gulp.task('parse', function() {
     postcss().use(function(css) {
       css.eachRule(function(rule) {
         rule.eachDecl(function(decl) {
-          if (decl.value.match(/^small$/i)) {
+          if (decl.value.match(/^larger$/i)) {
             selector.push(rule.selector);
           }
         });
@@ -79,6 +80,38 @@ gulp.task('parse', function() {
     }).process(fs.readFileSync('reddit.css')).css;
     return selector;
   }());
+});
+
+gulp.task('process-svg', function(cb) {
+  var vp = vinylPaths();
+
+  gulp.src('images/sprites/*.svg')
+    .pipe($.svgSprite({
+      // Configuration is to generate an SCSS file in the appropriate directory
+      // and the sprites in the images for PNG conversion
+      mode: {
+        css: {
+          dest: '.',
+          sprite: 'images/icon-sprites.svg',
+          bust: false, // No need for cache busting
+          render: {
+            scss: {
+              dest: 'scss/sprites/_sprites.scss'
+            }
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest('.'))
+    .pipe($.filter('**/*.svg'))
+    .pipe(vp) // Get the SVG path for deletion later
+    .pipe($.svg2png())
+    .pipe(gulp.dest('.'))
+    .on('end', function() {
+      // We're finished. Delete the SVG from the path passed to vinylPaths.
+      browserSync.reload();
+      del(vp.paths, cb);
+    });
 });
 
 gulp.task('styles:build', ['sass'], function() {
@@ -107,8 +140,9 @@ gulp.task('build', ['styles:build'], function() {
 });
 
 
-gulp.task('dev', ['setup-servers', 'styles:dev'], function() {
+gulp.task('dev', ['setup-servers', 'styles:dev', 'process-svg'], function() {
   gulp.watch('scss/**/*.scss', ['styles:dev']);
+  gulp.watch('images/sprites/*.svg', ['process-svg']);
 });
 gulp.task('serve', ['dev']);
 gulp.task('develop', ['dev']);

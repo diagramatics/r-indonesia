@@ -1,0 +1,15 @@
+.fancy-toggle-button {
+  .active {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  .add {
+    @extend %button;
+    @extend %button--green;
+  }
+
+  .remove {
+    @extend %button;
+  }
+}

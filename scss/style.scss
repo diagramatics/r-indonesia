@@ -1,12 +1,26 @@
+@import "debugging";
+
 @import "variables";
 @import "functions";
+@import "mixins";
 @import "core";
+@import "reddit-normalize";
 @import "typography";
 @import "animations";
 
+@import "sprites/sprites";
+@import "sprites/navigation-black";
+
+@import "components/buttons";
+@import "components/fancy-toggle-button";
+@import "components/arrows";
+
 @import "components/header-bar";
+@import "components/tabmenu";
 @import "components/content";
 @import "components/sidebar";
+@import "components/linkinfo";
 @import "components/sidebar-submit-button";
-@import "components/tabmenu";
-@import "components/posts";
+// @import "components/posts";
+@import "components/comments";
+@import "components/markdown";

@@ -8,32 +8,6 @@
     display: inline-block;
     position: relative;
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-position: center;
-      background-size: 24px;
-      background-repeat: no-repeat;
-      opacity: 0;
-      transform: translateY(-14px);
-      transition: all .2s ease-in-out;
-    }
-
-    &:hover:before {
-      opacity: 1;
-      transform: translateY(-4px);
-    }
-
-    @for $i from 1 through length($tabmenu-order) {
-      &:nth-of-type(#{$i}):before {
-        background-image: url(unquote("%%icon-#{nth($tabmenu-order, $i)}%%"));
-      }
-    }
-
     > a {
       display: block;
       position: relative;
@@ -57,9 +31,25 @@
         z-index: -1;
       }
 
+
+
       &:before {
-        border: 2px solid black;
-        border-bottom: none;
+        background-position: center;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transform: translateY(-14px);
+        transition: all .2s ease-in-out;
+      }
+
+      &[href$="/indonesia/"]:before {
+        background-image: url(unquote("%%icon-hot%%"));
+      }
+
+      @for $i from 1 through length($tabmenu-list) {
+        &[href$="/#{nth($tabmenu-list, $i)}/"]:before {
+          background-image: url(unquote("%%icon-#{nth($tabmenu-list, $i)}%%"));
+        }
       }
 
       &:after {
@@ -71,6 +61,11 @@
       &:hover {
         color: transparent;
         transform: translateY(-4px);
+
+        &:before {
+          opacity: 1;
+          transform: translateY(-4px);
+        }
 
         &:after {
           opacity: 1;
@@ -86,23 +81,14 @@
     }
 
     &.selected {
-      &:hover:before {
-        transform: translateY(0);
-      }
 
       > a {
         background: none;
         border: none;
         color: black;
 
-        &:before,
         &:after {
           opacity: 1;
-        }
-
-        &:after {
-          left: 17px; // Independence! :D
-          border-bottom-right-radius: 4px;
           transform: translateY(0) scaleX(1);
         }
 

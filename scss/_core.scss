@@ -4,11 +4,7 @@
   box-sizing: border-box;
 }
 
-a,
-.md a {
-  color: $color-red;
-}
-
 body {
+  background: $page-background-color;
   overflow-x: hidden; // So transitioned elements that are initially positioned outside the page will not make a scrollbar
 }

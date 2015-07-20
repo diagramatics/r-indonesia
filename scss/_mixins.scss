@@ -1,0 +1,5 @@
+@mixin mq($max-width) {
+  @media all and (max-width: $max-width) {
+    @content;
+  }
+}

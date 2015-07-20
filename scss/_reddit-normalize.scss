@@ -1,0 +1,193 @@
+html {
+  font-size: 62.5%; // body font-size is x-small, 10px. Making this 62.5% makes the size 10px. That way the whole thing can use rem units.
+}
+
+body {
+  font-size: 1rem;
+}
+
+@mixin font-size-medium {
+  font-size: 1.6rem; // font-size: medium is 16px
+}
+@mixin font-size-small {
+  font-size: 1.3rem;
+}
+@mixin font-size-x-small {
+  font-size: 1rem;
+}
+@mixin font-size-larger {
+  font-size: 1.2em;
+}
+
+.link .title,
+.link .child h3,
+.link .rank,
+.rank-spacer,
+.subreddit .title,
+.rulespage .rule-list,
+.blog5 .right,
+.subscription-box .title,
+.traffic-table caption,
+.traffic-tables-side fieldset legend,
+div.timeseries span.title,
+.gold-thanks .lounge-msg p,
+.app-details h2
+{
+  @include font-size-medium;
+}
+body,
+.domain,
+.link-note,
+.user-distinction,
+.tagline,
+.flair input,
+.linkflairlabel,
+.link .flair,
+.flairselector,
+.flairselector .title,
+.explore-item .explore-sr-details,
+.explore-comment .comment .md,
+.commentarea .menuarea .toggle a,
+.toggle .error,
+.gadget,
+.little a,
+.details,
+.button .blog1,
+.button .blog2 .score .submit,
+.button .blog3 .score .submit,
+.entry .buttons li.nsfw-stamp,
+.stamp,
+.linefield .title+.gray,
+.linefield.usertext .edit-usertext,
+.campaign .status,
+.existing-campaigns>table,
+.campaign .bid-info,
+.trophy-description,
+.ui-datepicker-inline,
+.bidding-history .linefield .bid-table,
+.bidding-history .linefield .notes,
+#side-multi-list+.expand-summary,
+.side .recommend-box .endoflist ul,
+.rel-note button[type=submit],
+.rel-note input[name=note],
+.api-help .toc .mode-selector,
+.developed-app,
+.authorized-app,
+.app-details h3,
+.permissions-edit {
+  @include font-size-x-small;
+}
+.read-next-container,
+.md-container,
+.combined-search-page>.content,
+.searchfacets,
+.post-sharing,
+.infotext p,
+.infobar,
+.link .midcol,
+.midcol-spacer,
+.gadget .click-gadget,
+.comment .title,
+.subreddit .description,
+.status,
+.error,
+.legal,
+#passform p,
+.popup h2,
+.rulespage .examples,
+.error-log .save-button,
+.error-log .logtext,
+.button .blog2,
+.button .blog2 .bottomreddit,
+.button .blog.blog3,
+.button .blog.blog5,
+.instructions code,
+.contact-us-page .details li,
+.toolbar,
+.toolbar .middle-side .domain,
+#url-field .title-status,
+.sr-name,
+#suggested-reddits,
+.usertext,
+.linefield .info,
+.linefield.usertext .usertext-edit,
+.linefield .upload,
+.linefield .upload label,
+.campaign th,
+#campaign label,
+#campaign li,
+.traffic-table,
+.traffic-tables-side fieldset,
+.traffic-table caption .normal,
+.traffic-form p,
+.timeseries-placeholder,
+#timeseries-unprocessed,
+.promoted-traffic h1 a,
+.promo-traffic-settings-instructions,
+.promote-report-csv,
+.promote-report-table,
+.gold-thanks.gold-accent,
+.modactions td,
+.api-help .methods h2 .scope-id,
+.errorpage-message,
+#otp-secret-info,
+.app-description,
+table.diff,
+#stripe-payment td input,
+.stripe-note div,
+.gold-subscription,
+.gold-subscription .status,
+.gold-subscription .error,
+.permissions,
+.permission-summary,
+#past-notes .adminnote-info {
+  @include font-size-small;
+}
+#header-bottom-left,
+#account-activity table,
+.nextprev,
+.next-suggestions,
+.promoted-list,
+.menuarea,
+.deepthread a,
+.morecomments,
+.message .subject,
+.footer-parent,
+.notes-status,
+.searchfail,
+.usertable,
+.rulespage .info,
+.error-log .nickname,
+.error-log .exception-name,
+.error-log .frequency,
+.error-log .logtext .classification,
+.num,
+.blog5 .arrow b,
+.instructions,
+.contact-us-page .info,
+#preview #previewbox,
+.pretty-form,
+.content.submit .info-notice,
+.opt-form,
+.stats,
+ul#image-preview-list,
+#preview-table>table>tbody>tr>th,
+.submit-header,
+ul.tabmenu.formtab,
+.titlebox,
+.sidecontentbox .content,
+.linkinfo,
+.email,
+.action-form {
+  @include font-size-larger;
+}
+
+// ----
+//
+#sr-header-area .width-clip {
+  position: static;
+}
+
+.morelink {
+  height: 31px;
+}

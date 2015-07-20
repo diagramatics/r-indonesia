@@ -1,0 +1,37 @@
+$sprite-position--navigation-black: (
+  close: -5px -5px,
+  apps: -39px -5px,
+  arrow-drop-down: -5px -39px,
+  arrow-drop-down-circle: -39px -39px,
+  arrow-drop-up: -73px -5px,
+  arrow-forward: -73px -39px,
+  cancel: -5px -73px,
+  check: -39px -73px,
+  chevron-left: -73px -73px,
+  chevron-right: -107px -5px,
+  arrow-back: -107px -39px,
+  expand-less: -107px -73px,
+  expand-more: -5px -107px,
+  fullscreen: -39px -107px,
+  fullscreen-exit: -73px -107px,
+  menu: -107px -107px,
+  more-horiz: -141px -5px,
+  more-vert: -141px -39px,
+  refresh: -141px -73px,
+  unfold-less: -141px -107px,
+  unfold-more: -5px -141px
+);
+
+@mixin sprite--navigation-black($name) {
+  width: 24px;
+  height: 24px;
+  background-image: url(%%sprite-navigation-black%%);
+
+  @if map-has-key($sprite-position--navigation-black, $name) {
+    background-position: #{map-get($sprite-position--navigation-black, $name)};
+  }
+
+  @else {
+    @warn "No values found with the name `#{$name}`. for the sprite-position--navigation-black map.";
+  }
+}

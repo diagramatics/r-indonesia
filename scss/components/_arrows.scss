@@ -1,0 +1,9 @@
+.arrow {
+  &.up {
+    @include sprite--navigation-black("expand-less");
+  }
+
+  &.down {
+    @include sprite--navigation-black("expand-more");
+  }
+}

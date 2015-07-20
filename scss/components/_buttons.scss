@@ -1,0 +1,47 @@
+%button {
+  padding-right: 1em;
+  padding-left: 1em;
+  transition: all .1s ease-in-out;
+  border: 0;
+  border-radius: .2em;
+  background: darken($page-background-color, 5%);
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    background: $color-red;
+    color: $page-background-color;
+  }
+
+  &:active {
+    background: $color-red--dark;
+    color: $page-background-color;
+    box-shadow: inset 0 .3em .6em -.2em rgba(#000, .3);
+  }
+}
+
+%button--green {
+  background: $color-green;
+  color: $page-background-color;
+
+  &:hover {
+    background: $color-green--dark;
+  }
+
+  &:active {
+    background: $color-green--darker;
+  }
+}
+
+%button--red {
+  background: $color-red;
+  color: $page-background-color;
+
+  &:hover {
+    background: $color-red--dark;
+  }
+
+  &:active {
+    background: $color-red--darker;
+  }
+}

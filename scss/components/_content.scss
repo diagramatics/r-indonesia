@@ -1,3 +1,12 @@
-.content {
+body > .content {
+  // .content is used for other kinds of divs
   position: relative;
+  width: 70%;
+  margin: 3em 0;
+  padding: 0 1em;
+  float: left;
+
+  .link .midcol.midcol { // Higher specificity
+    width: auto;
+  }
 }

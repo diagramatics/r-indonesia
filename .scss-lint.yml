@@ -1,0 +1,30 @@
+linters:
+  # Necessary configuration for dealing with Reddit
+  IdSelector:
+    enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  NestingDepth:
+    enabled: false # In case hacks are needed for functionality needing lots of selectors
+
+  SelectorDepth:
+    enabled: false # Same reason as disabling NestingDepth
+
+  # URL formats not linted because of the format
+  UrlFormat:
+    enabled: false
+
+  UrlQuotes:
+    enabled: false
+
+  # Custom preferences
+  ElsePlacement:
+    style: 'new_line'
+
+  PropertySortOrder:
+    order: smacss
+
+  StringQuotes:
+    style: 'double_quotes'

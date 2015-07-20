@@ -1,0 +1,28 @@
+.linkinfo {
+  padding: 0;
+  border: 0;
+  background: none;
+
+  .date {
+    span {
+      display: none;
+    }
+  }
+
+  .shortlink {
+    font-size: 0;
+  }
+}
+
+#shortlink-text {
+  display: block;
+  width: 100%;
+  padding: .5em;
+  border: thin solid darken($page-background-color, 8%);
+  background: none;
+  font-size: 1.2rem;
+
+  &:hover {
+    border-color: darken($page-background-color, 24%);
+  }
+}

@@ -1,11 +1,35 @@
-$font-size-base: 16px;
+$font-size-base: 10px;
+
+$font-family-sans-serif-fallback: -apple-system-font, HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-family-sans-serif: "Noto Sans", $font-family-sans-serif-fallback;
+$font-family-serif-fallback: "Georgia", "Palatino", "Times New Roman";
+$font-family-serif: "Noto Serif", $font-family-serif-fallback;
+
+@if (is-debug--font-family-fallback()) {
+  $font-family-sans-serif: $font-family-sans-serif-fallback;
+  $font-family-serif: $font-family-serif-fallback;
+}
+
+$font-family-heading: $font-family-serif;
+$font-family-body: $font-family-sans-serif;
+$font-family: $font-family-sans-serif;
 
 $color-red: #ce1126;
+$color-red--light: lighten($color-red, 5%);
+$color-red--lighter: lighten($color-red, 15%);
+$color-red--dark: darken($color-red, 5%);
+$color-red--darker: darken($color-red, 10%);
+$color-red--desaturated: desaturate($color-red--lighter, 50%);
 $color-yellow: #ffe800;
 $color-yellow-alt: #ffb717;
+$color-green: #0db04b;
+$color-green--dark: #00652e;
+$color-green--darker: #006937;
 
-$header-height: 30em;
+$header-height: 10em;
 
 $sidebar-width: 300px;
 
-$tabmenu-order: hot, new, rising, controversial, top, gilded, promoted;
+$page-background-color: #fafafa;
+
+$tabmenu-list: hot, new, rising, controversial, top, gilded, promoted, wiki;

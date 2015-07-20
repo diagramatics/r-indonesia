@@ -1,23 +1,58 @@
+@include mq(60em) {
+  body {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .footer-parent,
+  .debuginfo {
+    order: 1;
+  }
+}
+
 .side {
   position: relative;
+  width: 25%;
+  margin: 0;
+  padding: 1em;
   background: none;
-  z-index: 2; // Up the z-index since sidebar precedes .content in the DOM tree
-  // TODO: Figure out why z-index: 1 doesn't work
+  order: 1;
+
+  @include mq(60em) {
+    width: 100%;
+    float: none;
+  }
+
+  @include mq(85em) {
+    width: 30%;
+  }
+
+  // Sidebar subreddit name
+  .redditname {
+    a:before {
+      content: "r/";
+    }
+  }
+}
+
+.titlebox form.toggle,
+.leavemoderator {
+  background: none;
 }
 
 #search {
   // Relative to the sidebar, position it on top of everything
   position: relative;
-  top: -5em;
-  margin-bottom: -5em;
+
   > input[type="text"] {
-    opacity: 0;
+    width: 100%;
     cursor: pointer;
+    opacity: 0;
 
     &:focus {
-      opacity: 1;
-      cursor: auto;
       outline: 0;
+      cursor: auto;
+      opacity: 1;
 
       + input[type="submit"] {
         z-index: auto;
@@ -30,4 +65,8 @@
     transform: scale(1.5);
     z-index: -1;
   }
+}
+
+.gadget .midcol {
+  width: auto;
 }
