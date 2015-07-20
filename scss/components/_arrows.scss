@@ -1,9 +1,17 @@
 .arrow {
   &.up {
-    @include sprite--navigation-black("expand-less");
+    @extend .svg-arrow-up;
+  }
+
+  &.upmod {
+    @extend .svg-arrow-up--main;
   }
 
   &.down {
-    @include sprite--navigation-black("expand-more");
+    @extend .svg-arrow-down;
+  }
+
+  &.downmod {
+    @extend .svg-arrow-down--main;
   }
 }

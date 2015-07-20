@@ -1,24 +1,32 @@
-%svg-common {
-	background: url(images/icon-sprites.svg) no-repeat;
+@mixin icon-sprite {
+	background: url(%%icon-sprites%%) no-repeat;
 }
 
-.svg-ic_expand_less_black_48px {
-	@extend %svg-common;
+.svg-arrow-down {
+	@include icon-sprite;
 	background-position: 0 0;
+	width: 24px;
+	height: 24px;
 }
 
-.svg-ic_expand_less_black_48px-dims {
-	width: 48px;
-	height: 48px;
-}
-
-.svg-ic_expand_more_black_48px {
-	@extend %svg-common;
+.svg-arrow-down--main {
+	@include icon-sprite;
 	background-position: 100% 0;
+	width: 24px;
+	height: 24px;
 }
 
-.svg-ic_expand_more_black_48px-dims {
-	width: 48px;
-	height: 48px;
+.svg-arrow-up {
+	@include icon-sprite;
+	background-position: 0 100%;
+	width: 24px;
+	height: 24px;
+}
+
+.svg-arrow-up--main {
+	@include icon-sprite;
+	background-position: 100% 100%;
+	width: 24px;
+	height: 24px;
 }
 
