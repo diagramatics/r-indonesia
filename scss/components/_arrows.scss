@@ -1,17 +1,17 @@
 .arrow {
   &.up {
-    @extend .svg-arrow-up;
+    @include icon-sprite("arrow-up");
   }
 
   &.upmod {
-    @extend .svg-arrow-up--main;
+    @include icon-sprite("arrow-up--main");
   }
 
   &.down {
-    @extend .svg-arrow-down;
+    @include icon-sprite("arrow-down");
   }
 
   &.downmod {
-    @extend .svg-arrow-down--main;
+    @include icon-sprite("arrow-down--main");
   }
 }

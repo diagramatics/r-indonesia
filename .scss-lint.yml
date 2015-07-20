@@ -19,6 +19,10 @@ linters:
   UrlQuotes:
     enabled: false
 
+  # Placeholder extends turned off so the current SVG > PNG sprite build system can work
+  PlaceholderInExtend:
+    enabled: false
+
   # Custom preferences
   ElsePlacement:
     style: 'new_line'

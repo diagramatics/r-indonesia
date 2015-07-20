@@ -1,32 +1,84 @@
-@mixin icon-sprite {
+
+
+@mixin icon-sprite($name) {
 	background: url(%%icon-sprites%%) no-repeat;
-}
 
-.svg-arrow-down {
-	@include icon-sprite;
-	background-position: 0 0;
-	width: 24px;
-	height: 24px;
-}
+	@if $name == "arrow-down" {
+		
+		background-position: 33.333333333333336% 0;
+		width: 24px;
+		height: 24px;
+	}
 
-.svg-arrow-down--main {
-	@include icon-sprite;
-	background-position: 100% 0;
-	width: 24px;
-	height: 24px;
-}
+@if $name == "arrow-down--main" {
+		
+		background-position: 66.66666666666667% 50%;
+		width: 24px;
+		height: 24px;
+	}
 
-.svg-arrow-up {
-	@include icon-sprite;
-	background-position: 0 100%;
-	width: 24px;
-	height: 24px;
-}
+@if $name == "arrow-up" {
+		
+		background-position: 0 50%;
+		width: 24px;
+		height: 24px;
+	}
 
-.svg-arrow-up--main {
-	@include icon-sprite;
-	background-position: 100% 100%;
-	width: 24px;
-	height: 24px;
-}
+@if $name == "arrow-up--main" {
+		
+		background-position: 33.333333333333336% 50%;
+		width: 24px;
+		height: 24px;
+	}
 
+@if $name == "header-controversial" {
+		
+		background-position: 66.66666666666667% 0;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-gilded" {
+		
+		background-position: 0 0;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-hot" {
+		
+		background-position: 0 100%;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-new" {
+		
+		background-position: 33.333333333333336% 100%;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-promoted" {
+		
+		background-position: 66.66666666666667% 100%;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-rising" {
+		
+		background-position: 100% 0;
+		width: 24px;
+		height: 24px;
+	}
+
+@if $name == "header-top" {
+		
+		background-position: 100% 50%;
+		width: 24px;
+		height: 24px;
+	}
+
+
+}

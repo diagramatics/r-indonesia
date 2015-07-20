@@ -1,10 +1,10 @@
 #header {
   position: relative;
   min-height: $header-height;
-  border-bottom: none;
+  border-bottom: 0;
   background: linear-gradient(to bottom, rgba(white, .7) 0%, rgba(white, .7) 100%),
               //repeating-linear-gradient(-60deg, transparent, transparent 2px, rgba(white, .3) 2px, rgba(white, .3) 4px),
-              url(%%header-new%%) no-repeat center;
+              url(%%header1%%) no-repeat center;
 
   // &:before {
   //   content: "";
@@ -23,16 +23,16 @@
   width: 100%;
   height: auto;
   padding: .3em 0;
+  border-bottom: 0;
   background: none;
-  border-bottom: none;
 
   > .width-clip {
     position: relative; // So the parent :before background can get displayed
 
     &:after {
-      content: "";
       display: table;
       clear: both;
+      content: "";
     }
   }
 
@@ -42,16 +42,16 @@
   }
 
   .sr-list {
-    float: left;
     max-width: 49%;
+    float: left;
   }
 }
 
 #sr-more-link {
-  background: none;
   position: static;
-  float: left;
   max-width: 7%;
+  float: left;
+  background: none;
 }
 
 #header-bottom-left,
@@ -62,10 +62,6 @@
 
 #header-bottom-left {
   font-size: 1.4rem;
-}
-
-.pagename {
-  display: block;
 }
 
 #header-bottom-right {
@@ -87,9 +83,10 @@
 }
 
 .pagename {
-  letter-spacing: 4px;
+  display: block;
   font-family: $font-family-heading;
   font-size: 2.4rem;
   font-weight: normal;
+  letter-spacing: 4px;
   text-align: center;
 }

@@ -108,6 +108,7 @@ gulp.task('process-svg', function(cb) {
           bust: false, // No need for cache busting
           render: {
             scss: {
+              template: 'build/svg-sprite-template.scss',
               dest: 'scss/sprites/_sprites.scss'
             }
           },
