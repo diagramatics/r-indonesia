@@ -185,13 +185,7 @@ gulp.task('prebuild:beta-test', function() {
   config = betaConfig;
   return;
 });
-gulp.task('build:beta-test', ['prebuild:beta-test', 'build'], function() {
-  // Concatenate with the old v1
-  return gulp.src([config.distStyle, 'v1.css'])
-    .pipe($.concat('beta-test.css'))
-    .pipe($.size())
-    .pipe(gulp.dest('dist/css/'));
-});
+gulp.task('build:beta-test', ['prebuild:beta-test', 'build']);
 
 
 gulp.task('dev', ['setup-servers', 'styles:dev', 'process-svg'], function() {

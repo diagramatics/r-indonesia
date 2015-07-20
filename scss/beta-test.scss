@@ -1,0 +1,11 @@
+html {
+  font-size: 62.5%;
+}
+
+body.post-linkflair-beta:lang(bt) {
+  @import "style";
+}
+
+html:not(:lang(bt)) {
+  @import "v1";
+}
