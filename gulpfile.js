@@ -185,7 +185,23 @@ gulp.task('prebuild:beta-test', function() {
   config = betaConfig;
   return;
 });
-gulp.task('build:beta-test', ['prebuild:beta-test', 'build']);
+gulp.task('build:beta-test', ['prebuild:beta-test', 'build'], function() {
+  fs.writeFile(config.distStyle, postcss()
+    .use(function(css) {
+      css.eachRule(function(rule) {
+        // TODO: Put this on a separate config file
+        // Because we're using html selector and body selectors, merge together if there's a child element with the same name in the selector
+        rule.selector = rule.selector.replace(/^body\.post-linkflair-beta:lang\(bt\) body/ig, 'body.post-linkflair-beta:lang(bt)');
+        rule.selector = rule.selector.replace(/^html:not\(:lang\(bt\)\) html/ig, 'html:not(:lang(bt))');
+        // Also use the beta linkflair selector and merge it with the longpost for testing
+        rule.selector = rule.selector.replace(/ \.comments-page/ig, '.comments-page');
+        rule.selector = rule.selector.replace(/\.post-linkflair-longpost/ig, '.post-linkflair-beta');
+      });
+    })
+    .process(fs.readFileSync(config.distStyle))
+    .css
+  );
+});
 
 
 gulp.task('dev', ['setup-servers', 'styles:dev', 'process-svg'], function() {
