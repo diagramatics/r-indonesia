@@ -1,83 +1,126 @@
 
 
-@mixin icon-sprite($name) {
+@mixin icon-sprite($name, $scale: 1) {
 	background: url(%%icon-sprites%%) no-repeat;
+	background-size: (96px * $scale) (92px * $scale);
 
 	@if $name == "arrow-down" {
 		
 		background-position: 33.333333333333336% 0;
-		width: 24px;
-		height: 24px;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "arrow-down--main" {
 		
-		background-position: 66.66666666666667% 50%;
-		width: 24px;
-		height: 24px;
+		background-position: 66.66666666666667% 70.58823529411765%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "arrow-up" {
 		
-		background-position: 0 50%;
-		width: 24px;
-		height: 24px;
+		background-position: 0 35.294117647058826%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "arrow-up--main" {
 		
-		background-position: 33.333333333333336% 50%;
-		width: 24px;
-		height: 24px;
+		background-position: 33.333333333333336% 35.294117647058826%;
+		width: 24px * $scale;
+		height: 24px * $scale;
+	}
+
+@if $name == "email" {
+		
+		background-position: 45% 94.73684210526316%;
+		width: 16px * $scale;
+		height: 16px * $scale;
+	}
+
+@if $name == "email--main" {
+		
+		background-position: 25% 94.73684210526316%;
+		width: 16px * $scale;
+		height: 16px * $scale;
 	}
 
 @if $name == "header-controversial" {
 		
-		background-position: 66.66666666666667% 0;
-		width: 24px;
-		height: 24px;
+		background-position: 0 70.58823529411765%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-gilded" {
 		
-		background-position: 0 0;
-		width: 24px;
-		height: 24px;
+		background-position: 33.333333333333336% 70.58823529411765%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-hot" {
 		
-		background-position: 0 100%;
-		width: 24px;
-		height: 24px;
+		background-position: 0 0;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-new" {
 		
-		background-position: 33.333333333333336% 100%;
-		width: 24px;
-		height: 24px;
+		background-position: 100% 0;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-promoted" {
 		
-		background-position: 66.66666666666667% 100%;
-		width: 24px;
-		height: 24px;
+		background-position: 100% 35.294117647058826%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-rising" {
 		
-		background-position: 100% 0;
-		width: 24px;
-		height: 24px;
+		background-position: 66.66666666666667% 35.294117647058826%;
+		width: 24px * $scale;
+		height: 24px * $scale;
 	}
 
 @if $name == "header-top" {
 		
-		background-position: 100% 50%;
-		width: 24px;
-		height: 24px;
+		background-position: 66.66666666666667% 0;
+		width: 24px * $scale;
+		height: 24px * $scale;
+	}
+
+@if $name == "reddit" {
+		
+		background-position: 65% 94.73684210526316%;
+		width: 16px * $scale;
+		height: 16px * $scale;
+	}
+
+@if $name == "reddit--main" {
+		
+		background-position: 85% 94.73684210526316%;
+		width: 16px * $scale;
+		height: 16px * $scale;
+	}
+
+@if $name == "search" {
+		
+		background-position: 94.73684210526316% 66.66666666666667%;
+		width: 20px * $scale;
+		height: 20px * $scale;
+	}
+
+@if $name == "search--main" {
+		
+		background-position: 0 100%;
+		width: 20px * $scale;
+		height: 20px * $scale;
 	}
 
 

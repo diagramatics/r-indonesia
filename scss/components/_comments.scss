@@ -104,10 +104,24 @@
   .child {
     margin-left: 1em;
   }
+
+  .flat-list.buttons li a {
+    color: #666;
+  }
 }
 
 .entry .buttons .reply-button a { // High specificity to override
   @extend %button;
   display: inline-block;
   padding: .1em 1em;
+}
+
+.tagline {
+  a {
+    color: $color-red--desaturated;
+  }
+
+  .submitter {
+    color: $color-red;
+  }
 }

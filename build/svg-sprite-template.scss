@@ -10,21 +10,22 @@
 
 {{/hasMixin}}
 
-@mixin icon-sprite($name) {
+@mixin icon-sprite($name, $scale: 1) {
 	background: url({{{sprite}}}) no-repeat;
+	background-size: ({{spriteWidth}}px * $scale) ({{spriteHeight}}px * $scale);
 
 	{{#shapes}}@if $name == "{{name}}"{{#selector.shape}}{{^last}},
 	{{/last}}{{/selector.shape}} {
 		{{^hasCommon}}{{#hasMixin}}{{/hasMixin}}{{^hasMixin}}@extend %{{commonName}};{{/hasMixin}}
 		{{/hasCommon}}background-position: {{position.relative.xy}};{{#dimensions.inline}}
-		width: {{width.outer}}px;
-		height: {{height.outer}}px;{{/dimensions.inline}}
+		width: {{width.outer}}px * $scale;
+		height: {{height.outer}}px * $scale;{{/dimensions.inline}}
 	}{{#dimensions.extra}}
 
 	{{#selector.dimensions}}{{expression}}{{^last}},
 	{{/last}}{{/selector.dimensions}} {
-		width: {{width.outer}}px;
-		height: {{height.outer}}px;
+		width: {{width.outer}}px * $scale;
+		height: {{height.outer}}px * $scale;
 	}{{/dimensions.extra}}
 
 	{{/shapes}}

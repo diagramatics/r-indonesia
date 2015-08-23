@@ -85,7 +85,7 @@ gulp.task('parse', function() {
     var selector = [];
     postcss().use(function(css) {
       css.eachRule(function(rule) {
-        rule.eachDecl(function(decl) {
+        rule.walkDecls(function(decl) {
           if (decl.value.match(/^larger$/i)) {
             selector.push(rule.selector);
           }
@@ -150,7 +150,7 @@ gulp.task('styles:build', ['sass'], function() {
       // Adapted from postcss-single-charset that removes all but the first one
       // specified in the CSS file
       // (https://github.com/hail2u/postcss-single-charset/blob/master/index.js)
-      css.eachAtRule('charset', function (atRule) {
+      css.walkAtRules('charset', function (atRule) {
         atRule.removeSelf();
       });
     })
@@ -188,7 +188,7 @@ gulp.task('prebuild:beta-test', function() {
 gulp.task('build:beta-test', ['prebuild:beta-test', 'build'], function() {
   fs.writeFile(config.distStyle, postcss()
     .use(function(css) {
-      css.eachRule(function(rule) {
+      css.walkRules(function(rule) {
         // TODO: Put this on a separate config file
         // Because we're using html selector and body selectors, merge together if there's a child element with the same name in the selector
         rule.selector = rule.selector.replace(/^body\.post-linkflair-beta:lang\(bt\) body/ig, 'body.post-linkflair-beta:lang(bt)');
