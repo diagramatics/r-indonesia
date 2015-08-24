@@ -1,5 +1,4 @@
 .tabmenu {
-  display: block;
   position: relative;
   text-align: center;
   z-index: 1; // Prevent the same-x-position search bar from covering the dimensions of the tabmenu
@@ -12,7 +11,7 @@
       display: block;
       position: relative;
       background: none;
-      color: black;
+      color: currentColor;
       padding: .5em 1.5em;
       transition: all .2s ease-in-out;
 
@@ -42,24 +41,23 @@
         transition: all .2s ease-in-out;
       }
 
-      &[href$="/indonesia/"]:before {
-        @include icon-sprite("header-hot");
-      }
-
-      @for $i from 1 through length($tabmenu-list) {
-        &[href$="/#{nth($tabmenu-list, $i)}/"]:before {
-          @include icon-sprite("header-#{nth($tabmenu-list, $i)}");
-        }
-      }
+      // &[href$="/indonesia/"]:before {
+      //   @include icon-sprite("header-hot");
+      // }
+      //
+      // @for $i from 1 through length($tabmenu-list) {
+      //   &[href$="/#{nth($tabmenu-list, $i)}/"]:before {
+      //     @include icon-sprite("header-#{nth($tabmenu-list, $i)}");
+      //   }
+      // }
 
       &:after {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid currentColor;
         border-bottom-right-radius: 0;
         transform: translateY(4px) scaleX(0);
       }
 
       &:hover {
-        color: transparent;
         transform: translateY(-4px);
 
         &:before {
@@ -85,7 +83,7 @@
       > a {
         background: none;
         border: none;
-        color: black;
+        color: currentColor;
 
         &:after {
           opacity: 1;
@@ -93,7 +91,6 @@
         }
 
         &:hover {
-          color: transparent;
           transform: translateY(0);
         }
 

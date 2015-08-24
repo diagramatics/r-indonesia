@@ -1,10 +1,24 @@
 body > .content {
-  // .content is used for other kinds of divs
+  // .content is used for other kinds of divs, so target the first .content
   position: relative;
-  width: 70%;
-  margin: 3em 0;
-  padding: 0 1em;
   float: left;
+  width: 73%;
+  margin: $content-offset-height 1% 3em;
+  padding: 1em;
+  z-index: 1;
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+
+  background: $page-background-color;
+
+  &:before {
+    @include icon-sprite("wings");
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 100%;
+    transform: translateX(-50%);
+  }
 
   .link .midcol.midcol { // Higher specificity
     width: auto;

@@ -1,0 +1,40 @@
+.debuginfo {
+  position: relative;
+  font-size: 1rem;
+  // Let's add "his" face!
+
+  &:before,
+  &:after,
+  .icon:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 100%;
+  }
+
+  &:before {
+    @include icon-sprite("the-man", .3);
+    content: "";
+    display: block;
+  }
+
+  &:hover:before {
+    animation: swing .3s infinite;
+  }
+
+  &:after {
+    content: "Internet cepat buat apa?";
+    font-size: 1.2rem;
+    margin-right: 40px;
+    padding: .5rem 1rem;
+    background: darken($page-background-color, 10%);
+  }
+
+  .icon:before {
+    width: 0;
+    height: 0;
+    margin-right: 30px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid darken($page-background-color, 10%);
+  }
+}

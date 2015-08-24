@@ -1,0 +1,13 @@
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
