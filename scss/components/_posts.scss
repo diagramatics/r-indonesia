@@ -1,20 +1,17 @@
-.expando-button.selftext.collapsed {
-  display: inline-block;
-  float: none;
-  vertical-align: middle;
-  // TODO: After having new icons, change this to a smaller size
-
-  + .tagline {
-    display: inline;
-  }
-}
-
 .linklisting {
-
   .thing {
     position: relative;
     padding: 1em 0;
     border-bottom: thin solid darken($page-background-color, 5%);
+
+    .entry {
+      position: relative;
+      // The left and padding-left gives an overflow buffer on the left
+      // So we can absolute position things until 48px to the left
+      left: -48px;
+      padding-left: 48px;
+      overflow: auto;
+    }
 
     .title {
       color: black;
@@ -28,6 +25,20 @@
       > .title {
         vertical-align: middle;
       }
+    }
+
+    .flat-list {
+      margin-top: .5rem;
+
+      .comments {
+        @extend %button;
+        display: inline-block;
+        padding: .5rem 1rem;
+      }
+    }
+
+    .tagline {
+      font-size: 1.2rem;
     }
 
     .rank {

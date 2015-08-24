@@ -19,6 +19,8 @@
 @import "components/header-bar";
 @import "components/tabmenu";
 @import "components/content";
+@import "components/expando";
+@import "components/expando-button";
 @import "components/sidebar";
 @import "components/linkinfo";
 @import "components/sidebar-submit-button";
@@ -27,6 +29,6 @@
 @import "components/comment-visits-box";
 @import "components/markdown";
 
-@import "components/_report-reasons";
+@import "components/report-reasons";
 
 @import "components/debuginfo";

@@ -1,0 +1,20 @@
+.expando-button.selftext.selftext {
+  @include icon-sprite("content-text");
+  display: inline-block;
+  float: none;
+  margin: 0 1rem 0 0;
+  vertical-align: middle;
+
+  + .tagline {
+    display: inline;
+  }
+
+  &:hover {
+    // Override the background declaration on :hover brought by the default stylesheet
+    @include icon-sprite("content-text--main");
+  }
+}
+
+.expando-button.selftext.expanded {
+  @include icon-sprite("content-text--main");
+}
