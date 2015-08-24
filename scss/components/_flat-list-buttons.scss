@@ -7,3 +7,48 @@
   font-size: 1.2rem;
   font-weight: normal;
 }
+
+// Mod tools buttons
+.entry .flat-list.buttons .reported-stamp {
+  @extend %button;
+  @extend %button--yellow;
+  padding: .2rem 1rem;
+  border: 0 !important; // Overriding !important from Reddit's stylesheet
+  border-radius: 2px;
+  font-size: 1.1rem;
+}
+
+// TODO: Pretty buttons might be related to other uses than the modtools
+.pretty-button {
+  @extend %button;
+  border: 0;
+  font-size: 1.1rem;
+
+  &.pretty-button {
+    // Higher specificity to override the gradient image on all variants
+    background-image: none;
+
+    &.pressed {
+      background-image: none;
+      background: darken($page-background-color, 10%);
+      color: $page-background-color;
+      box-shadow: inset 0 .3em .6em -.2em rgba(#000, .3);
+    }
+  }
+
+  &.negative {
+    @extend %button--red;
+
+    &.pressed {
+      background: $color-red--darker;
+    }
+  }
+
+  &.positive {
+    @extend %button--green;
+
+    &.pressed {
+      background: $color-green--darker;
+    }
+  }
+}

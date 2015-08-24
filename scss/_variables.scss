@@ -22,6 +22,8 @@ $color-red--darker: darken($color-red, 10%);
 $color-red--desaturated: desaturate($color-red--lighter, 50%);
 $color-yellow: #ffe800;
 $color-yellow-alt: #ffb717;
+$color-yellow-alt--desaturated: desaturate(lighten($color-yellow-alt, 10%), 10%);
+$color-yellow-alt--saturated: saturate($color-yellow-alt, 20%);
 $color-green: #0db04b;
 $color-green--dark: #00652e;
 $color-green--darker: darken($color-green--dark, 5%);

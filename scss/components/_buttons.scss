@@ -45,3 +45,18 @@
     background: $color-red--darker;
   }
 }
+
+%button--yellow {
+  background: $color-yellow-alt--desaturated;
+  color: black;
+
+  &:hover {
+    background: $color-yellow-alt;
+    color: black;
+  }
+
+  &:active {
+    background: $color-yellow-alt--saturated;
+    color: black;
+  }
+}
