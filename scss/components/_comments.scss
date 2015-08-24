@@ -213,7 +213,7 @@
     border-left-color: $color-green--dark !important; // !important to override the nested styles for the nested child comments
 
     &:before {
-      content: "New comment";
+      content: "New Comment";
       display: block;
       position: absolute;
       top: .5rem;
@@ -290,7 +290,7 @@
   }
 
   &:after {
-    content: "Linked comment";
+    content: "Linked Comment";
     position: absolute;
     bottom: 100%;
     left: -2px;
@@ -320,5 +320,41 @@
 
   .submitter {
     color: $color-red;
+  }
+}
+
+// Comment area infobar (e.g. shown on the context page)
+.commentarea > .infobar {
+  margin: .5rem 0;
+  padding: 1rem;
+  border: 0;
+  border-left: 2px solid $color-yellow-alt--saturated;
+  border-radius: 2px;
+  background: darken($page-background-color, 5%);
+
+  &:after {
+    content: "The comment this link refers to is highlighted with a yellow left border, with a \"Linked Comment\" tag.";
+    display: inline-block;
+    margin-top: 1rem;
+    color: #777;
+    font-size: 1.2rem;
+  }
+
+  &:first-letter {
+    text-transform: capitalize;
+  }
+
+  p {
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  a {
+    color: $color-red;
+
+    &:hover {
+      border-bottom: thin solid $color-red;
+    }
   }
 }
