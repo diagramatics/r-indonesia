@@ -1,0 +1,37 @@
+.flair {
+  position: relative;
+  height: 25px;
+  margin-left: 20px;
+  padding: .3rem 1rem .3rem 2rem;
+  border: 0;
+  background: darken($page-background-color, 10%);
+  transition: all .2s ease-in-out;
+
+  &.flair {
+    font-size: 1.1rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: -12.5px;
+    background: lighten($color-red--desaturated, 25%);
+    border-radius: 50%;
+    box-shadow: inset -1px -1px 0 rgba(black, .3);
+    transform: scale(25/40); // 25px for initial value, 40 when hovered
+    transform-origin: 100% 100%;
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover {
+    transform: translateX(10px);
+
+    &:before {
+      transform: scale(1);
+    }
+  }
+}
