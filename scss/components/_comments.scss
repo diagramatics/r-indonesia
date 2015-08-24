@@ -203,7 +203,7 @@
 .comment {
   position: relative;
   margin-left: 1px;
-  padding: 1em 0 .5em 0;
+  padding: 1rem 0 1.2rem 0;
   border-left: 2px solid darken($page-background-color, 5%);
 
   &.new-comment {
@@ -273,6 +273,38 @@
 // First-level comments
 .commentarea > .sitetable > .comment {
   margin-top: 1rem;
+}
+
+// Comments in a context, highlighted
+.comment > .entry > .usertext.border {
+  // Because the selector is deeper than the element having the indicator on the left,
+  // make one by absolute positioning this
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2px;
+    width: 2px; // The width of the border highlighting the comments when hovered
+    background: $color-yellow-alt--saturated;
+  }
+
+  &:after {
+    content: "Linked comment";
+    position: absolute;
+    bottom: 100%;
+    left: -2px;
+    margin-bottom: -.7rem;
+    padding: 0 1rem;
+    background: $color-yellow-alt--saturated;
+    color: black;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .usertext-body {
+    background-color: transparent;
+  }
 }
 
 .entry .buttons .reply-button a { // High specificity to override
