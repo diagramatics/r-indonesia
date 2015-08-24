@@ -11,3 +11,57 @@
     transform: rotate(-15deg);
   }
 }
+
+@keyframes garuda-popup {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-150%);
+  }
+}
+
+@keyframes dot-move {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes opacity-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes color-to-white {
+  0% {
+    color: transparent;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes background-desaturated-to-red {
+  0% {
+    background: $color-red--desaturated;
+  }
+
+  100% {
+    background: $color-red;
+  }
+}

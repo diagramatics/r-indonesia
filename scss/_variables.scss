@@ -24,7 +24,7 @@ $color-yellow: #ffe800;
 $color-yellow-alt: #ffb717;
 $color-green: #0db04b;
 $color-green--dark: #00652e;
-$color-green--darker: #006937;
+$color-green--darker: darken($color-green--dark, 5%);
 
 $header-height: 10em;
 $header-offset-height: 10rem;

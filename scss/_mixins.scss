@@ -3,3 +3,31 @@
     @content;
   }
 }
+
+/**
+ * Mixin that outputs comment child nested in n-level deep with gradually changing values every child
+ */
+@mixin comment-nest($n: 20, $selector: ".comment", $child-selector: " .comment", $percentage: 5%, $percentage-gradual: 5%) {
+
+  @for $i from 1 to $n {
+    #{$selector} {
+      border-left-color: darken($page-background-color, min($percentage, 100%));
+      transition: border-left-color .1s ease-in-out;
+
+      &:hover {
+        border-left-color: darken($color-red--desaturated, min($percentage, 100%));
+      }
+
+      &.new-comment {
+        border-left-color: darken($color-green, min($percentage, 100%));
+
+        &:hover {
+          border-left-color: darken($color-green--dark, min($percentage, 100%));
+        }
+      }
+    }
+
+    $percentage: $percentage + $percentage-gradual;
+    $selector: $selector + $child-selector;
+  }
+}

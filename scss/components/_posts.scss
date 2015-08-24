@@ -9,45 +9,37 @@
   }
 }
 
-.thing {
-  position: relative;
-  padding-top: .5rem;
+.linklisting {
 
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    right: 5%;
-    left: 5%;
-    height: 1px;
-    margin-right: $sidebar-width; // Counter the sidebar width so the horizontal line doesn't pass through the sidebar
-    margin-bottom: .25rem;
-    background: rgba(black, .05);
-  }
+  .thing {
+    position: relative;
+    padding: 1em 0;
+    border-bottom: thin solid darken($page-background-color, 5%);
 
-  .title {
-    color: black;
+    .title {
+      color: black;
 
-    &:visited {
-      color: #777;
+      &:visited {
+        color: #777;
+      }
+
+
+      > .linkflairlabel,
+      > .title {
+        vertical-align: middle;
+      }
     }
 
-
-    > .linkflairlabel,
-    > .title {
-      vertical-align: middle;
+    .rank {
+      display: none;
     }
-  }
 
-  .rank {
-    display: none;
-  }
+    .midcol {
+      margin-right: 1.2rem;
+    }
 
-  .midcol {
-    margin-right: 1.2rem;
-  }
-
-  .thumbnail {
-    margin-right: 1.8rem;
+    .thumbnail {
+      margin-right: 1.8rem;
+    }
   }
 }
