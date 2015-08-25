@@ -2,6 +2,7 @@
   position: relative;
   text-align: center;
   z-index: 1; // Prevent the same-x-position search bar from covering the dimensions of the tabmenu
+  vertical-align: middle;
 
   > li {
     display: inline-block;
