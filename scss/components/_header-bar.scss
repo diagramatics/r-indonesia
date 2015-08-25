@@ -170,6 +170,14 @@
         margin-top: 10px;
         border-top: 0;
       }
+
+      &[href$="#{$subreddit-name}/"] {
+        background: lighten($color-red, 40%);
+
+        &:hover {
+          background: $color-red--light;
+        }
+      }
     }
   }
 }
@@ -440,7 +448,7 @@
   }
 
   &:after {
-    content: "indonesia";
+    content: $subreddit-name;
     position: absolute;
     top: 0;
     right: 0;
