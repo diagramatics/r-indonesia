@@ -24,6 +24,9 @@ $color-red--lighter: lighten($color-red, 15%);
 $color-red--dark: darken($color-red, 5%);
 $color-red--darker: darken($color-red, 10%);
 $color-red--desaturated: desaturate($color-red--lighter, 50%);
+// Alt red colors from HUT RI 70 logo
+$color-red-alt: rgb(215, 25, 32);
+$color-red-alt-dark: rgb(158, 11, 15);
 $color-yellow: #ffe800;
 $color-yellow-alt: #ffb717;
 $color-yellow-alt--desaturated: desaturate(lighten($color-yellow-alt, 10%), 10%);
