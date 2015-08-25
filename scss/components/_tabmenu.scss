@@ -13,7 +13,7 @@
       position: relative;
       background: none;
       color: currentColor;
-      padding: .5em 1.5em;
+      padding: 0 1.5em .5em; // No top padding for better visual on vertical alignment
       transition: all .2s ease-in-out;
 
       &:before,
@@ -31,8 +31,6 @@
         transition: all .2s ease-in-out;
         z-index: -1;
       }
-
-
 
       &:before {
         background-size: 24px;
