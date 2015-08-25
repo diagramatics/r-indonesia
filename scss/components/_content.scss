@@ -7,9 +7,8 @@ body > .content {
   padding: 1em;
   z-index: 1;
   border-radius: 2px;
-  transition: all .2s ease-in-out;
-
   background: $page-background-color;
+  transition: all .2s ease-in-out;
 
   // Wings of the RI70 logo
   &:before {

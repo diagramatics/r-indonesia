@@ -23,10 +23,6 @@
     float: none;
   }
 
-  @include mq(85em) {
-    width: 30%;
-  }
-
   // Sidebar subreddit name
   .redditname {
     a:before {
