@@ -2,11 +2,11 @@
 
 @mixin icon-sprite($name, $scale: 1) {
 	background: url(%%icon-sprites%%) no-repeat;
-	background-size: (221px * $scale) (170px * $scale);
+	background-size: (221px * $scale) (178px * $scale);
 
 	@if $name == "arrow-down" {
 		
-		background-position: 93.61269035532996% 47.19178082191782%;
+		background-position: 62.944162436548226% 46.42857142857143%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -16,7 +16,7 @@
 
 @if $name == "arrow-down--main" {
 		
-		background-position: 24.365482233502537% 89.04109589041096%;
+		background-position: 48.73096446700507% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -26,7 +26,7 @@
 
 @if $name == "arrow-up" {
 		
-		background-position: 62.944162436548226% 48.97260273972603%;
+		background-position: 50.76142131979695% 62.01298701298701%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -36,7 +36,7 @@
 
 @if $name == "arrow-up--main" {
 		
-		background-position: 50.76142131979695% 65.41095890410959%;
+		background-position: 73.09644670050761% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -46,7 +46,7 @@
 
 @if $name == "bars" {
 		
-		background-position: 39.02439024390244% 100%;
+		background-position: 70.2439024390244% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -56,7 +56,7 @@
 
 @if $name == "content-text" {
 		
-		background-position: 79.3994923857868% 66.36986301369863%;
+		background-position: 79.3994923857868% 62.922077922077925%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -66,7 +66,7 @@
 
 @if $name == "content-text--main" {
 		
-		background-position: 91.58223350253807% 66.36986301369863%;
+		background-position: 91.58223350253807% 62.922077922077925%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -76,7 +76,7 @@
 
 @if $name == "email" {
 		
-		background-position: 7.804878048780488% 100%;
+		background-position: 62.4390243902439% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -86,7 +86,7 @@
 
 @if $name == "email--main" {
 		
-		background-position: 99.71560975609756% 62.922077922077925%;
+		background-position: 54.63414634146341% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -106,7 +106,7 @@
 
 @if $name == "header-controversial" {
 		
-		background-position: 62.944162436548226% 65.41095890410959%;
+		background-position: 62.944162436548226% 62.01298701298701%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -116,7 +116,7 @@
 
 @if $name == "header-gilded" {
 		
-		background-position: 0 89.04109589041096%;
+		background-position: 0 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -126,7 +126,7 @@
 
 @if $name == "header-hot" {
 		
-		background-position: 12.182741116751268% 89.04109589041096%;
+		background-position: 12.182741116751268% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -136,7 +136,7 @@
 
 @if $name == "header-new" {
 		
-		background-position: 73.09644670050761% 89.04109589041096%;
+		background-position: 24.365482233502537% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -146,7 +146,7 @@
 
 @if $name == "header-promoted" {
 		
-		background-position: 36.54822335025381% 89.04109589041096%;
+		background-position: 36.54822335025381% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -156,7 +156,7 @@
 
 @if $name == "header-rising" {
 		
-		background-position: 48.73096446700507% 89.04109589041096%;
+		background-position: 0 100%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -166,7 +166,7 @@
 
 @if $name == "header-top" {
 		
-		background-position: 60.91370558375635% 89.04109589041096%;
+		background-position: 60.91370558375635% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -176,7 +176,7 @@
 
 @if $name == "image--white" {
 		
-		background-position: 81.04507772020726% 48.521126760563384%;
+		background-position: 81.04507772020726% 45.93333333333334%;
 
 		@if ($scale != 0) {
 			width: 28px * $scale;
@@ -186,7 +186,7 @@
 
 @if $name == "logout" {
 		
-		background-position: 0 100%;
+		background-position: 99.71560975609756% 59.81481481481482%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -194,9 +194,19 @@
 		}
 	}
 
+@if $name == "media-embed" {
+		
+		background-position: 97.46192893401015% 84.41558441558442%;
+
+		@if ($scale != 0) {
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+	}
+
 @if $name == "quote" {
 		
-		background-position: 50.76142131979695% 48.97260273972603%;
+		background-position: 85.27918781725889% 84.41558441558442%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -206,7 +216,7 @@
 
 @if $name == "reddit" {
 		
-		background-position: 15.609756097560975% 100%;
+		background-position: 31.21951219512195% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -216,7 +226,7 @@
 
 @if $name == "reddit--main" {
 		
-		background-position: 23.414634146341463% 100%;
+		background-position: 39.02439024390244% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -226,7 +236,7 @@
 
 @if $name == "search" {
 		
-		background-position: 83.58208955223881% 86.66666666666667%;
+		background-position: 11.940298507462687% 97.46835443037975%;
 
 		@if ($scale != 0) {
 			width: 20px * $scale;
@@ -236,7 +246,7 @@
 
 @if $name == "search--main" {
 		
-		background-position: 93.53233830845771% 86.66666666666667%;
+		background-position: 21.890547263681594% 97.46835443037975%;
 
 		@if ($scale != 0) {
 			width: 20px * $scale;
@@ -246,7 +256,7 @@
 
 @if $name == "settings" {
 		
-		background-position: 31.21951219512195% 100%;
+		background-position: 46.829268292682926% 95.06172839506173%;
 
 		@if ($scale != 0) {
 			width: 16px * $scale;
@@ -264,6 +274,26 @@
 		}
 	}
 
+@if $name == "video" {
+		
+		background-position: 50.76142131979695% 46.42857142857143%;
+
+		@if ($scale != 0) {
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+	}
+
+@if $name == "video--main" {
+		
+		background-position: 93.61269035532996% 44.740259740259745%;
+
+		@if ($scale != 0) {
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+	}
+
 @if $name == "wings" {
 		
 		background-position: 60.759616728337676% 0;
@@ -278,82 +308,91 @@
 
 @mixin icon-sprite-background-position($name) {
 	@if $name == "arrow-down" {
-		background-position: 93.61269035532996% 47.19178082191782%;
+		background-position: 62.944162436548226% 46.42857142857143%;
 	}
 	@if $name == "arrow-down--main" {
-		background-position: 24.365482233502537% 89.04109589041096%;
+		background-position: 48.73096446700507% 84.41558441558442%;
 	}
 	@if $name == "arrow-up" {
-		background-position: 62.944162436548226% 48.97260273972603%;
+		background-position: 50.76142131979695% 62.01298701298701%;
 	}
 	@if $name == "arrow-up--main" {
-		background-position: 50.76142131979695% 65.41095890410959%;
+		background-position: 73.09644670050761% 84.41558441558442%;
 	}
 	@if $name == "bars" {
-		background-position: 39.02439024390244% 100%;
+		background-position: 70.2439024390244% 95.06172839506173%;
 	}
 	@if $name == "content-text" {
-		background-position: 79.3994923857868% 66.36986301369863%;
+		background-position: 79.3994923857868% 62.922077922077925%;
 	}
 	@if $name == "content-text--main" {
-		background-position: 91.58223350253807% 66.36986301369863%;
+		background-position: 91.58223350253807% 62.922077922077925%;
 	}
 	@if $name == "email" {
-		background-position: 7.804878048780488% 100%;
+		background-position: 62.4390243902439% 95.06172839506173%;
 	}
 	@if $name == "email--main" {
-		background-position: 99.71560975609756% 62.922077922077925%;
+		background-position: 54.63414634146341% 95.06172839506173%;
 	}
 	@if $name == "garuda--white" {
 		background-position: 99.62866242038217% 0;
 	}
 	@if $name == "header-controversial" {
-		background-position: 62.944162436548226% 65.41095890410959%;
+		background-position: 62.944162436548226% 62.01298701298701%;
 	}
 	@if $name == "header-gilded" {
-		background-position: 0 89.04109589041096%;
+		background-position: 0 84.41558441558442%;
 	}
 	@if $name == "header-hot" {
-		background-position: 12.182741116751268% 89.04109589041096%;
+		background-position: 12.182741116751268% 84.41558441558442%;
 	}
 	@if $name == "header-new" {
-		background-position: 73.09644670050761% 89.04109589041096%;
+		background-position: 24.365482233502537% 84.41558441558442%;
 	}
 	@if $name == "header-promoted" {
-		background-position: 36.54822335025381% 89.04109589041096%;
+		background-position: 36.54822335025381% 84.41558441558442%;
 	}
 	@if $name == "header-rising" {
-		background-position: 48.73096446700507% 89.04109589041096%;
-	}
-	@if $name == "header-top" {
-		background-position: 60.91370558375635% 89.04109589041096%;
-	}
-	@if $name == "image--white" {
-		background-position: 81.04507772020726% 48.521126760563384%;
-	}
-	@if $name == "logout" {
 		background-position: 0 100%;
 	}
+	@if $name == "header-top" {
+		background-position: 60.91370558375635% 84.41558441558442%;
+	}
+	@if $name == "image--white" {
+		background-position: 81.04507772020726% 45.93333333333334%;
+	}
+	@if $name == "logout" {
+		background-position: 99.71560975609756% 59.81481481481482%;
+	}
+	@if $name == "media-embed" {
+		background-position: 97.46192893401015% 84.41558441558442%;
+	}
 	@if $name == "quote" {
-		background-position: 50.76142131979695% 48.97260273972603%;
+		background-position: 85.27918781725889% 84.41558441558442%;
 	}
 	@if $name == "reddit" {
-		background-position: 15.609756097560975% 100%;
+		background-position: 31.21951219512195% 95.06172839506173%;
 	}
 	@if $name == "reddit--main" {
-		background-position: 23.414634146341463% 100%;
+		background-position: 39.02439024390244% 95.06172839506173%;
 	}
 	@if $name == "search" {
-		background-position: 83.58208955223881% 86.66666666666667%;
+		background-position: 11.940298507462687% 97.46835443037975%;
 	}
 	@if $name == "search--main" {
-		background-position: 93.53233830845771% 86.66666666666667%;
+		background-position: 21.890547263681594% 97.46835443037975%;
 	}
 	@if $name == "settings" {
-		background-position: 31.21951219512195% 100%;
+		background-position: 46.829268292682926% 95.06172839506173%;
 	}
 	@if $name == "the-man" {
 		background-position: 0 0;
+	}
+	@if $name == "video" {
+		background-position: 50.76142131979695% 46.42857142857143%;
+	}
+	@if $name == "video--main" {
+		background-position: 93.61269035532996% 44.740259740259745%;
 	}
 	@if $name == "wings" {
 		background-position: 60.759616728337676% 0;

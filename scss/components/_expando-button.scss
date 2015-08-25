@@ -4,6 +4,8 @@
   float: none;
   margin: 0 1rem 0 0;
   vertical-align: middle;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
 
   + .tagline {
     display: inline;
@@ -11,10 +13,44 @@
 
   &:hover {
     // Override the background declaration on :hover brought by the default stylesheet
-    @include icon-sprite("content-text--main");
+    @include icon-sprite("content-text");
+    opacity: 1;
   }
 }
 
 .expando-button.selftext.expanded {
   @include icon-sprite("content-text--main");
+
+  &:hover {
+    @include icon-sprite("content-text--main");
+  }
+}
+
+
+.expando-button.video.video {
+  @include icon-sprite("video");
+  display: inline-block;
+  float: none;
+  margin: 0 1rem 0 0;
+  vertical-align: middle;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
+
+  + .tagline {
+    display: inline;
+  }
+
+  &:hover {
+    // Override the background declaration on :hover brought by the default stylesheet
+    @include icon-sprite("video");
+    opacity: 1;
+  }
+}
+
+.expando-button.video.expanded {
+  @include icon-sprite("video--main");
+
+  &:hover {
+    @include icon-sprite("video--main");
+  }
 }

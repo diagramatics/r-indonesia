@@ -17,6 +17,43 @@
   }
 }
 
+// Loading indicator
+.expando > .error {
+  display: block;
+  position: relative;
+  padding-top: 1rem;
+  color: transparent;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $color-red;
+    transition: all .2s ease-in-out;
+    opacity: 1;
+    transition-delay: .4s;
+    animation: dot-move .8s cubic-bezier(.4, 0, .2, 1) infinite;
+  }
+}
+
+// Supposedly videos are the only ones having data-cachedhtml containing 'class="media-embed"'
+.expando[data-cachedhtml~="class=\"media-embed\""] {
+  padding-top: 1rem;
+
+  &:before {
+    @include icon-sprite("media-embed");
+    transform: none;
+  }
+}
+
 .expando .usertext-body .md {
   border: 0;
 }
