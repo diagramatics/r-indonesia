@@ -58,6 +58,8 @@
   }
 }
 
+// These links on the sidebar is placed below the end of the header bar
+// These links are to toggle a bigger picture of the title and the information.
 .md a[href="#header"] {
   position: absolute;
   right: 2rem;
@@ -94,19 +96,18 @@
 #sr-header-area {
   position: relative;
   width: 100%;
-  height: 24px;
+  height: $sr-header-height;
   border-bottom: 0;
   background: none;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: $sr-header-height;
 
   &:after {
     content: "";
     position: absolute;
-    right: 0;
+    right: 3rem;
     bottom: 0;
-    left: 0;
-    width: 95%;
+    left: 3rem;
     margin: auto;
     height: 1px;
     background: rgba($page-background-color, .1);
@@ -227,26 +228,38 @@
 
 #header-bottom-left,
 #header-bottom-right {
-  float: left;
   position: relative;
   padding: 0 1em;
 }
 
 #header-bottom-left {
-  width: 75%;
+  width: 100%;
+  margin-top: $sr-header-height;
   padding: 1rem;
   font-size: 1.4rem;
 }
 
 #header-bottom-right {
-  float: right;
-  width: 25%;
-  margin-top: 1rem;
+  position: absolute;
+  top: $sr-header-height;
+  bottom: auto;
   margin-left: auto;
+  padding: .5rem 3rem .5rem 3rem;
+  border-left: thin solid rgba($page-background-color, .1);
+  border-radius: 0;
   background: none;
   color: white;
-  font-size: 1.2rem;
   text-align: right;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 3rem; // The same with the border of #sr-header-area
+    left: 0;
+    height: 1px;
+    background: rgba($page-background-color, .1);
+  }
 
   a {
     color: currentColor;
@@ -255,28 +268,27 @@
   > .user {
     display: inline-block;
     padding: .5em 0;
+    color: currentColor;
 
     a {
       font-size: 1.4rem;
       padding-right: .5rem;
-    }
+      opacity: .7;
 
-    + .separator {
-      display: block;
-      clear: both;
-      height: 0;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
   > .separator {
-    // display: none;
     color: transparent;
   }
 
   .beta-hint {
     display: inline-block;
     position: static;
-    padding-right: .5rem;
+    height: auto;
   }
 
   .beta-link {
@@ -285,36 +297,184 @@
 }
 
 #mail,
-#modmail {
+#modmail,
+.pref-lang,
+.logout a {
+  position: relative;
   font-size: 0;
+  opacity: .8;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px);
+    transition: all .2s ease-in-out;
+  }
+
+  &:before {
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    background: white;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+
+  &:after {
+    right: 3px;
+    border-right: solid .5rem transparent;
+    border-bottom: solid .5rem white;
+    border-left: solid .5rem transparent;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &:before,
+    &:after {
+      opacity: .8;
+      transform: translateY(0);
+    }
+  }
+}
+
+#mail,
+#modmail {
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+  text-indent: 0;
+  display: inline-block;
+  overflow: visible;
+  vertical-align: middle;
 }
 
 #mail {
-  top: 5px;
-
   &.nohavemail {
     @include icon-sprite("email");
+
+    &:before {
+      content: "No new mail";
+    }
   }
 
   &.havemail {
     @include icon-sprite("email--main");
+
+    &:before {
+      content: "New mail";
+    }
   }
 }
 
 #modmail {
   &.nohavemail {
     @include icon-sprite("reddit");
+
+    &:before {
+      content: "No new mod mail";
+    }
   }
 
   &.havemail {
     @include icon-sprite("reddit--main");
+
+    &:before {
+      content: "New mod mail";
+    }
+  }
+}
+
+// Iconize the preferences and the logout link
+.pref-lang,
+.logout a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pref-lang {
+  @include icon-sprite("settings");
+
+  &:before {
+    content: "Preferences";
+  }
+}
+
+.logout a {
+  @include icon-sprite("logout");
+
+  &:before {
+    content: "Logout";
   }
 }
 
 .pagename {
+  position: relative;
+  padding: 0 2%;
+  color: $color-red--desaturated;
   font-family: $font-family-heading;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: normal;
-  letter-spacing: 4px;
+  line-height: 1;
+  letter-spacing: 5px;
   text-align: center;
+  box-shadow: 0 1px 2px rgba(black, .8);
+  text-rendering: optimizeLegibility;
+  transition: all .2s ease-in-out;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 2px solid $color-red--desaturated;
+  }
+
+  &:after {
+    content: "indonesia";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform: scale(.95);
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover {
+    background: $color-red--desaturated;
+    text-shadow: none;
+
+    &:after {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+      transform: scale(1);
+      transition-duration: .5s;
+      transition-delay: .25s;
+    }
+
+    a {
+      opacity: 0;
+      text-decoration: none;
+    }
+  }
+
+  a {
+    position: relative;
+    top: -3px;
+    left: 2px;
+    text-shadow: 0 1px 2px black;
+  }
 }

@@ -31,6 +31,8 @@ $color-green--darker: darken($color-green--dark, 5%);
 $header-height: 10em;
 $header-offset-height: 10rem;
 
+$sr-header-height: 24px;
+
 $content-offset-height: -($header-offset-height * 3/4);
 
 $sidebar-width: 300px;
