@@ -69,11 +69,19 @@
 
 .usertext-edit {
   width: 100% !important;
-  padding-left: 30px; // The size of the vote sections
+  padding-left: 48px; // The size of the vote sections
 
   .commentarea > .usertext > & {
     // Top level comment box doesn't need the padding offset
     padding-left: 0;
+  }
+
+  .entry & {
+    padding-left: 0;
+
+    .md {
+      padding: 0;
+    }
   }
 
   > .md {
