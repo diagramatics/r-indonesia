@@ -1,0 +1,66 @@
+#search {
+  // Relative to the sidebar, position it on top of everything
+  position: relative;
+  font-size: 1.4rem;
+
+  > input[type="text"] {
+    // Note: for the placeholder text not to collapse it's better to use width transitions
+    // As performance-heavy as it is.
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border-color: darken($page-background-color, 10%);
+    font-size: 1.4rem;
+    box-shadow: 0 1px 1px transparent;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      + input[type="submit"] {
+        @include icon-sprite("search--main", .5);
+      }
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: $color-red;
+      box-shadow: 1px 1px 1px rgba(black, .2);
+
+      &:hover {
+        + input[type="submit"] {
+          @include icon-sprite("search", .5);
+        }
+      }
+
+      + input[type="submit"] {
+        z-index: auto;
+        @include icon-sprite-scale("search", .5);
+      }
+    }
+  }
+
+  > input[type="submit"] {
+    @include icon-sprite("search", .5);
+    position: relative;
+    right: .5em;
+    transition: transform .2s ease-in-out;
+    z-index: -1;
+
+    &:hover {
+      @include icon-sprite("search--main", .5);
+    }
+  }
+}
+
+#searchexpando {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  border: 0;
+  border-radius: 2px;
+  background: darken($page-background-color, 2%);
+
+  p {
+    margin: 0;
+  }
+}

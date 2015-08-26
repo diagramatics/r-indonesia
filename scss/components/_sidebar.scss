@@ -71,55 +71,6 @@
   background: none;
 }
 
-#search {
-  // Relative to the sidebar, position it on top of everything
-  position: relative;
-
-  > input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    border-color: darken($page-background-color, 4%);
-    cursor: pointer;
-    opacity: 0;
-
-    &:hover {
-      + input[type="submit"] {
-        @include icon-sprite("search--main");
-      }
-    }
-
-    &:focus {
-      outline: 0;
-      cursor: auto;
-      opacity: 1;
-
-      &:hover {
-        + input[type="submit"] {
-          @include icon-sprite("search");
-        }
-      }
-
-      + input[type="submit"] {
-        z-index: auto;
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  > input[type="submit"] {
-    @include icon-sprite("search");
-    position: relative;
-    right: .5em;
-    transition: transform .2s ease-in-out;
-    z-index: -1;
-
-    &:hover {
-      @include icon-sprite("search--main");
-    }
-  }
-}
-
 .gadget .midcol {
   width: auto;
 }
