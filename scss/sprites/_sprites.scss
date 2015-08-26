@@ -2,11 +2,11 @@
 
 @mixin icon-sprite($name, $scale: 1) {
 	background: url(%%icon-sprites%%) no-repeat;
-	background-size: (221px * $scale) (186px * $scale);
+	background-size: (269px * $scale) (226px * $scale);
 
 	@if $name == "arrow-down" {
 		
-		background-position: 99.69153439153439% 44.740259740259745%;
+		background-position: 93.0029535864979% 24.742268041237114%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -16,7 +16,7 @@
 
 @if $name == "arrow-down--main" {
 		
-		background-position: 52.91005291005291% 46.42857142857143%;
+		background-position: 93.0029535864979% 74.22680412371135%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -26,7 +26,7 @@
 
 @if $name == "arrow-up" {
 		
-		background-position: 0 84.41558441558442%;
+		background-position: 93.0029535864979% 41.23711340206186%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -36,7 +36,7 @@
 
 @if $name == "arrow-up--main" {
 		
-		background-position: 82.76031746031747% 44.740259740259745%;
+		background-position: 93.0029535864979% 57.7319587628866%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -46,17 +46,17 @@
 
 @if $name == "bars" {
 		
-		background-position: 56.58536585365854% 95.29411764705883%;
+		background-position: 70.77692307692308% 38.70786516853933%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "content-text" {
 		
-		background-position: 40.609137055837564% 80.24691358024691%;
+		background-position: 0 100%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -66,7 +66,7 @@
 
 @if $name == "content-text--main" {
 		
-		background-position: 52.79187817258883% 80.24691358024691%;
+		background-position: 97.95918367346938% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -76,27 +76,27 @@
 
 @if $name == "email" {
 		
-		background-position: 33.170731707317074% 95.29411764705883%;
+		background-position: 0 73.03370786516854%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "email--main" {
 		
-		background-position: 40.97560975609756% 95.29411764705883%;
+		background-position: 21.71945701357466% 73.03370786516854%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "garuda--white" {
 		
-		background-position: 99.62866242038217% 0;
+		background-position: 76.30097560975611% 0;
 
 		@if ($scale != 0) {
 			width: 64px * $scale;
@@ -106,7 +106,7 @@
 
 @if $name == "header-controversial" {
 		
-		background-position: 67.00507614213198% 44.135802469135804%;
+		background-position: 0 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -116,7 +116,7 @@
 
 @if $name == "header-gilded" {
 		
-		background-position: 50.76142131979695% 63.888888888888886%;
+		background-position: 58.775510204081634% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -126,7 +126,7 @@
 
 @if $name == "header-hot" {
 		
-		background-position: 62.944162436548226% 63.888888888888886%;
+		background-position: 29.387755102040817% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -136,7 +136,7 @@
 
 @if $name == "header-new" {
 		
-		background-position: 16.243654822335024% 80.24691358024691%;
+		background-position: 68.57142857142857% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -146,7 +146,7 @@
 
 @if $name == "header-promoted" {
 		
-		background-position: 28.426395939086294% 80.24691358024691%;
+		background-position: 19.591836734693878% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -156,7 +156,7 @@
 
 @if $name == "header-rising" {
 		
-		background-position: 64.9746192893401% 80.24691358024691%;
+		background-position: 9.795918367346939% 100%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -166,7 +166,7 @@
 
 @if $name == "header-top" {
 		
-		background-position: 93.61269035532996% 62.28395061728395%;
+		background-position: 9.795918367346939% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -176,7 +176,7 @@
 
 @if $name == "image--white" {
 		
-		background-position: 81.04507772020726% 63.860759493670884%;
+		background-position: 79.66804979253112% 65.65656565656566%;
 
 		@if ($scale != 0) {
 			width: 28px * $scale;
@@ -186,17 +186,17 @@
 
 @if $name == "logout" {
 		
-		background-position: 80% 95.29411764705883%;
+		background-position: 99.73619909502263% 0;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "media-embed" {
 		
-		background-position: 77.15736040609137% 80.24691358024691%;
+		background-position: 39.183673469387756% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -206,7 +206,7 @@
 
 @if $name == "quote" {
 		
-		background-position: 89.34010152284264% 80.24691358024691%;
+		background-position: 48.97959183673469% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -216,27 +216,27 @@
 
 @if $name == "reddit" {
 		
-		background-position: 64.39024390243902% 95.29411764705883%;
+		background-position: 65.15837104072398% 73.03370786516854%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "reddit--main" {
 		
-		background-position: 72.1951219512195% 95.29411764705883%;
+		background-position: 43.43891402714932% 73.03370786516854%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
 @if $name == "search" {
 		
-		background-position: 23.880597014925375% 97.59036144578313%;
+		background-position: 19.27710843373494% 98.05825242718447%;
 
 		@if ($scale != 0) {
 			width: 20px * $scale;
@@ -246,7 +246,7 @@
 
 @if $name == "search--main" {
 		
-		background-position: 99.50248756218906% 78.3132530120482%;
+		background-position: 77.10843373493977% 76.69902912621359%;
 
 		@if ($scale != 0) {
 			width: 20px * $scale;
@@ -256,11 +256,11 @@
 
 @if $name == "settings" {
 		
-		background-position: 48.78048780487805% 95.29411764705883%;
+		background-position: 45.248868778280546% 40.168539325842694%;
 
 		@if ($scale != 0) {
-			width: 16px * $scale;
-			height: 16px * $scale;
+			width: 48px * $scale;
+			height: 48px * $scale;
 		}
 	}
 
@@ -276,7 +276,7 @@
 
 @if $name == "video" {
 		
-		background-position: 0 100%;
+		background-position: 88.16326530612245% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -286,7 +286,7 @@
 
 @if $name == "video--main" {
 		
-		background-position: 12.182741116751268% 100%;
+		background-position: 78.36734693877551% 88.11881188118812%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -296,7 +296,7 @@
 
 @if $name == "wings" {
 		
-		background-position: 60.759616728337676% 0;
+		background-position: 47.04045008302639% 0;
 
 		@if ($scale != 0) {
 			width: 56.417px * $scale;
@@ -308,93 +308,248 @@
 
 @mixin icon-sprite-background-position($name) {
 	@if $name == "arrow-down" {
-		background-position: 99.69153439153439% 44.740259740259745%;
+		background-position: 93.0029535864979% 24.742268041237114%;
 	}
 	@if $name == "arrow-down--main" {
-		background-position: 52.91005291005291% 46.42857142857143%;
+		background-position: 93.0029535864979% 74.22680412371135%;
 	}
 	@if $name == "arrow-up" {
-		background-position: 0 84.41558441558442%;
+		background-position: 93.0029535864979% 41.23711340206186%;
 	}
 	@if $name == "arrow-up--main" {
-		background-position: 82.76031746031747% 44.740259740259745%;
+		background-position: 93.0029535864979% 57.7319587628866%;
 	}
 	@if $name == "bars" {
-		background-position: 56.58536585365854% 95.29411764705883%;
+		background-position: 70.77692307692308% 38.70786516853933%;
 	}
 	@if $name == "content-text" {
-		background-position: 40.609137055837564% 80.24691358024691%;
+		background-position: 0 100%;
 	}
 	@if $name == "content-text--main" {
-		background-position: 52.79187817258883% 80.24691358024691%;
+		background-position: 97.95918367346938% 88.11881188118812%;
 	}
 	@if $name == "email" {
-		background-position: 33.170731707317074% 95.29411764705883%;
+		background-position: 0 73.03370786516854%;
 	}
 	@if $name == "email--main" {
-		background-position: 40.97560975609756% 95.29411764705883%;
+		background-position: 21.71945701357466% 73.03370786516854%;
 	}
 	@if $name == "garuda--white" {
-		background-position: 99.62866242038217% 0;
+		background-position: 76.30097560975611% 0;
 	}
 	@if $name == "header-controversial" {
-		background-position: 67.00507614213198% 44.135802469135804%;
+		background-position: 0 88.11881188118812%;
 	}
 	@if $name == "header-gilded" {
-		background-position: 50.76142131979695% 63.888888888888886%;
+		background-position: 58.775510204081634% 88.11881188118812%;
 	}
 	@if $name == "header-hot" {
-		background-position: 62.944162436548226% 63.888888888888886%;
+		background-position: 29.387755102040817% 88.11881188118812%;
 	}
 	@if $name == "header-new" {
-		background-position: 16.243654822335024% 80.24691358024691%;
+		background-position: 68.57142857142857% 88.11881188118812%;
 	}
 	@if $name == "header-promoted" {
-		background-position: 28.426395939086294% 80.24691358024691%;
+		background-position: 19.591836734693878% 88.11881188118812%;
 	}
 	@if $name == "header-rising" {
-		background-position: 64.9746192893401% 80.24691358024691%;
+		background-position: 9.795918367346939% 100%;
 	}
 	@if $name == "header-top" {
-		background-position: 93.61269035532996% 62.28395061728395%;
+		background-position: 9.795918367346939% 88.11881188118812%;
 	}
 	@if $name == "image--white" {
-		background-position: 81.04507772020726% 63.860759493670884%;
+		background-position: 79.66804979253112% 65.65656565656566%;
 	}
 	@if $name == "logout" {
-		background-position: 80% 95.29411764705883%;
+		background-position: 99.73619909502263% 0;
 	}
 	@if $name == "media-embed" {
-		background-position: 77.15736040609137% 80.24691358024691%;
+		background-position: 39.183673469387756% 88.11881188118812%;
 	}
 	@if $name == "quote" {
-		background-position: 89.34010152284264% 80.24691358024691%;
+		background-position: 48.97959183673469% 88.11881188118812%;
 	}
 	@if $name == "reddit" {
-		background-position: 64.39024390243902% 95.29411764705883%;
+		background-position: 65.15837104072398% 73.03370786516854%;
 	}
 	@if $name == "reddit--main" {
-		background-position: 72.1951219512195% 95.29411764705883%;
+		background-position: 43.43891402714932% 73.03370786516854%;
 	}
 	@if $name == "search" {
-		background-position: 23.880597014925375% 97.59036144578313%;
+		background-position: 19.27710843373494% 98.05825242718447%;
 	}
 	@if $name == "search--main" {
-		background-position: 99.50248756218906% 78.3132530120482%;
+		background-position: 77.10843373493977% 76.69902912621359%;
 	}
 	@if $name == "settings" {
-		background-position: 48.78048780487805% 95.29411764705883%;
+		background-position: 45.248868778280546% 40.168539325842694%;
 	}
 	@if $name == "the-man" {
 		background-position: 0 0;
 	}
 	@if $name == "video" {
-		background-position: 0 100%;
+		background-position: 88.16326530612245% 88.11881188118812%;
 	}
 	@if $name == "video--main" {
-		background-position: 12.182741116751268% 100%;
+		background-position: 78.36734693877551% 88.11881188118812%;
 	}
 	@if $name == "wings" {
-		background-position: 60.759616728337676% 0;
+		background-position: 47.04045008302639% 0;
+	}
+}
+
+@mixin icon-sprite-scale($name, $scale) {
+	@if ($scale != 0) {
+		@if $name == "arrow-down" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 32px * $scale;
+			height: 32px * $scale;
+		}
+		@if $name == "arrow-down--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 32px * $scale;
+			height: 32px * $scale;
+		}
+		@if $name == "arrow-up" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 32px * $scale;
+			height: 32px * $scale;
+		}
+		@if $name == "arrow-up--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 32px * $scale;
+			height: 32px * $scale;
+		}
+		@if $name == "bars" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "content-text" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "content-text--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "email" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "email--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "garuda--white" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 64px * $scale;
+			height: 68.9px * $scale;
+		}
+		@if $name == "header-controversial" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-gilded" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-hot" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-new" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-promoted" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-rising" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "header-top" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "image--white" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 28px * $scale;
+			height: 28px * $scale;
+		}
+		@if $name == "logout" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "media-embed" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "quote" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "reddit" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "reddit--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "search" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 20px * $scale;
+			height: 20px * $scale;
+		}
+		@if $name == "search--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 20px * $scale;
+			height: 20px * $scale;
+		}
+		@if $name == "settings" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 48px * $scale;
+			height: 48px * $scale;
+		}
+		@if $name == "the-man" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 100px * $scale;
+			height: 130px * $scale;
+		}
+		@if $name == "video" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "video--main" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 24px * $scale;
+			height: 24px * $scale;
+		}
+		@if $name == "wings" {
+			background-size: (269px * $scale) (226px * $scale);
+			width: 56.417px * $scale;
+			height: 71.5px * $scale;
+		}
 	}
 }

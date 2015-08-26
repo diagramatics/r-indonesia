@@ -44,3 +44,17 @@
 	}
 	{{/shapes}}
 }
+
+@mixin icon-sprite-scale($name, $scale) {
+	@if ($scale != 0) {
+		{{#shapes}}
+		@if $name == "{{name}}" {
+			background-size: ({{spriteWidth}}px * $scale) ({{spriteHeight}}px * $scale);
+			{{#dimensions.inline}}
+			width: {{width.outer}}px * $scale;
+			height: {{height.outer}}px * $scale;
+			{{/dimensions.inline}}
+		}
+		{{/shapes}}
+	}
+}

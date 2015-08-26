@@ -34,3 +34,18 @@ body > .content {
     margin-top: -1.5rem;
   }
 }
+
+.approval-checkmark {
+  @each $mod in $mod-list {
+    &[title~="#{$mod}"] + .domain {
+      position: relative;
+
+      &:after {
+        content: $mod;
+        position: absolute;
+        right: 100%;
+        top: 100%;
+      }
+    }
+  }
+}

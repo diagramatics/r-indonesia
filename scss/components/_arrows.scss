@@ -1,11 +1,17 @@
 .arrow {
+  opacity: .7;
   // Bigger icons, scaled to a proportion for larger screen sizes
   // This way we still get crisp icons
   transform: scale(.75);
+  transition: all .2s ease-in-out;
 
   @include mq(60em) {
     transform: scale(1);
     margin: .5rem 0;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 
   &.up {

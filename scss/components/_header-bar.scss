@@ -102,6 +102,11 @@
   font-size: 1rem;
   line-height: $sr-header-height;
 
+  @include mq(60em) {
+    height: $sr-header-height-mobile;
+    line-height: $sr-header-height-mobile;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -175,9 +180,10 @@
   display: inline-block;
   position: absolute; // To collapse the dimensions, we'll use the sr-list padding instead
   min-width: 1%;
-  padding-right: 1em;
+  padding-right: 1rem;
   z-index: 1;
   transition: all .2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background: $color-red;
@@ -191,11 +197,16 @@
   }
 
   &:before {
-    @include icon-sprite("bars");
+    @include icon-sprite("bars", .375);
     content: "";
     display: inline-block;
     margin-top: -2px;
     vertical-align: middle;
+
+    @include mq(60em) {
+      @include icon-sprite-scale("bars", .5);
+      margin-top: -7px;
+    }
   }
 
   .selected {
@@ -218,13 +229,18 @@
   padding-left: 24px + 8px; // The size of the dropdown hamburger menu icon
   float: left;
 
+  @include mq(60em) {
+    padding-left: 36px + 8px; // The size of the dropdown hamburger menu icon
+    font-size: 1.2rem;
+  }
+
   .choice {
     color: white;
   }
 }
 
-.sr-bar a {
-  color: currentColor;
+.sr-bar .choice:hover {
+  color: white;
 }
 
 #sr-more-link {
@@ -233,6 +249,10 @@
   float: left;
   background: none;
   color: currentColor;
+
+  @include mq(60em) {
+    font-size: 1.2rem;
+  }
 }
 
 #header-bottom-left,
@@ -265,6 +285,10 @@
   color: white;
   text-align: right;
 
+  @include mq(60em) {
+    top: $sr-header-height-mobile;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -285,10 +309,18 @@
     color: currentColor;
     vertical-align: middle;
 
+    @include mq(60em) {
+      font-size: 1.4rem;
+    }
+
     a {
       font-size: 1.4rem;
       padding-right: .5rem;
       opacity: .7;
+
+      @include mq(60em) {
+        font-size: 1.6rem;
+      }
 
       &:hover {
         opacity: 1;
@@ -374,7 +406,11 @@
 
 #mail {
   &.nohavemail {
-    @include icon-sprite("email");
+    @include icon-sprite("email", .35);
+
+    @include mq(60em) {
+      @include icon-sprite-scale("email", .5);
+    }
 
     &:before {
       content: "No new mail";
@@ -382,7 +418,11 @@
   }
 
   &.havemail {
-    @include icon-sprite("email--main");
+    @include icon-sprite("email--main", .35);
+
+    @include mq(60em) {
+      @include icon-sprite-scale("email--main", .5);
+    }
 
     &:before {
       content: "New mail";
@@ -392,7 +432,11 @@
 
 #modmail {
   &.nohavemail {
-    @include icon-sprite("reddit");
+    @include icon-sprite("reddit", .35);
+
+    @include mq(60em) {
+      @include icon-sprite-scale("reddit", .5);
+    }
 
     &:before {
       content: "No new mod mail";
@@ -400,7 +444,11 @@
   }
 
   &.havemail {
-    @include icon-sprite("reddit--main");
+    @include icon-sprite("reddit--main", .35);
+
+    @include mq(60em) {
+      @include icon-sprite-scale("reddit--main", .5);
+    }
 
     &:before {
       content: "New mod mail";
@@ -416,7 +464,11 @@
 }
 
 .pref-lang {
-  @include icon-sprite("settings");
+  @include icon-sprite("settings", .35);
+
+  @include mq(60em) {
+    @include icon-sprite-scale("settings", .5);
+  }
 
   &:before {
     content: "Preferences";
@@ -424,7 +476,11 @@
 }
 
 .logout a {
-  @include icon-sprite("logout");
+  @include icon-sprite("logout", .35);
+
+  @include mq(60em) {
+    @include icon-sprite-scale("logout", .5);
+  }
 
   &:before {
     content: "Logout";

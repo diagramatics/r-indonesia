@@ -39,6 +39,7 @@ $header-height: 10em;
 $header-offset-height: 10rem;
 
 $sr-header-height: 24px;
+$sr-header-height-mobile: $sr-header-height * 1.5; 
 
 $content-offset-height: -($header-offset-height * 3/4);
 
@@ -47,3 +48,5 @@ $sidebar-width: 300px;
 $page-background-color: #fafafa;
 
 $tabmenu-list: hot, new, rising, controversial, top, gilded, promoted;
+
+$mod-list: "sapulidi", "anak_jakarta", "Mental_octo", "TheBlazingPhoenix", "diagramatics", "RG_Kid";
