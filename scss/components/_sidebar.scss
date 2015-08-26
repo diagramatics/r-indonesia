@@ -68,24 +68,41 @@
   color: white;
   font-size: 1.6rem;
   font-weight: normal;
+  line-height: 1.6;
   transition: all .2s ease-in-out;
 
   @include mq(60em) {
-    top: $header-height * 2.5;
-    font-size: 1.4rem;
+    top: $header-height * 2.25;
   }
 
   @include mq(44em) {
-    top: $header-height * 2.8;
+    top: $header-height * 2.3;
   }
 
   @include mq(30em) {
-    top: $header-height * 3.2;
+    top: $header-height * 2.5;
+    left: 0;
+  }
+
+  .listing-page & {
+    @include mq(60em) {
+      top: $header-height * 2.5;
+      font-size: 1.4rem;
+    }
+
+    @include mq(44em) {
+      top: $header-height * 2.8;
+    }
+
+    @include mq(30em) {
+      top: $header-height * 3.1;
+    }
   }
 
   a {
     color: white;
-    border-bottom-color: white;
+    border-bottom-color: transparent;
+    text-decoration: underline;
   }
 
   &:hover {
@@ -95,11 +112,9 @@
 
     a {
       color: $color-red;
-      border-bottom-color: $color-red;
 
       &:hover {
         color: $color-red--dark;
-        border-bottom-color: $color-red--dark;
       }
     }
   }
