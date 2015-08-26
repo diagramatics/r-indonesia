@@ -1,0 +1,22 @@
+.sidecontentbox {
+  border-top: thin solid darken($page-background-color, 5%);
+  padding-top: 1rem;
+  font-size: 1.2rem;
+
+  .collapse-button {
+    @extend %button;
+    float: right;
+    width: auto;
+    height: auto;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .content {
+    border: 0;
+
+    li {
+      margin: .5rem 0;
+    }
+  }
+}

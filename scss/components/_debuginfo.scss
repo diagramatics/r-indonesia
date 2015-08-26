@@ -1,8 +1,12 @@
 .debuginfo {
   position: relative;
   font-size: 1rem;
-  // Let's add "his" face!
 
+  @include mq(60em) {
+    margin-top: 5rem;
+  }
+
+  // Let's add "his" face!
   &:before,
   &:after,
   .icon:before {

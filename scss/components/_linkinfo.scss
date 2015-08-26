@@ -4,9 +4,13 @@
   background: none;
 
   .date {
-    span {
-      display: none;
+    @include mq(60em) {
+      font-size: 1.4rem;
     }
+  }
+
+  .date:first-letter {
+    text-transform: uppercase;
   }
 
   .shortlink {
@@ -21,6 +25,10 @@
   border: thin solid darken($page-background-color, 8%);
   background: none;
   font-size: 1.2rem;
+
+  @include mq(60em) {
+    font-size: 1.4rem;
+  }
 
   &:hover {
     border-color: darken($page-background-color, 24%);

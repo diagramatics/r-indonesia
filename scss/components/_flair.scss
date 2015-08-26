@@ -1,6 +1,6 @@
 .flair {
   position: relative;
-  height: 25px;
+  min-height: 25px;
   margin-left: 20px;
   padding: .3rem 1rem .3rem 2rem;
   border: 0;
@@ -8,6 +8,7 @@
   transition: all .2s ease-in-out;
 
   &.flair {
+    display: inline-block;
     font-size: 1.1rem;
   }
 

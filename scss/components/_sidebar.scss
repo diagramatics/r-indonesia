@@ -44,8 +44,15 @@
 
   // Sidebar subreddit name
   .redditname {
-    a:before {
-      content: "r/";
+    @extend .pagename;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: none;
+
+    a {
+      text-shadow: none;
     }
   }
 }
@@ -97,4 +104,305 @@
 
 .gadget .midcol {
   width: auto;
+}
+
+.subscribers {
+  display: block;
+  font-size: 1.4rem;
+  text-align: center;
+
+  > .number {
+    font-size: 2.0rem;
+    vertical-align: middle;
+  }
+
+  > .word {
+    vertical-align: middle;
+  }
+}
+
+.users-online {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+
+  &:before {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+  }
+
+  > .number {
+    font-size: 1.6rem;
+    vertical-align: middle;
+  }
+
+  > .word {
+    vertical-align: middle;
+  }
+}
+
+// Flair box prompt
+.titlebox form.flairtoggle {
+  position: relative;
+  margin-top: 1rem;
+
+  > input {
+    display: none;
+  }
+
+  > label {
+    @extend %button;
+    display: block;
+    position: relative;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1rem;
+    padding-left: 3rem;
+    background: darken($page-background-color, 5%);
+    font-size: 1.2rem;
+
+    &:before {
+      content: "Show my flair";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      font-size: 1.8rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-50%);
+      transition: all .2s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      bottom: 1rem;
+      width: 10px;
+      height: 10px;
+      margin: auto;
+      background: transparent;
+      border: 1px solid $color-red;
+      transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+      box-shadow: 0 .3em .6em -.2em rgba(black, .3);
+      color: rgba(black, .1);
+
+      &:before {
+        color: white;
+        opacity: 1;
+      }
+
+      &:after {
+        border-color: white;
+        background: white;
+        box-shadow: 0 0 0 1px $color-red,
+        0 0 0 2px white;
+        transition: border-color .2s ease-in-out,
+                    background .2s ease-in-out .2s,
+                    box-shadow .2s ease-in-out .2s;
+      }
+    }
+  }
+
+  > input:checked + label {
+    background: $color-red;
+    color: white;
+    box-shadow: inset 0 .3em .6em -.2em rgba(black, .4);
+
+    &:before {
+      content: "Don't show my flair";
+      color: black;
+    }
+
+    &:after {
+      border-color: white;
+      background: white;
+      box-shadow: 0 0 0 1px $color-red,
+      0 0 0 2px white;
+    }
+
+    &:hover {
+      background: darken($page-background-color, 10%);
+      color: rgba(black, .1);
+      box-shadow: 0 .3em .6em -.2em rgba(black, .3);
+
+      &:after {
+        border-color: $color-red;
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+
+    &:active {
+    box-shadow: 0 .3em .6em -.2em transparent;
+    }
+  }
+}
+.titlebox .tagline {
+  position: relative;
+  margin: 0;
+  padding: .5rem;
+  background: darken($page-background-color, 2%);
+  color: transparent; // This is in order to hide the (edit) brackets
+
+  > .author {
+    display: block;
+    text-align: center;
+  }
+
+  > .flairselectbtn {
+    @extend %button;
+    display: block;
+    margin-top: 2rem;
+    padding: .5rem;
+    background: darken($page-background-color, 15%);
+    color: black;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  > .userattrs {
+    // Hide this for now
+    // TODO: Figure out what this actually is
+    display: none;
+  }
+}
+
+// Flair selector
+.flairselector {
+  // Position is relative to .tagline
+  // !important declarations are to override inline styling
+  right: 1rem;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  min-width: 350px;
+  padding: 1rem !important;
+  background: darken($page-background-color, 5%);
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px 1px rgba(black, .1);
+
+  &.drop-choices.active {
+    border: 0;
+  }
+
+  > h2 {
+    background: none;
+    text-transform: capitalize;
+    color: $color-red;
+    font-size: 1.6rem;
+  }
+
+  ul {
+    display: block;
+    width: 100% !important; // Override inline styling
+    max-width: none;
+    overflow: visible;
+  }
+
+  li {
+    padding: .5rem 0;
+    border: 0;
+    border-bottom: thin solid darken($page-background-color, 10%);
+    text-align: center !important;
+
+    &.selected {
+      padding: .5em;
+      border: none;
+      background: darken($page-background-color, 15%);
+    }
+
+    a {
+      color: $color-red--desaturated !important; // Original base has !important
+    }
+  }
+
+  .author {
+    font-size: 1.2rem;
+  }
+
+  form {
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    > div {
+      margin: .5rem 0;
+    }
+  }
+
+  .customizer {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    margin: 0;
+  }
+
+  .customizer input {
+    width: 100%;
+    height: 35px;
+    padding: 0 .5rem;
+    border: thin solid darken($page-background-color, 15%);
+    background: none;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      border-color: darken($page-background-color, 25%);
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: darken($page-background-color, 30%);
+    }
+  }
+
+  button[type="submit"] {
+    @extend %button;
+    @extend %button--red;
+    width: 30%;
+    min-width: 50px;
+    height: 35px;
+    margin-left: 0;
+    padding: 0 .5rem;
+  }
+
+  .customizer + button[type="submit"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .status {
+    display: block;
+  }
+}
+
+.flairoptionpane {
+  overflow: visible;
+}
+
+.flairremove {
+  // Note: this element, even though is the parent of the link, is the element
+  // triggering the flair removal.
+
+  a {
+    @extend %button;
+    display: inline-block;
+    padding: .5rem 1rem;
+    background: darken($page-background-color, 10%);
+    font-size: 1.4rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

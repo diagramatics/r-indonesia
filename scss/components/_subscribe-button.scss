@@ -1,0 +1,19 @@
+.titlebox .subscribe-button {
+  display: block;
+  margin: 1rem 1rem;
+  text-align: center;
+
+  > a {
+    padding: .75rem 2rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    &.active {
+      display: block;
+    }
+
+    &.add {
+      font-size: 1.8rem;
+    }
+  }
+}
