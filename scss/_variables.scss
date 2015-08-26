@@ -35,13 +35,13 @@ $color-green: #0db04b;
 $color-green--dark: #00652e;
 $color-green--darker: darken($color-green--dark, 5%);
 
-$header-height: 10em;
-$header-offset-height: 10rem;
+$header-height: 10rem;
+$header-offset-height: 17.5rem;
 
 $sr-header-height: 24px;
-$sr-header-height-mobile: $sr-header-height * 1.5; 
+$sr-header-height-mobile: $sr-header-height * 1.5;
 
-$content-offset-height: -($header-offset-height * 3/4);
+$content-offset-height: -($header-offset-height / 2);
 
 $sidebar-width: 300px;
 

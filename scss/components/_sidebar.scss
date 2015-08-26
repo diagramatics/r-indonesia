@@ -11,7 +11,7 @@
 }
 
 .side {
-  position: relative;
+  // Note: keep this as static positioned so the announcement below can work
   width: 25%;
   margin: 0;
   padding: 1em;
@@ -27,6 +27,41 @@
   .redditname {
     a:before {
       content: "r/";
+    }
+  }
+}
+
+// Put the first H3 of the sidebar information as an announcement
+.side h3:first-of-type {
+  display: inline-block;
+  position: absolute;
+  top: $header-offset-height - ($header-height / 2); // Offset from the top of header/page
+  left: 1%;
+  border-left: 5px solid rgba(white, .9);
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: normal;
+  transition: all .2s ease-in-out;
+
+  a {
+    color: white;
+    border-bottom-color: white;
+  }
+
+  &:hover {
+    border-left-color: $color-red--desaturated;
+    background: rgba(white, .7);
+    color: black;
+
+    a {
+      color: $color-red;
+      border-bottom-color: $color-red;
+
+      &:hover {
+        color: $color-red--dark;
+        border-bottom-color: $color-red--dark;
+      }
     }
   }
 }
