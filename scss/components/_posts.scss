@@ -27,11 +27,11 @@
 
     .entry {
       position: relative;
-      // The left and padding-left gives an overflow buffer on the left
+      margin: 0;
+      // The padding-left gives an overflow buffer on the left
       // So we can absolute position things until 48px to the left
-      left: -48px;
       padding-left: 48px;
-      overflow: auto;
+      overflow: visible;
     }
 
     .title {
@@ -73,6 +73,17 @@
 
     .thumbnail {
       margin-right: 1.8rem;
+
+      @include mq(44em) {
+        position: absolute;
+        opacity: .1;
+        filter: grayscale(.75);
+
+        &.default,
+        &.nsfw {
+          opacity: .15;
+        }
+      }
     }
   }
 }

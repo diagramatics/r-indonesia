@@ -3,6 +3,7 @@
   text-align: center;
   z-index: 1; // Prevent the same-x-position search bar from covering the dimensions of the tabmenu
   vertical-align: middle;
+  white-space: normal;
 
   @include mq(60em) {
     display: block;
@@ -21,6 +22,11 @@
       text-transform: capitalize;
       padding: 0 1.75rem .5rem; // No top padding for better visual on vertical alignment
       transition: all .2s ease-in-out;
+
+      @include mq(60em) {
+        margin-top: 1rem;
+        padding: 1rem 1.75rem;
+      }
 
       &:before,
       &:after {

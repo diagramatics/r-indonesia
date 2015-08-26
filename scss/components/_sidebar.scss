@@ -71,8 +71,16 @@
   transition: all .2s ease-in-out;
 
   @include mq(60em) {
-    top: $header-height * 2.2;
+    top: $header-height * 2.5;
     font-size: 1.4rem;
+  }
+
+  @include mq(44em) {
+    top: $header-height * 2.8;
+  }
+
+  @include mq(30em) {
+    top: $header-height * 3.2;
   }
 
   a {

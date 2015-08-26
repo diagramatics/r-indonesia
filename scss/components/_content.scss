@@ -19,6 +19,10 @@ body > .content {
     }
   }
 
+  @include mq(30em) {
+    width: 100%;
+  }
+
   // Wings of the RI70 logo
   &:before {
     @include icon-sprite("wings");

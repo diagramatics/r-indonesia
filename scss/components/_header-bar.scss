@@ -230,6 +230,7 @@
   float: left;
 
   @include mq(60em) {
+    max-width: 100%;
     padding-left: 36px + 8px; // The size of the dropdown hamburger menu icon
     font-size: 1.2rem;
   }
@@ -251,7 +252,7 @@
   color: currentColor;
 
   @include mq(60em) {
-    font-size: 1.2rem;
+    display: none;
   }
 }
 
@@ -271,6 +272,10 @@
     margin-top: $sr-header-height * 2;
     text-align: center;
   }
+
+  @include mq(30em) {
+    margin-top: $sr-header-height * 3;
+  }
 }
 
 #header-bottom-right {
@@ -278,16 +283,12 @@
   top: $sr-header-height;
   bottom: auto;
   margin-left: auto;
-  padding: .5rem 3rem .5rem 3rem;
+  padding: .5rem 3rem;
   border-left: thin solid rgba($page-background-color, .1);
   border-radius: 0;
   background: none;
   color: white;
   text-align: right;
-
-  @include mq(60em) {
-    top: $sr-header-height-mobile;
-  }
 
   &:before {
     content: "";
@@ -297,6 +298,22 @@
     left: 0;
     height: 1px;
     background: rgba($page-background-color, .1);
+  }
+
+  @include mq(60em) {
+    top: $sr-header-height-mobile;
+  }
+
+  @include mq(44em) {
+    right: 50%;
+    white-space: nowrap;
+    border-right: thin solid rgba($page-background-color, .1);
+    transform: translateX(50%);
+
+    &:before {
+      right: 0;
+      left: 0;
+    }
   }
 
   a {
@@ -314,6 +331,12 @@
 
     @include mq(60em) {
       font-size: 1.4rem;
+    }
+
+    @include mq(30em) {
+      display: block;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     &:hover {
@@ -350,6 +373,12 @@
     display: inline-block;
     position: static;
     height: auto;
+
+    @include mq(30em) {
+      display: block;
+      position: absolute;
+      top: 1rem;
+    }
   }
 
   .beta-link {
@@ -365,6 +394,10 @@
   position: relative;
   font-size: 0;
   opacity: .8;
+
+  @include mq(44em) {
+    margin: 0 .5rem;
+  }
 
   &:before,
   &:after {
