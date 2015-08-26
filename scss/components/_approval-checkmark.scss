@@ -1,0 +1,53 @@
+.approval-checkmark {
+  // The tooltip, placed on the next element because .approval-checkmark is an image
+  & + .domain {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 100%;
+      z-index: 1;
+      transition: all .2s ease-in-out;
+    }
+
+    &:before {
+      margin-right: 5px;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid rgba(black, .9);
+      border-left: 5px solid transparent;
+      opacity: 0;
+    }
+
+    &:after {
+      content: "?";
+      display: inline-block;
+      margin-top: 5px;
+      padding: .25rem 1rem;
+      border-radius: 2px;
+      background: rgba(black, .9);
+      color: white;
+      opacity: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &:hover {
+    & + .domain {
+      &:before,
+      &:after {
+        opacity: .95;
+      }
+    }
+  }
+
+  @each $mod in $mod-list {
+    &[title~="#{$mod}"] + .domain {
+      &:after {
+        content: $mod;
+      }
+    }
+  }
+}
