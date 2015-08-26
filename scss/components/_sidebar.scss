@@ -14,13 +14,32 @@
   // Note: keep this as static positioned so the announcement below can work
   width: 25%;
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
   background: none;
   order: 1;
 
   @include mq(60em) {
     width: 100%;
     float: none;
+    padding-top: 3rem;
+    border-top: thin solid darken($page-background-color, 5%);
+
+    // A marking for the start of the sidebar
+    &:before {
+      content: "Sidebar";
+      position: relative; // Can't absolute position, can't relative position the sidebar
+      top: -4.25rem;
+      padding: 0 1rem;
+      background: $page-background-color;
+      color: rgba(black, .5);
+      font-size: 1.4rem;
+      text-align: right;
+    }
+
+    > .spacer:first-of-type {
+      // Collapse the margin made by the marking
+      margin-top: -2rem;
+    }
   }
 
   // Sidebar subreddit name
@@ -43,6 +62,11 @@
   font-size: 1.6rem;
   font-weight: normal;
   transition: all .2s ease-in-out;
+
+  @include mq(60em) {
+    top: $header-height * 2.2;
+    font-size: 1.4rem;
+  }
 
   a {
     color: white;
