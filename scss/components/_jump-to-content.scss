@@ -1,0 +1,27 @@
+#jumpToContent {
+  top: $sr-header-height;
+  right: 0;
+  left: 0;
+  width: 200px;
+  margin: auto;
+  padding: .5rem 1rem;
+  border-radius: 2px;
+  background: $color-red;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: capitalize;
+  opacity: 0;
+  // Don't use transparent because it is basically rgba(black, 0).
+  // The transition from black to white is ugly.
+  box-shadow: 0 0 5px 8px rgba(white, 0);
+  transform: translateY(-200%);
+
+  &:focus {
+    margin-left: auto !important; // Overriding !important styling from base
+    outline: 0;
+    opacity: .9;
+    box-shadow: 0 0 5px 8px rgba(white, .2);
+    transform: translateY(0);
+  }
+}
