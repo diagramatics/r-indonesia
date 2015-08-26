@@ -5,7 +5,7 @@ ul.report-reasons {
   padding: 1rem;
   border: 0;
   border-radius: 2px;
-  background: $color-yellow-alt--desaturated;
+  background: rgba($color-yellow-alt--desaturated, .3);
   font-size: 1.2rem;
 }
 
@@ -15,7 +15,7 @@ ul.report-reasons li.report-reason-title {
   display: block;
   margin-bottom: .5rem;
   padding-bottom: .5rem;
-  border-bottom: thin solid darken($color-yellow-alt--desaturated, 15%);
+  border-bottom: thin solid rgba(darken($color-yellow-alt--desaturated, 15%), .3);
   font-size: 1.4rem;
   font-weight: normal;
   text-transform: capitalize;
@@ -24,17 +24,35 @@ ul.report-reasons li.report-reason-title {
 // Default styling is ul.report-reasons li.report-reason
 // Oh so deep :(
 ul.report-reasons li.report-reason {
-  &[title="spam"] {
-    &:before {
-      content: "";
-      display: inline-block;
-      position: relative;
-      width: 5px;
-      height: 5px;
-      bottom: 2px;
-      margin-right: 1rem;
-      background: $color-red;
-      border-radius: 50%;
-    }
+  &:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    bottom: 2px;
+    margin-right: 1rem;
+    background: #777;
+    border-radius: 50%;
+  }
+
+  &[title="spam"]:before {
+    background: $color-red;
+  }
+
+  &[title="vote manipulation"]:before {
+    background: blue;
+  }
+
+  &[title="personal information"]:before {
+    background: lightblue;
+  }
+
+  &[title="sexualizing minors"]:before {
+    background: maroon;
+  }
+
+  &[title="breaking reddit"]:before {
+    background: white;
   }
 }
