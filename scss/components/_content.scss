@@ -4,11 +4,20 @@ body > .content {
   float: left;
   width: 73%;
   margin: $content-offset-height 1% 3em;
-  padding: 1em;
+  padding: 1rem;
   z-index: 1;
   border-radius: 2px;
   background: $page-background-color;
   transition: all .2s ease-in-out;
+
+  @include mq(60em) {
+    float: none;
+    width: 98%;
+
+    &:before {
+      display: none;
+    }
+  }
 
   // Wings of the RI70 logo
   &:before {
@@ -22,5 +31,6 @@ body > .content {
 
   .link .midcol.midcol { // Higher specificity
     width: auto;
+    margin-top: -1.5rem;
   }
 }

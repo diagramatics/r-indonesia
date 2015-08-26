@@ -3,8 +3,8 @@
   min-height: $header-height;
   border-bottom: 0;
   background: linear-gradient(to bottom, rgba(black, .4) 0%, rgba(black, .4) 100%),
-              //repeating-linear-gradient(-60deg, transparent, transparent 2px, rgba(white, .3) 2px, rgba(white, .3) 4px),
-              url(%%header-new2%%) no-repeat center;
+  //repeating-linear-gradient(-60deg, transparent, transparent 2px, rgba(white, .3) 2px, rgba(white, .3) 4px),
+  url(%%header-new2%%) no-repeat center;
   background-size: cover;
   color: white;
   padding-bottom: $header-offset-height;
@@ -123,17 +123,6 @@
     }
   }
 
-  .sr-list {
-    max-width: 93%;
-    float: left;
-
-    .choice {
-      color: white;
-    }
-  }
-
-
-
   .drop-choices.srdrop {
     display: block;
     right: 20px;
@@ -184,7 +173,10 @@
 
 .dropdown.srdrop {
   display: inline-block;
-  margin-right: 1em;
+  position: absolute; // To collapse the dimensions, we'll use the sr-list padding instead
+  min-width: 1%;
+  padding-right: 1em;
+  z-index: 1;
   transition: all .2s ease-in-out;
 
   &:hover {
@@ -221,6 +213,15 @@
   }
 }
 
+.sr-list {
+  max-width: 93%;
+  padding-left: 24px + 8px; // The size of the dropdown hamburger menu icon
+  float: left;
+
+  .choice {
+    color: white;
+  }
+}
 
 .sr-bar a {
   color: currentColor;
@@ -245,6 +246,11 @@
   margin-top: $sr-header-height;
   padding: 1rem;
   font-size: 1.4rem;
+
+  @include mq(60em) {
+    margin-top: $sr-header-height * 2;
+    text-align: center;
+  }
 }
 
 #header-bottom-right {
@@ -277,6 +283,7 @@
     display: inline-block;
     padding: .5em 0;
     color: currentColor;
+    vertical-align: middle;
 
     a {
       font-size: 1.4rem;
@@ -301,6 +308,7 @@
 
   .beta-link {
     position: static;
+    vertical-align: middle;
   }
 }
 

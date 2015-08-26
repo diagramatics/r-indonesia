@@ -1,4 +1,13 @@
 .arrow {
+  // Bigger icons, scaled to a proportion for larger screen sizes
+  // This way we still get crisp icons
+  transform: scale(.75);
+
+  @include mq(60em) {
+    transform: scale(1);
+    margin: .5rem 0;
+  }
+
   &.up {
     @include icon-sprite("arrow-up");
   }

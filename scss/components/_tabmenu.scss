@@ -4,6 +4,10 @@
   z-index: 1; // Prevent the same-x-position search bar from covering the dimensions of the tabmenu
   vertical-align: middle;
 
+  @include mq(60em) {
+    display: block;
+  }
+
   > li {
     display: inline-block;
     position: relative;
