@@ -4,6 +4,27 @@
     padding: 1em 0;
     border-bottom: thin solid darken($page-background-color, 5%);
 
+    &.last-clicked {
+      overflow: visible;
+      border: none;
+      border-bottom: thin solid darken($page-background-color, 5%);
+
+      &:after {
+        content: "Last Clicked";
+        position: absolute;
+        top: -1rem; // Negative number of the padding set on the entry
+        right: 0;
+        padding: .5rem 1rem;
+        background: darken($page-background-color, 5%);
+        font-size: 1.1rem;
+        opacity: .5;
+      }
+
+      &:hover:after {
+        opacity: .8;
+      }
+    }
+
     .entry {
       position: relative;
       // The left and padding-left gives an overflow buffer on the left
