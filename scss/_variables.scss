@@ -24,9 +24,10 @@ $color-red--lighter: lighten($color-red, 15%);
 $color-red--dark: darken($color-red, 5%);
 $color-red--darker: darken($color-red, 10%);
 $color-red--desaturated: desaturate($color-red--lighter, 50%);
+$color-red--dark--desaturated: desaturate($color-red, 50%);
 // Alt red colors from HUT RI 70 logo
 $color-red-alt: rgb(215, 25, 32);
-$color-red-alt-dark: rgb(158, 11, 15);
+$color-red-alt--dark: rgb(158, 11, 15);
 $color-yellow: #ffe800;
 $color-yellow-alt: #ffb717;
 $color-yellow-alt--desaturated: desaturate(lighten($color-yellow-alt, 10%), 10%);
@@ -34,6 +35,11 @@ $color-yellow-alt--saturated: saturate($color-yellow-alt, 40%);
 $color-green: #0db04b;
 $color-green--dark: #00652e;
 $color-green--darker: darken($color-green--dark, 5%);
+
+$color-link: $color-red-alt;
+$color-link-hover: $color-red-alt--dark;
+$color-link-visited: $color-red--desaturated;
+$color-link-visited-hover: $color-red--dark--desaturated;
 
 $header-height: 10rem;
 $header-offset-height: 17.5rem;

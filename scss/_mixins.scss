@@ -4,6 +4,16 @@
   }
 }
 
+@mixin link-no-visited {
+  &:visited {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
 /**
  * Mixin that outputs comment child nested in n-level deep with gradually changing values every child
  */

@@ -1,0 +1,34 @@
+.footer {
+  max-width: 800px;
+  border: 0;
+  font-size: 1.4rem;
+
+  .col {
+    border-left-color: darken($page-background-color, 5%);
+  }
+
+  .title {
+    font-family: $font-family-serif;
+    font-size: 2.0rem;
+    text-transform: capitalize;
+  }
+
+  li {
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+
+    @include mq(60em) {
+      margin-bottom: .25rem;
+    }
+  }
+
+   a {
+     @include link-no-visited;
+     border-bottom: thin solid transparent;
+
+     &:hover {
+       text-decoration: none;
+       border-bottom-color: currentColor;
+     }
+   }
+}
