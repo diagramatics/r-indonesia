@@ -269,7 +269,7 @@
     border-left: 0;
   }
 
-  .flat-list.buttons {
+  > .entry > .flat-list.buttons {
     padding-top: 1rem;
     border-top: thin solid darken($page-background-color, 5%);
   }
@@ -333,7 +333,7 @@
 
 // Comment area infobar (e.g. shown on the context page)
 .commentarea > .infobar {
-  margin: .5rem 0;
+  margin: .5rem 0 3rem;
   padding: 1rem;
   border: 0;
   border-left: 2px solid $color-yellow-alt--saturated;
@@ -364,5 +364,51 @@
     &:hover {
       border-bottom: thin solid $color-red;
     }
+  }
+}
+
+.morerecursion {
+  margin-left: 1px;
+  padding: 1rem 0 1.2rem 0;
+  border-left: 2px dotted darken($page-background-color, 25%);
+
+  &:hover {
+    border-left-color: darken($page-background-color, 50%);
+  }
+}
+
+.deepthread {
+  display: inline-block;
+  margin-left: 46px; // Vote section size
+
+  &:after {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  a {
+    @extend %button;
+    display: inline-block;
+    padding: .5rem 2rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    &:hover {
+      text-decoration: none;
+
+      &:after {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  + .flat-list {
+    margin-left: 46px; // Vote section size
   }
 }
