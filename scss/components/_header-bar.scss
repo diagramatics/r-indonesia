@@ -306,17 +306,26 @@
   > .user {
     display: inline-block;
     padding: .5em 0;
+    opacity: .7;
     color: currentColor;
+    font-size: 1.4rem;
     vertical-align: middle;
+    transition: all .2s ease-in-out;
 
     @include mq(60em) {
       font-size: 1.4rem;
     }
 
+    &:hover {
+      opacity: 1;
+
+      a {
+        opacity: .7;
+      }
+    }
+
     a {
-      font-size: 1.4rem;
       padding-right: .5rem;
-      opacity: .7;
 
       @include mq(60em) {
         font-size: 1.6rem;
@@ -324,6 +333,11 @@
 
       &:hover {
         opacity: 1;
+      }
+
+      &.login-required {
+        padding-right: 0;
+        text-decoration: underline;
       }
     }
   }
