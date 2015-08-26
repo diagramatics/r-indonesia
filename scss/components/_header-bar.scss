@@ -179,6 +179,8 @@
 .dropdown.srdrop {
   display: inline-block;
   position: absolute; // To collapse the dimensions, we'll use the sr-list padding instead
+  top: 0;
+  left: 0;
   min-width: 1%;
   padding-right: 1rem;
   z-index: 1;
@@ -314,6 +316,10 @@
       right: 0;
       left: 0;
     }
+  }
+
+  @include mq(30em) {
+    text-align: center;
   }
 
   a {
