@@ -2,11 +2,11 @@
 
 @mixin icon-sprite($name, $scale: 1) {
 	background: url(%%icon-sprites%%) no-repeat;
-	background-size: (269px * $scale) (234px * $scale);
+	background-size: (269px * $scale) (210px * $scale);
 
 	@if $name == "arrow-down" {
 		
-		background-position: 0 88.11881188118812%;
+		background-position: 27.0042194092827% 100%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -16,7 +16,7 @@
 
 @if $name == "arrow-down--main" {
 		
-		background-position: 27.0042194092827% 88.11881188118812%;
+		background-position: 93.24894514767932% 71.91011235955057%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -26,7 +26,7 @@
 
 @if $name == "arrow-up" {
 		
-		background-position: 13.50210970464135% 88.11881188118812%;
+		background-position: 0 100%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -36,7 +36,7 @@
 
 @if $name == "arrow-up--main" {
 		
-		background-position: 93.24894514767932% 63.366336633663366%;
+		background-position: 13.50210970464135% 100%;
 
 		@if ($scale != 0) {
 			width: 32px * $scale;
@@ -46,7 +46,7 @@
 
 @if $name == "bars" {
 		
-		background-position: 21.71945701357466% 69.89247311827957%;
+		background-position: 45.248868778280546% 44.44444444444444%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -56,7 +56,7 @@
 
 @if $name == "checkmark" {
 		
-		background-position: 29.387755102040817% 100%;
+		background-position: 39.183673469387756% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -66,7 +66,7 @@
 
 @if $name == "content-text" {
 		
-		background-position: 19.591836734693878% 100%;
+		background-position: 48.97959183673469% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -76,7 +76,7 @@
 
 @if $name == "content-text--main" {
 		
-		background-position: 9.795918367346939% 100%;
+		background-position: 97.95918367346938% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -86,7 +86,7 @@
 
 @if $name == "email" {
 		
-		background-position: 0 69.89247311827957%;
+		background-position: 65.15837104072398% 80.24691358024691%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -110,83 +110,13 @@
 
 		@if ($scale != 0) {
 			width: 64px * $scale;
-			height: 68.9px * $scale;
-		}
-	}
-
-@if $name == "header-controversial" {
-		
-		background-position: 0 100%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-gilded" {
-		
-		background-position: 39.183673469387756% 84.76190476190476%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-hot" {
-		
-		background-position: 88.16326530612245% 84.76190476190476%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-new" {
-		
-		background-position: 58.775510204081634% 84.76190476190476%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-promoted" {
-		
-		background-position: 58.775510204081634% 100%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-rising" {
-		
-		background-position: 48.97959183673469% 84.76190476190476%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-	}
-
-@if $name == "header-top" {
-		
-		background-position: 97.95918367346938% 84.76190476190476%;
-
-		@if ($scale != 0) {
-			width: 24px * $scale;
-			height: 24px * $scale;
+			height: 69px * $scale;
 		}
 	}
 
 @if $name == "image--white" {
 		
-		background-position: 79.66804979253112% 63.10679611650485%;
+		background-position: 79.66804979253112% 71.42857142857143%;
 
 		@if ($scale != 0) {
 			width: 28px * $scale;
@@ -196,7 +126,7 @@
 
 @if $name == "logout" {
 		
-		background-position: 43.43891402714932% 69.89247311827957%;
+		background-position: 43.43891402714932% 80.24691358024691%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -206,7 +136,7 @@
 
 @if $name == "media-embed" {
 		
-		background-position: 68.57142857142857% 84.76190476190476%;
+		background-position: 68.57142857142857% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -216,7 +146,7 @@
 
 @if $name == "quote" {
 		
-		background-position: 78.36734693877551% 84.76190476190476%;
+		background-position: 58.775510204081634% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -226,7 +156,7 @@
 
 @if $name == "reddit" {
 		
-		background-position: 45.248868778280546% 38.70967741935484%;
+		background-position: 21.71945701357466% 80.24691358024691%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -236,7 +166,7 @@
 
 @if $name == "reddit--main" {
 		
-		background-position: 65.15837104072398% 69.89247311827957%;
+		background-position: 0 80.24691358024691%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -246,7 +176,7 @@
 
 @if $name == "search" {
 		
-		background-position: 96.5065502183406% 24.742268041237114%;
+		background-position: 96.5065502183406% 28.235294117647058%;
 
 		@if ($scale != 0) {
 			width: 40px * $scale;
@@ -256,7 +186,7 @@
 
 @if $name == "search--main" {
 		
-		background-position: 96.5065502183406% 45.36082474226804%;
+		background-position: 96.5065502183406% 51.76470588235294%;
 
 		@if ($scale != 0) {
 			width: 40px * $scale;
@@ -266,7 +196,7 @@
 
 @if $name == "settings" {
 		
-		background-position: 71.04072398190046% 37.043010752688176%;
+		background-position: 71.04072398190046% 42.592592592592595%;
 
 		@if ($scale != 0) {
 			width: 48px * $scale;
@@ -286,7 +216,7 @@
 
 @if $name == "video" {
 		
-		background-position: 39.183673469387756% 100%;
+		background-position: 78.36734693877551% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -296,7 +226,7 @@
 
 @if $name == "video--main" {
 		
-		background-position: 48.97959183673469% 100%;
+		background-position: 88.16326530612245% 95.6989247311828%;
 
 		@if ($scale != 0) {
 			width: 24px * $scale;
@@ -318,31 +248,31 @@
 
 @mixin icon-sprite-background-position($name) {
 	@if $name == "arrow-down" {
-		background-position: 0 88.11881188118812%;
+		background-position: 27.0042194092827% 100%;
 	}
 	@if $name == "arrow-down--main" {
-		background-position: 27.0042194092827% 88.11881188118812%;
+		background-position: 93.24894514767932% 71.91011235955057%;
 	}
 	@if $name == "arrow-up" {
-		background-position: 13.50210970464135% 88.11881188118812%;
+		background-position: 0 100%;
 	}
 	@if $name == "arrow-up--main" {
-		background-position: 93.24894514767932% 63.366336633663366%;
+		background-position: 13.50210970464135% 100%;
 	}
 	@if $name == "bars" {
-		background-position: 21.71945701357466% 69.89247311827957%;
+		background-position: 45.248868778280546% 44.44444444444444%;
 	}
 	@if $name == "checkmark" {
-		background-position: 29.387755102040817% 100%;
+		background-position: 39.183673469387756% 95.6989247311828%;
 	}
 	@if $name == "content-text" {
-		background-position: 19.591836734693878% 100%;
+		background-position: 48.97959183673469% 95.6989247311828%;
 	}
 	@if $name == "content-text--main" {
-		background-position: 9.795918367346939% 100%;
+		background-position: 97.95918367346938% 95.6989247311828%;
 	}
 	@if $name == "email" {
-		background-position: 0 69.89247311827957%;
+		background-position: 65.15837104072398% 80.24691358024691%;
 	}
 	@if $name == "email--main" {
 		background-position: 100% 0;
@@ -350,62 +280,41 @@
 	@if $name == "garuda--white" {
 		background-position: 76.58536585365853% 0;
 	}
-	@if $name == "header-controversial" {
-		background-position: 0 100%;
-	}
-	@if $name == "header-gilded" {
-		background-position: 39.183673469387756% 84.76190476190476%;
-	}
-	@if $name == "header-hot" {
-		background-position: 88.16326530612245% 84.76190476190476%;
-	}
-	@if $name == "header-new" {
-		background-position: 58.775510204081634% 84.76190476190476%;
-	}
-	@if $name == "header-promoted" {
-		background-position: 58.775510204081634% 100%;
-	}
-	@if $name == "header-rising" {
-		background-position: 48.97959183673469% 84.76190476190476%;
-	}
-	@if $name == "header-top" {
-		background-position: 97.95918367346938% 84.76190476190476%;
-	}
 	@if $name == "image--white" {
-		background-position: 79.66804979253112% 63.10679611650485%;
+		background-position: 79.66804979253112% 71.42857142857143%;
 	}
 	@if $name == "logout" {
-		background-position: 43.43891402714932% 69.89247311827957%;
+		background-position: 43.43891402714932% 80.24691358024691%;
 	}
 	@if $name == "media-embed" {
-		background-position: 68.57142857142857% 84.76190476190476%;
+		background-position: 68.57142857142857% 95.6989247311828%;
 	}
 	@if $name == "quote" {
-		background-position: 78.36734693877551% 84.76190476190476%;
+		background-position: 58.775510204081634% 95.6989247311828%;
 	}
 	@if $name == "reddit" {
-		background-position: 45.248868778280546% 38.70967741935484%;
+		background-position: 21.71945701357466% 80.24691358024691%;
 	}
 	@if $name == "reddit--main" {
-		background-position: 65.15837104072398% 69.89247311827957%;
+		background-position: 0 80.24691358024691%;
 	}
 	@if $name == "search" {
-		background-position: 96.5065502183406% 24.742268041237114%;
+		background-position: 96.5065502183406% 28.235294117647058%;
 	}
 	@if $name == "search--main" {
-		background-position: 96.5065502183406% 45.36082474226804%;
+		background-position: 96.5065502183406% 51.76470588235294%;
 	}
 	@if $name == "settings" {
-		background-position: 71.04072398190046% 37.043010752688176%;
+		background-position: 71.04072398190046% 42.592592592592595%;
 	}
 	@if $name == "the-man" {
 		background-position: 0 0;
 	}
 	@if $name == "video" {
-		background-position: 39.183673469387756% 100%;
+		background-position: 78.36734693877551% 95.6989247311828%;
 	}
 	@if $name == "video--main" {
-		background-position: 48.97959183673469% 100%;
+		background-position: 88.16326530612245% 95.6989247311828%;
 	}
 	@if $name == "wings" {
 		background-position: 47.16981132075472% 0;
@@ -415,157 +324,122 @@
 @mixin icon-sprite-scale($name, $scale) {
 	@if ($scale != 0) {
 		@if $name == "arrow-down" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 32px * $scale;
 			height: 32px * $scale;
 		}
 		@if $name == "arrow-down--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 32px * $scale;
 			height: 32px * $scale;
 		}
 		@if $name == "arrow-up" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 32px * $scale;
 			height: 32px * $scale;
 		}
 		@if $name == "arrow-up--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 32px * $scale;
 			height: 32px * $scale;
 		}
 		@if $name == "bars" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "checkmark" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "content-text" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "content-text--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "email" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "email--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "garuda--white" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 64px * $scale;
-			height: 68.9px * $scale;
-		}
-		@if $name == "header-controversial" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-gilded" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-hot" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-new" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-promoted" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-rising" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
-		}
-		@if $name == "header-top" {
-			background-size: (269px * $scale) (234px * $scale);
-			width: 24px * $scale;
-			height: 24px * $scale;
+			height: 69px * $scale;
 		}
 		@if $name == "image--white" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 28px * $scale;
 			height: 28px * $scale;
 		}
 		@if $name == "logout" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "media-embed" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "quote" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "reddit" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "reddit--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "search" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 40px * $scale;
 			height: 40px * $scale;
 		}
 		@if $name == "search--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 40px * $scale;
 			height: 40px * $scale;
 		}
 		@if $name == "settings" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 48px * $scale;
 			height: 48px * $scale;
 		}
 		@if $name == "the-man" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 100px * $scale;
 			height: 130px * $scale;
 		}
 		@if $name == "video" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "video--main" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 24px * $scale;
 			height: 24px * $scale;
 		}
 		@if $name == "wings" {
-			background-size: (269px * $scale) (234px * $scale);
+			background-size: (269px * $scale) (210px * $scale);
 			width: 57px * $scale;
 			height: 72px * $scale;
 		}
