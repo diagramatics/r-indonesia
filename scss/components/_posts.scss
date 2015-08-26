@@ -29,9 +29,14 @@
       position: relative;
       margin: 0;
       // The padding-left gives an overflow buffer on the left
-      // So we can absolute position things until 48px to the left
-      padding-left: 48px;
+      // So we can absolute position things with a left margin of the votes and
+      // thumbnails
+      padding-left: $post-votes-width + $post-votes-margin-right + $post-thumbnail-width + $post-thumbnail-margin-right;
       overflow: visible;
+
+      @include mq(44em) {
+        padding-left: $post-votes-width + $post-votes-margin-right;
+      }
     }
 
     .title {
@@ -68,11 +73,13 @@
     }
 
     .midcol {
-      margin-right: 1.2rem;
+      width: $post-votes-width;
+      margin-right: $post-votes-margin-right;
     }
 
     .thumbnail {
-      margin-right: 1.8rem;
+      width: $post-thumbnail-width;
+      margin-right: $post-thumbnail-margin-right;
 
       @include mq(44em) {
         position: absolute;

@@ -36,6 +36,8 @@ $color-green: #0db04b;
 $color-green--dark: #00652e;
 $color-green--darker: darken($color-green--dark, 5%);
 
+$page-background-color: #fafafa;
+
 $color-link: $color-red-alt;
 $color-link-hover: $color-red-alt--dark;
 $color-link-visited: $color-red--desaturated;
@@ -51,8 +53,12 @@ $content-offset-height: -($header-offset-height / 2);
 
 $sidebar-width: 300px;
 
-$page-background-color: #fafafa;
+$post-votes-width: 3.2rem;
+$post-votes-margin-right: 1.2rem;
+$post-thumbnail-width: 7rem;
+$post-thumbnail-margin-right: 1.8rem;
 
-$tabmenu-list: hot, new, rising, controversial, top, gilded, promoted;
+$comment-votes-width: 3.2rem;
+$comment-votes-margin-right: .5rem;
 
 $mod-list: "sapulidi", "anak_jakarta", "Mental_octo", "TheBlazingPhoenix", "diagramatics", "RG_Kid";

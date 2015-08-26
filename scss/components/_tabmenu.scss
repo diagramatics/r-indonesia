@@ -52,16 +52,6 @@
         transition: all .2s ease-in-out;
       }
 
-      // &[href$="/indonesia/"]:before {
-      //   @include icon-sprite("header-hot");
-      // }
-      //
-      // @for $i from 1 through length($tabmenu-list) {
-      //   &[href$="/#{nth($tabmenu-list, $i)}/"]:before {
-      //     @include icon-sprite("header-#{nth($tabmenu-list, $i)}");
-      //   }
-      // }
-
       &:after {
         border-bottom: 2px solid currentColor;
         border-bottom-right-radius: 0;
