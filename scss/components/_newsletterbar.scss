@@ -1,0 +1,10 @@
+.infobar.newsletterbar {
+  height: $content-offset-height * -1;
+  margin: 0 0 2rem;
+}
+
+.infobar.newsletterbar a.newsletter-close {
+  right: 1rem;
+  font-size: 2.8rem;
+  line-height: 1;
+}
