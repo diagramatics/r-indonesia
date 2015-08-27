@@ -97,11 +97,15 @@
     }
 
     .midcol {
+      position: relative;
+      z-index: 1; // Add z-index to put it on top of .entry
       width: $post-votes-width;
       margin-right: $post-votes-margin-right;
     }
 
     .thumbnail {
+      position: relative;
+      z-index: 1; // Add z-index to put it on top of .entry
       width: $post-thumbnail-width;
       margin-right: $post-thumbnail-margin-right;
 
