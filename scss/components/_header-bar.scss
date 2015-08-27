@@ -130,6 +130,7 @@
 
   .drop-choices.srdrop {
     display: block;
+    top: 0 !important; // overriding the element inline style
     right: 20px;
     left: 20px !important; // overriding the element inline style
     margin-left: 0;
