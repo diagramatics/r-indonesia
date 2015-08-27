@@ -4,6 +4,23 @@
     padding: 1em 0;
     border-bottom: thin solid darken($page-background-color, 5%);
 
+    &:after {
+      @include icon-sprite("linkpost", .75);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: -.5rem;
+      opacity: .1;
+      transition: all .2s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        opacity: .3;
+      }
+    }
+
     &.last-clicked {
       overflow: visible;
       border: none;
@@ -22,6 +39,13 @@
 
       &:hover:after {
         opacity: .8;
+      }
+    }
+
+    // Self posts
+    &.self {
+      &:after {
+        @include icon-sprite("selfpost", .75);
       }
     }
 
@@ -92,5 +116,6 @@
         }
       }
     }
+
   }
 }
