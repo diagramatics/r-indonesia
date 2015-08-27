@@ -1,0 +1,55 @@
+.nav-buttons {
+
+}
+
+.nextprev {
+  display: block;
+  font-size: 0; // Hide the "view more text"
+  text-align: center;
+
+  // We hid the "view more" text because we can't individually display: block
+  // the text to put it in its own row. Instead, make another one with ::before
+  &:before {
+    content: "View more";
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  a {
+    @extend %button;
+    display: inline-block;
+    width: 50%;
+    max-width: 350px;
+    padding: .75rem 1rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+
+    &:hover {
+      border: 0;
+    }
+
+    @include mq(60em) {
+      max-width: none;
+      padding: 1rem;
+    }
+  }
+
+  a[rel~="prev"] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: thin solid darken($page-background-color, 15%);
+
+    // If the previous page button is there, zero the borders of the next page
+    // button as well.
+    + a[rel~="next"] {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .separator {
+    display: none;
+  }
+}
