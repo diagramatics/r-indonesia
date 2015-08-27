@@ -3,6 +3,10 @@
   position: relative;
   font-size: 1.4rem;
 
+  @include mq(60em) {
+    padding: 1rem 0;
+  }
+
   > input[type="text"] {
     // Note: for the placeholder text not to collapse it's better to use width transitions
     // As performance-heavy as it is.

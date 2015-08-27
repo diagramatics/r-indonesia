@@ -8,8 +8,14 @@
     font-size: 1.4rem;
     text-transform: capitalize;
 
+    @include mq(60em) {
+      max-width: 400px;
+      padding: 1rem 2rem;
+    }
+
     &.active {
       display: block;
+      margin: 0 auto;
     }
 
     &.add {
