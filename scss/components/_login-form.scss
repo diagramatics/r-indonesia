@@ -1,0 +1,132 @@
+.login-form {
+}
+
+.login-form-side {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0 1rem;
+  border: 0;
+  border-top: thin solid darken($page-background-color, 5%);
+  border-bottom: thin solid darken($page-background-color, 5%);
+  font-size: 1.4rem;
+
+  &:before {
+    content: "Login";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    padding: 0 .5rem;
+    background: $page-background-color;
+    color: rgba(black, .5);
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+  }
+}
+
+.login-form-side input[type="text"],
+.login-form-side input[type="password"] {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  background: none;
+  border-color: darken($page-background-color, 10%);
+  font-family: $font-family;
+  font-size: 1em;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    border-color: darken($page-background-color, 20%);
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $color-red;
+    box-shadow: 1px 1px 1px rgba(black, .2);
+  }
+}
+
+// All of these are using default selectors from Reddit's base CSS
+.login-form-side #remember-me {
+  display: block;
+  float: none;
+  margin: 0;
+  text-align: right; // So the recover password link is on the right without making the whole thing a display: block
+  text-transform: capitalize;
+}
+
+#rem-login-main {
+  display: none;
+
+  &:focus {
+
+  }
+
+  &:checked {
+    + label {
+      &:before {
+        background: $color-red;
+        box-shadow: 0 0 0 1px $page-background-color,
+        0 0 0 2px $color-red;
+      }
+
+      &:hover {
+        &:before {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.login-form-side label {
+  display: block;
+  padding: .5rem 1rem;
+  text-align: left; // Parent is right aligned for the recover password link
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 1rem;
+    border: thin solid $color-red;
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      box-shadow: 0 0 0 1px $page-background-color,
+      0 0 0 2px $color-red;
+    }
+  }
+
+  &:active {
+    background: darken($page-background-color, 10%);
+  }
+}
+
+.login-form-side .recover-password {
+  display: inline-block;
+  width: auto;
+  font-size: 1.2rem;
+  text-align: right;
+
+  @include mq(60em) {
+    font-size: 1.4rem;
+  }
+}
+
+.login-form-side .submit {
+  float: none;
+}
+
+.login-form-side .submit .btn {
+  @extend %button;
+  @extend %button--red;
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  font-family: $font-family;
+  font-size: 1em;
+  text-transform: capitalize;
+}
