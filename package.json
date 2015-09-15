@@ -4,10 +4,10 @@
   "description": "The stylesheet for Reddit's /r/indonesia subreddit.",
   "private": true,
   "devDependencies": {
-    "autoprefixer-core": "^5.2.0",
-    "browser-sync": "^2.8.2",
+    "autoprefixer-core": "^6.0.1",
+    "browser-sync": "^2.9.3",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
+    "gulp-autoprefixer": "^3.0.1",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^1.0.0",
     "gulp-filter": "^3.0.1",
@@ -18,8 +18,8 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-svg-sprite": "^1.2.9",
     "gulp-svg2png": "^0.3.0",
-    "postcss": "^5.0.2",
-    "postcss-url": "^4.0.1"
+    "postcss": "^5.0.5",
+    "postcss-url": "^5.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

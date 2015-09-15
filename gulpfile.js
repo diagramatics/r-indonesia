@@ -176,7 +176,12 @@ gulp.task('styles:build', ['sass'], function() {
     .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('build', ['styles:build'], function() {
+gulp.task('test-script', function() {
+  return gulp.src('test-script/*.js')
+    .pipe(gulp.dest('dist/test-script'));
+});
+
+gulp.task('build', ['styles:build', 'test-script'], function() {
   return gulp.src(config.distStyle).pipe($.size());
 });
 
