@@ -259,6 +259,36 @@
     }
   }
 
+  &.spam {
+    background: none;
+    padding-top: 4rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+
+      &:before {
+        background: $color-red--desaturated;
+        color: white;
+      }
+    }
+
+    &:before {
+      content: "Removed";
+      position: absolute;
+      top: .5rem;
+      left: 0;
+      padding: .5rem 1rem;
+      background: darken($page-background-color, 5%);
+
+    }
+
+    > .child {
+      padding-left: 0;
+      background: none;
+    }
+  }
+
   .midcol {
     width: auto;
     margin-left: .5rem;
