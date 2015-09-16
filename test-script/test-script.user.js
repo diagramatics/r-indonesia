@@ -10,15 +10,32 @@
 // ==/UserScript==
 
 (function() {
-  var injectedStyle = '<link rel="stylesheet" href="https://cdn.rawgit.com/diagramatics/r-indonesia/dist/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
-  // Find the custom subreddit styling
-  var style = document.querySelector('link[title="applied_subreddit_stylesheet"]');
-  if (style !== null) {
-    style.insertAdjacentHTML('afterend', injectedStyle);
-    style.remove();
+
+  var injectStyle = function(sha) {
+    var injectedStyle = '<link rel="stylesheet" href="https://cdn.rawgit.com/diagramatics/r-indonesia/'+ sha +'/css/style.css" title="applied_subreddit_stylesheet" type="text/css">';
+    // Find the custom subreddit styling
+    var style = document.querySelector('link[title="applied_subreddit_stylesheet"]');
+    if (style !== null) {
+      style.insertAdjacentHTML('afterend', injectedStyle);
+      style.remove();
+    }
+    else {
+      var head = document.querySelector('head');
+      head.insertAdjacentHTML('beforeend', injectedStyle);
+    }
   }
-  else {
-    var head = document.querySelector('head');
-    head.insertAdjacentHTML('beforeend', injectedStyle);
-  }
+
+  var request = new XMLHttpRequest();
+  request.open('GET', 'https://api.github.com/repos/diagramatics/r-indonesia/git/refs/heads/dist', true);
+
+  request.onload = function() {
+    var response = JSON.parse(this.response);
+    injectStyle(response.object.sha);
+  };
+
+  request.onerror = function() {
+    // There was a connection error of some sort
+  };
+
+  request.send();
 }());
