@@ -24,21 +24,34 @@
   background: darken($page-background-color, 10%);
 }
 
+%button--dark--red {
+  &:hover {
+    background: $color-red;
+    color: $page-background-color;
+  }
+
+  &:active {
+    background: $color-red--dark;
+    color: $page-background-color;
+    box-shadow: inset 0 .3em .6em -.2em rgba(#000, .3);
+  }
+}
+
 %button--darker {
   background: darken($page-background-color, 15%);
 }
 
 %button--subtle {
   background: darken($page-background-color, 2%);
-  color: black;
+  color: lighten(black, 30%);
 
   &:hover {
-    background: darken($page-background-color, 5%);
+    background: darken($page-background-color, 8%);
     color: black;
   }
 
   &:active {
-    background: darken($page-background-color, 5%);
+    background: darken($page-background-color, 8%);
     color: black;
   }
 }

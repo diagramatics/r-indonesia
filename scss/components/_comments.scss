@@ -269,6 +269,10 @@
   padding: .5rem 0 .5rem 1rem;
   border-left: 2px solid darken($page-background-color, 5%);
 
+  &.collapsed {
+    line-height: 1.6;
+  }
+
   &.new-comment {
     position: relative;
     padding-top: 2.5rem;
@@ -307,12 +311,8 @@
     }
 
     > .entry .reply-button a {
-      background: darken($page-background-color, 20%);
-
-      &:hover,
-      &:active {
-        background: $color-red;
-      }
+      @extend %button--dark;
+      @extend %button--dark--red;
     }
   }
 
@@ -348,6 +348,7 @@
 
   .midcol {
     width: auto;
+    margin-top: 2.5rem; // Get whitespace to put the expand/shrink button
     margin-left: .5rem;
   }
 
@@ -415,6 +416,27 @@
 
   .submitter {
     color: $color-red;
+  }
+}
+
+// Expand/shrink buttons
+.tagline > .expand {
+  @extend %button;
+  @extend %button--subtle;
+  display: inline-block;
+  position: absolute;
+  left: 1.8rem;
+  background: darken($page-background-color, 5%);
+  padding: .2rem .5rem;
+  font-size: 1.4rem;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .comment.collapsed & {
+    @extend %button--red;
   }
 }
 
@@ -493,6 +515,11 @@
         transform: translateX(100%);
       }
     }
+  }
+
+  .new-comment & a {
+    @extend %button--dark;
+    @extend %button--dark--red;
   }
 
   + .flat-list {
