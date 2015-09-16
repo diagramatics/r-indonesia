@@ -4,6 +4,7 @@
 // @description A loader for r/indonesia subreddit's new design (v2).
 // @namespace   http://diagramatics.me
 // @source      http://github.com/diagramatics/r-indonesia
+// @include     https://bt.reddit.com/r/indonesia/
 // @include     https://bt.reddit.com/r/indonesia/*
 // @version     {{version}}
 // @grant       GM_getValue
