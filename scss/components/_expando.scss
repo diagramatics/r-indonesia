@@ -2,7 +2,6 @@
   position: relative;
   margin-top: 1rem;
   border-top: thin solid darken($page-background-color, 5%);
-  border-right: thin solid darken($page-background-color, 5%);
 
 
   &:before {
@@ -15,6 +14,11 @@
     opacity: .5;
     transform: scaleX(-1); // Flip horizontally because laziness
   }
+}
+
+// Put a border-right on the small expando
+.expando-button ~ .expando {
+  border-right: thin solid darken($page-background-color, 5%);
 }
 
 // Loading indicator
