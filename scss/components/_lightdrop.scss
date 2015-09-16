@@ -1,0 +1,87 @@
+/**
+  Lightdrop is used in:
+  - The dropdown for "sorted by:" in comments
+  */
+.lightdrop {
+  // Dropdown toggle
+  $dropdown-text-padding: .5rem 1rem;
+  $dropdown-background: darken($page-background-color, 5%);
+
+  &.dropdown {
+    @extend %button;
+    display: inline-block;
+    padding: $dropdown-text-padding;
+    background: darken($dropdown-background, 5%);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background: darken($dropdown-background, 10%);
+    }
+
+    &:after {
+      content: "";
+      @include icon-sprite("arrow-down", .6);
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .selected {
+      padding-right: .5rem;
+      background-image: none;
+      text-decoration: none;
+    }
+  }
+
+  // Dropdown title
+  &.dropdown-title {
+    display: inline-block;
+    padding: $dropdown-text-padding;
+    background: $dropdown-background;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  // Dropdown choices (the dropdown itself)
+  &.drop-choices {
+    display: block;
+    margin-top: 1rem;
+    border: 0;
+    background: lighten($dropdown-background, 3%);
+    box-shadow: 0 2px 3px rgba(black, .2);
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-1rem);
+    // Transition trick without sacrificing background element being unclickable.
+    // Transition important stuff, with z-index delayed on the transition length
+    // and executed for 0s.
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out, z-index 0s .2s;
+
+    &.inuse {
+      opacity: 1;
+      z-index: 100;
+      transform: translateY(0);
+      // Set all delays to 0s so z-index gets set to 100 immediately
+      transition-delay: 0s;
+    }
+
+    a.choice {
+      padding: .5rem 1rem;
+      color: black;
+      text-transform: capitalize;
+      border-left: 2px solid transparent;
+      border-bottom: thin solid $dropdown-background;
+
+      &:hover {
+        background: $dropdown-background;
+        color: $color-red;
+        border-left-color: $color-red;
+      }
+    }
+  }
+}

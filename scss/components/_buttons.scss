@@ -20,6 +20,21 @@
   }
 }
 
+%button--subtle {
+  background: darken($page-background-color, 2%);
+  color: black;
+
+  &:hover {
+    background: darken($page-background-color, 5%);
+    color: black;
+  }
+
+  &:active {
+    background: darken($page-background-color, 5%);
+    color: black;
+  }
+}
+
 %button--green {
   background: $color-green;
   color: $page-background-color;

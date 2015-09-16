@@ -202,9 +202,25 @@
   .panestack-title {
     display: none;
   }
+}
 
-  .menuarea {
-    margin: 1em;
+.commentarea .menuarea {
+  margin: 1rem 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+// Link for things like set as suggested sort, enable contest mode, and sticky
+.commentarea .menuarea .toggle a {
+  @extend %button;
+  @extend %button--subtle;
+  display: inline-block;
+  margin-bottom: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1em;
+  font-weight: normal;
+
+  &:first-letter {
+    text-transform: uppercase;
   }
 }
 
