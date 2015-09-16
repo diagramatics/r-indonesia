@@ -6,7 +6,8 @@
 // @source      http://github.com/diagramatics/r-indonesia
 // @include     https://bt.reddit.com/r/indonesia/*
 // @version     1.0.0
-// @grant       none
+// @grant       GM_getValue
+// @grant       GM_setValue
 // ==/UserScript==
 
 (function() {
@@ -19,7 +20,7 @@
     request.onload = function() {
       var response = JSON.parse(this.response);
       if (response.version !== version) {
-        alert('You\'re using an older version of the script. Please redownload it again at https://cdn.rawgit.com/diagramatics/r-indonesia/'+ sha +'/test-script/version.json');
+        window.prompt('You\'re using an older version of the script. Please redownload it again at the link below.', 'https://cdn.rawgit.com/diagramatics/r-indonesia/'+ sha +'/test-script/test-script.user.js');
       }
     };
 
@@ -27,13 +28,15 @@
       // There was a connection error of some sort
       console.error('Seems like we cannot check the recent version of the script. We\'ll do it later.');
     };
+
+    request.send();
   }
 
   var checkSha = function(cb) {
-    var lastCheckDate = GM_getValue('lastCheckDate', null);
+    var lastCheckDate = new Date(GM_getValue('lastCheckDate', null));
     var lastSha = GM_getValue('lastSha', null);
     // Check if last SHA check date was yesterday
-    if (!lastSha || !lastCheckDate || lastCheckDate.setDate(lastCheckDate.getDate() + 1) > new Date()) {
+    if (!lastSha || !lastCheckDate || lastCheckDate.setDate(lastCheckDate.getDate() + 1) < new Date()) {
       var request = new XMLHttpRequest();
       request.open('GET', 'https://api.github.com/repos/diagramatics/r-indonesia/git/refs/heads/dist', true);
 
@@ -46,7 +49,7 @@
 
       request.onerror = function() {
         // There was a connection error of some sort
-        console.error('Seems like we cannot check the recent version of the stylesheet. Reverting to saved SHA if there is any.')
+        console.error('Seems like we cannot check the recent version of the stylesheet. Reverting to saved SHA if there is any.');
         if (lastSha) {
           cb(lastSha);
         }
