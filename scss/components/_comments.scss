@@ -210,14 +210,16 @@
 
 .comment {
   position: relative;
-  margin-left: 1px;
-  padding: 1rem 0 1.2rem 0;
+  margin-top: 5px;
+  margin-left: 0;
+  padding: .5rem 0 .5rem 1rem;
   border-left: 2px solid darken($page-background-color, 5%);
 
   &.new-comment {
     position: relative;
     padding-top: 2.5rem;
-    background: darken($page-background-color, 5%);
+    padding-right: 1rem;
+    background: darken($page-background-color, 2%);
     border-left-color: $color-green--dark !important; // !important to override the nested styles for the nested child comments
 
     &:before {
@@ -225,6 +227,7 @@
       display: block;
       position: absolute;
       top: .5rem;
+      left: 0;
       padding: 0 1rem;
       font-size: 1rem;
       color: white;
