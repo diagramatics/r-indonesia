@@ -20,6 +20,14 @@
   }
 }
 
+%button--dark {
+  background: darken($page-background-color, 10%);
+}
+
+%button--darker {
+  background: darken($page-background-color, 15%);
+}
+
 %button--subtle {
   background: darken($page-background-color, 2%);
   color: black;

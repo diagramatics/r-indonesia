@@ -1,5 +1,18 @@
 .comments-page {
 
+  .link .entry {
+    > .title > .title {
+      color: black;
+      font-size: 1.8rem;
+    }
+
+    > .expando {
+      padding-bottom: 1.5rem;
+      border-bottom: thin solid darken($page-background-color, 3%);
+      margin-bottom: 1.5rem;
+    }
+  }
+
   &.post-linkflair-longpost {
     .linkflairlabel {
       display: none;
@@ -215,15 +228,34 @@
   font-size: 1.4rem;
 }
 
-// Link for things like set as suggested sort, enable contest mode, and sticky
-.commentarea .menuarea .toggle a {
-  @extend %button;
-  @extend %button--subtle;
-  display: inline-block;
+.commentarea .menuarea .toggle {
   margin-bottom: .5rem;
-  padding: .5rem 1rem;
+  font-size: 1em;
+
+  & + .help-hoverable {
+    display: inline-block;
+    margin-left: -.5rem;
+    padding: .5rem 1rem;
+    background: darken($page-background-color, 7%);
+  }
+}
+
+// Overriding button font-size
+.commentarea .menuarea .toggle a {
   font-size: 1em;
   font-weight: normal;
+}
+
+// Because some buttons don't follow the same structure (the clear suggested sort)
+// we have to make selectors that cover this
+.commentarea .menuarea li.toggle form > a {
+  @extend .togglebutton;
+  display: inline-block !important; // Override inline style
+  color: gray;
+
+  &[style="display: none;"] {
+    display: none !important;
+  }
 
   &:first-letter {
     text-transform: uppercase;

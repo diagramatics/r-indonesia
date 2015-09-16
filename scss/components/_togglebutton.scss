@@ -1,0 +1,13 @@
+// Link for things like set as suggested sort, enable contest mode, and sticky
+.togglebutton {
+  @extend %button;
+  @extend %button--subtle;
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-size: 1em;
+  font-weight: normal;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}

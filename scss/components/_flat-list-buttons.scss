@@ -3,9 +3,20 @@
 }
 
 .flat-list.buttons li a {
+  background: none; // Force remove all background, since some of them are toggle buttons and they inherit
   color: #666;
   font-size: 1.2rem;
   font-weight: normal;
+
+  &:first-letter {
+    // Again, to override the inheritance from toggle buttons
+    text-transform: lowercase;
+  }
+}
+
+.flat-list.buttons .option.error a {
+  padding: 0 .5rem;
+  text-decoration: none;
 }
 
 // Mod tools buttons

@@ -1,0 +1,27 @@
+/**
+  * .option.error is the Yes/No dialog on most of the mod tools to ask
+  * for confirmation
+  */
+
+.option.error {
+  font-size: 1em;
+  background: darken($page-background-color, 5%);
+  padding-left: 1rem;
+
+  &.active,
+  &[style="display: inline;"] {
+    display: inline-block !important;
+  }
+}
+
+// The yes/no buttons
+.option.error a {
+  @extend %button;
+  @extend %button--darker;
+  display: inline-block;
+  margin: 0 .5rem;
+  margin-bottom: 0;
+  padding: .5rem 1.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}

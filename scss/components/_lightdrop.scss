@@ -9,9 +9,9 @@
 
   &.dropdown {
     @extend %button;
+    @extend %button--dark;
     display: inline-block;
     padding: $dropdown-text-padding;
-    background: darken($dropdown-background, 5%);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     text-transform: capitalize;
