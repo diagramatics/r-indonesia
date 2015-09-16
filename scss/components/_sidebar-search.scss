@@ -63,6 +63,7 @@
   border: 0;
   border-radius: 2px;
   background: darken($page-background-color, 2%);
+  z-index: 2; // Hide the header toggle buttons
 
   p {
     margin: 0;

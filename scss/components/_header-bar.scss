@@ -45,7 +45,7 @@
 
   &:target {
     // Show the header image more clearly when this is enabled
-    padding-bottom: $header-offset-height * 4;
+    padding-bottom: $header-offset-height * 2.5;
 
     &:before {
       opacity: 1;
@@ -61,32 +61,35 @@
 // These links on the sidebar is placed below the end of the header bar
 // These links are to toggle a bigger picture of the title and the information.
 .md a[href="#header"] {
+  @include icon-sprite("image--white");
   position: absolute;
   right: 2rem;
-  bottom: 100%;
-  margin-bottom: 1rem;
+  top: $header-height + $header-offset-height - 2rem;
+  border-bottom: 2px solid transparent;
   font-size: 0;
   z-index: 1;
-  @include icon-sprite("image--white");
 
   &:hover {
     border-bottom-width: 2px;
+
+    &:before {
+      opacity: 1;
+    }
   }
 
   #header:target + .side & {
-    z-index: 0;
+    opacity: 0;
+    z-index: -1;
   }
 }
 .md a[href="#header2"] {
+  @include icon-sprite("image--white");
   position: absolute;
   right: 2rem;
-  bottom: 100%;
-  margin-bottom: 1rem;
-  font-size: 0;
-  @include icon-sprite("image--white");
-  opacity: 0;
-  transition: all .2s ease-in-out;
+  top: $header-height + $header-offset-height - 2rem;
   border-bottom: 2px solid $color-red;
+  font-size: 0;
+  opacity: 0;
 
   #header:target + .side & {
     opacity: 1;
