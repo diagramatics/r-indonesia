@@ -4,14 +4,15 @@
 // @description A loader for r/indonesia subreddit's new design (v2).
 // @namespace   http://diagramatics.me
 // @source      http://github.com/diagramatics/r-indonesia
+// @include     https://bt.reddit.com/r/indonesia/
 // @include     https://bt.reddit.com/r/indonesia/*
-// @version     1.0.0
+// @version     1.0.1
 // @grant       GM_getValue
 // @grant       GM_setValue
 // ==/UserScript==
 
 (function() {
-  var version = '1.0.0';
+  var version = '1.0.1';
 
   var checkScriptVersion = function(sha) {
     var request = new XMLHttpRequest();
