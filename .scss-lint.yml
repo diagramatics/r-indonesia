@@ -12,6 +12,9 @@ linters:
   SelectorDepth:
     enabled: false # Same reason as disabling NestingDepth
 
+  ImportantRule:
+    enabled: false
+
   # URL formats not linted because of the format
   UrlFormat:
     enabled: false
@@ -24,11 +27,22 @@ linters:
     enabled: false
 
   # Custom preferences
+  ColorKeyword:
+    enabled: false
+
+  ColorVariable:
+    enabled: false
+
   ElsePlacement:
     style: 'new_line'
 
+  MergeableSelector:
+    enabled: false
+
   PropertySortOrder:
-    order: smacss
+    order:
+      - content
+      - smacss
 
   StringQuotes:
     style: 'double_quotes'
