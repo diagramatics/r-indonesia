@@ -3,7 +3,7 @@
   // Bigger icons, scaled to a proportion for larger screen sizes
   // This way we still get crisp icons
   transform: scale(.75);
-  transition: all .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 
   @include mq(60em) {
     transform: scale(1);

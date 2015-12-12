@@ -52,7 +52,7 @@
       transition-delay: .4s;
     }
 
-    & ~ .content {
+    ~ .content {
       margin-top: 1rem;
     }
   }
@@ -82,6 +82,7 @@
     z-index: -1;
   }
 }
+
 .md a[href="#header2"] {
   @include icon-sprite("image--white");
   position: absolute;
@@ -93,6 +94,47 @@
 
   #header:target + .side & {
     opacity: 1;
+  }
+}
+
+#header-img {
+  width: auto;
+  max-height: 50px;
+  margin: 0;
+  vertical-align: middle;
+
+  // Set width to 0 if it's using a 1x1 image to hide the header image
+  &[width="1"][height="1"] {
+    width: 0;
+  }
+}
+
+#header-img-a {
+  display: inline-block;
+  max-height: 50px;
+  margin-right: 2rem;
+
+  &:before {
+    content: "Back to Front Page";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: auto;
+    margin-left: 1rem;
+    padding: .5rem 1rem;
+    background: rgba($page-background-color, .9);
+    white-space: nowrap;
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-200%) translateY(-50%);
+    transition: all .5s ease-in-out;
+    z-index: 100;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
   }
 }
 
@@ -125,9 +167,9 @@
     position: relative; // So the parent :before background can get displayed
 
     &:after {
-      display: table;
-      clear: both;
       content: "";
+      clear: both;
+      display: table;
     }
   }
 
@@ -300,16 +342,6 @@
   color: white;
   text-align: right;
 
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 3rem; // The same with the border of #sr-header-area
-    left: 0;
-    height: 1px;
-    background: rgba($page-background-color, .1);
-  }
-
   @include mq(60em) {
     top: $sr-header-height-mobile;
   }
@@ -328,6 +360,16 @@
 
   @include mq(30em) {
     text-align: center;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 3rem; // The same with the border of #sr-header-area
+    left: 0;
+    height: 1px;
+    background: rgba($page-background-color, .1);
   }
 
   a {

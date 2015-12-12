@@ -40,3 +40,8 @@ body > .content {
     margin-top: -1.5rem;
   }
 }
+
+body.with-listing-chooser.listing-chooser-collapsed>.content,
+body.with-listing-chooser.listing-chooser-collapsed .footer-parent {
+  margin-left: 1%;
+}

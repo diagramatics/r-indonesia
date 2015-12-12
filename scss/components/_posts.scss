@@ -23,7 +23,7 @@
 
     &.last-clicked {
       overflow: visible;
-      border: none;
+      border: 0;
       border-bottom: thin solid darken($page-background-color, 5%);
 
       &:after {

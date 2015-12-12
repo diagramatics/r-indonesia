@@ -1,6 +1,7 @@
 .pagename {
   display: inline-block;
   position: relative;
+  border: 2px solid $color-red--desaturated;
   color: $color-red--desaturated;
   font-family: $font-family-heading;
   font-size: 2.6rem;
@@ -18,46 +19,28 @@
     margin-bottom: 2rem;
   }
 
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  &:before {
-    border: 2px solid $color-red--desaturated;
-  }
-
-  &:after {
-    content: $subreddit-name;
-    display: inline-block;
-    padding: .5rem 2rem;
-    color: white;
-    opacity: 0;
-    clip-path: inset(0 100% 0 0);
-    transform: scale(.95);
-    transition: all .2s ease-in-out;
-  }
-
   &:hover {
     background: $color-red--desaturated;
     text-shadow: none;
 
-    &:after {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
-      transform: scale(1);
-      transition-duration: .5s;
+    a {
+      text-decoration: none;
+      color: white;
+      text-shadow: none;
       transition-delay: .25s;
     }
 
-    a {
-      opacity: 0;
-      text-decoration: none;
+    a[href$="r/#{$subreddit-name}/"] {
+      text-shadow: none;
+      color: $color-red--desaturated;
+      transition-delay: 0s;
+
+      &:after {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transition-duration: .5s;
+        transition-delay: .25s;
+      }
     }
   }
 
@@ -67,5 +50,20 @@
     color: $color-red--desaturated;
     text-shadow: 0 1px 2px black;
     z-index: 1;
+
+    &:after {
+      content: $subreddit-name;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: .5rem 2rem;
+      color: white;
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transition: all .2s ease-in-out;
+    }
   }
 }
