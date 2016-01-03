@@ -222,14 +222,16 @@
   }
 }
 
-.dropdown.srdrop {
+.dropdown.srdrop,
+#srDropdown#srDropdown {
   display: inline-block;
   position: absolute; // To collapse the dimensions, we'll use the sr-list padding instead
   top: 0;
   left: 0;
   min-width: 1%;
   padding-right: 1rem;
-  z-index: 1;
+  padding-left: 5px;
+  z-index: 6; // RES has it at 5, along with elements before it.
   transition: all .2s ease-in-out;
   cursor: pointer;
 
@@ -237,10 +239,15 @@
     background: $color-red;
     color: white;
 
-    .selected {
+    .selected,
+    #srDropdownContainer {
       max-width: 150px;
       opacity: 1;
       transform: translateX(0);
+    }
+
+    #srDropdownContainer {
+      transform: translateX(18px);
     }
   }
 
@@ -257,8 +264,10 @@
     }
   }
 
-  .selected {
+  .selected,
+  #srDropdownContainer {
     position: absolute;
+    top: 0;
     max-width: 0;
     margin: 0;
     padding: 0 .5rem;
@@ -274,6 +283,14 @@
       font-size: 1.2rem;
     }
   }
+
+  #srDropdownContainer a {
+    color: currentColor;
+  }
+}
+
+#srDropdown#srDropdown {
+  position: relative; // RES doesn't need the hamburger icon to be absolute
 }
 
 .sr-list {
@@ -286,14 +303,15 @@
     padding-left: 36px + 8px; // The size of the dropdown hamburger menu icon
     font-size: 1.2rem;
   }
-
-  .choice {
-    color: white;
-  }
 }
 
-.sr-bar .choice:hover {
+.sr-list .choice,
+.sr-bar .subbarlink {
   color: white;
+
+  &:hover {
+    color: white;
+  }
 }
 
 #sr-more-link {
@@ -587,5 +605,17 @@
 
   &:before {
     content: "Logout";
+  }
+}
+
+// RES
+#srLeftContainer#srLeftContainer {
+  padding-left: 0;
+}
+
+#RESStaticShortcuts {
+  // Hide the first separator
+  .separator:nth-child(1) {
+    display: none;
   }
 }

@@ -15,6 +15,9 @@ linters:
   ImportantRule:
     enabled: false
 
+  SelectorFormat:
+    enabled: false
+
   # URL formats not linted because of the format
   UrlFormat:
     enabled: false

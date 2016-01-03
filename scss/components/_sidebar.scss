@@ -141,7 +141,7 @@
   text-align: center;
 
   > .number {
-    font-size: 2.0rem;
+    font-size: 2rem;
     vertical-align: middle;
   }
 
@@ -270,10 +270,11 @@
     }
 
     &:active {
-    box-shadow: 0 .3em .6em -.2em transparent;
+      box-shadow: 0 .3em .6em -.2em transparent;
     }
   }
 }
+
 .titlebox .tagline {
   position: relative;
   margin: 0;
@@ -345,7 +346,7 @@
 
     &.selected {
       padding: .5em;
-      border: none;
+      border: 0;
       background: darken($page-background-color, 15%);
     }
 
