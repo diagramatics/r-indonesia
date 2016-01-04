@@ -1,6 +1,10 @@
 .infobar.newsletterbar {
-  height: $content-offset-height * -1;
+  height: -$content-offset-height;
   margin: 0 0 2rem;
+
+  @include mq(60em) {
+    height: auto;
+  }
 }
 
 .infobar.newsletterbar a.newsletter-close {
