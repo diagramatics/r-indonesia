@@ -489,3 +489,29 @@
     }
   }
 }
+
+// RES
+.RESshortcut.RESshortcutside {
+  @extend %button;
+  @extend %button--green;
+  width: auto;
+  margin-left: 1rem;
+  background-image: none;
+  font-size: 1.1em;
+  font-weight: normal;
+
+  &.remove {
+    @extend %button--red;
+  }
+}
+
+.REStoggle.RESDashboardToggle {
+  @extend %button;
+  @extend %button--green;
+  font-size: 1.1em;
+  font-weight: normal;
+
+  &.remove {
+    @extend %button--red;
+  }
+}
