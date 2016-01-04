@@ -348,7 +348,8 @@
   }
 }
 
-#header-bottom-right {
+// Double specificity to override RES stuff
+#header-bottom-right#header-bottom-right {
   position: absolute;
   top: $sr-header-height;
   bottom: auto;
@@ -514,7 +515,7 @@
   }
 }
 
-#mail,
+#mail#mail,
 #modmail {
   position: relative;
   top: 0;
@@ -609,6 +610,12 @@
 }
 
 // RES
+#srLeftContainer,
+#RESShortcutsViewport,
+#RESShortcutsEditContainer {
+  max-height: none !important;
+}
+
 #srLeftContainer#srLeftContainer {
   padding-left: 0;
 }
@@ -617,5 +624,54 @@
   // Hide the first separator
   .separator:nth-child(1) {
     display: none;
+  }
+}
+
+// Edit icons for the navbars
+#RESShortcutsEditContainer#RESShortcutsEditContainer,
+#RESShortcutsSort#RESShortcutsSort,
+#RESShortcutsRight#RESShortcutsRight,
+#RESShortcutsLeft#RESShortcutsLeft,
+#RESShortcutsAdd#RESShortcutsAdd,
+#RESShortcutsTrash#RESShortcutsTrash {
+  background: transparent;
+  color: black;
+}
+
+#RESShortcutsEditContainer#RESShortcutsEditContainer {
+  height: $sr-header-height;
+
+  @include mq(60em) {
+    height: $sr-header-height-mobile;
+  }
+}
+
+#RESShortcutsSort#RESShortcutsSort,
+#RESShortcutsRight#RESShortcutsRight,
+#RESShortcutsLeft#RESShortcutsLeft,
+#RESShortcutsAdd#RESShortcutsAdd,
+#RESShortcutsTrash#RESShortcutsTrash {
+  top: 9px;
+}
+
+#RESShortcutsTrash#RESShortcutsTrash {
+  background: white;
+}
+
+#userbarToggle#userbarToggle {
+  left: 0;
+  background: transparent;
+  color: white;
+  border-right: 0;
+  line-height: 36px;
+}
+
+#RESSettingsButton {
+  vertical-align: middle;
+}
+
+#RESMainGearOverlay {
+  .gearIcon {
+    top: 11px;
   }
 }
