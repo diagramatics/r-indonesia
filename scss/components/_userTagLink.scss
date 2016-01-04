@@ -1,0 +1,6 @@
+.userTagLink {
+  &.hasTag.hasTag {
+    padding: .3rem 1rem;
+    border-color: darken($page-background-color, 10%);
+  }
+}
