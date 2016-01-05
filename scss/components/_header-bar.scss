@@ -640,6 +640,7 @@
 
 #RESShortcutsEditContainer#RESShortcutsEditContainer {
   height: $sr-header-height;
+  background: rgba(white, .8);
 
   @include mq(60em) {
     height: $sr-header-height-mobile;
@@ -651,7 +652,11 @@
 #RESShortcutsLeft#RESShortcutsLeft,
 #RESShortcutsAdd#RESShortcutsAdd,
 #RESShortcutsTrash#RESShortcutsTrash {
-  top: 9px;
+  top: 3px;
+
+  @include mq(60em) {
+    top: 9px;
+  }
 }
 
 #RESShortcutsTrash#RESShortcutsTrash {
