@@ -1,0 +1,93 @@
+// srList is the subreddit list dropdown
+
+#srList#srList {
+  display: block !important;
+  top: 0;
+  right: 0;
+  width: 90%;
+  max-height: none !important;
+  margin: auto;
+  border: 0;
+  background: rgba($page-background-color, .97);
+  font-size: 1.2rem;
+  box-shadow: 0 1px 1px rgba(black, .2);
+  opacity: 0;
+  transform: translateY(-110%);
+  transform-origin: top center;
+  transition: all .2s ease-in-out;
+
+  // Show when toggled
+  &[style*="display: block"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  thead {
+    display: block;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    tr {
+      border-bottom-color: darken($page-background-color, 10%);
+      box-shadow: 0 1px 20px 1px rgba(black, .1);
+    }
+  }
+
+  tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  tr {
+    display: block;
+    width: 100%;
+    padding: .2rem .5rem;
+    border-bottom-color: darken($page-background-color, 5%);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background-color: darken($page-background-color, 5%);
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  td {
+    display: block;
+    float: left;
+    position: relative;
+    width: 33% !important;
+
+    &:nth-of-type(3n-2) {
+      width: 50% !important;
+    }
+
+    &:nth-of-type(3n-1) {
+      width: 40% !important;
+    }
+
+    &:nth-of-type(3n) {
+      width: 10% !important;
+    }
+
+    &:nth-of-type(n) {
+      @include mq(60em) {
+        width: 33% !important;
+      }
+    }
+  }
+
+  .sortAsc,
+  .sortDesc {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    margin: auto;
+  }
+}

@@ -286,6 +286,13 @@
 
   #srDropdownContainer a {
     color: currentColor;
+
+    // RES position the link to cover all clickable locations
+    .res & {
+      padding-left: 30px;
+      left: -30px;
+      margin-right: -30px;
+    }
   }
 }
 
